@@ -27,6 +27,17 @@ When is a diagnostic intervention worth its cost, and when should a robot learni
 
 No real LIBERO simulator state replay/perturbation adapter, expert recovery, weighted SmolVLA training loop, checkpoint or GPU result. No Isaac Lab PPO, ROS2 hardware-control integration, TensorRT performance result, secure production service, customer deployment or published academic experiment. Demo values are labeled synthetic.
 
+## First real GPU milestone: LIBERO smoke and frozen baseline
+
+Do **not** treat a training command as proof of policy improvement. First run a real
+rollout with [lerobot/smolvla_libero](https://huggingface.co/lerobot/smolvla_libero),
+record actual failures, and validate environment/control settings. The generic
+smolvla_base checkpoint is not a LIBERO-trained baseline.
+
+See [P0 runbook](docs/P0_RUNBOOK.md) and run
+python -m vla_forge.preflight --require-gpu on the Linux GPU host.
+A short SFT can then check the training stack; research training still requires verified corrections.
+
 ## Quick start
 
 Python 3.11+:
@@ -35,7 +46,7 @@ Python 3.11+:
 python -m pip install -e ".[dev,serve]"
 pytest -q
 vla-forge demo-planner
-vla-forge eval-command --policy lerobot/smolvla_base --output-dir outputs/eval
+vla-forge eval-command --policy lerobot/smolvla_libero --output-dir outputs/eval
 vla-forge train-command --dataset YOUR_LEROBOT_DATASET --checkpoint lerobot/smolvla_base --output-dir outputs/sft
 uvicorn vla_forge.api:app --host 127.0.0.1 --port 8000
 ~~~
