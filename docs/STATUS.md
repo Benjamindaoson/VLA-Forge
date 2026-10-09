@@ -1,6 +1,8 @@
 # Capabilities and proof levels
 
-## Implemented code (subject to CI/unit verification)
+## Implemented code and verified CI
+
+On 2026-10-09, GitHub Actions completed successfully: 47 CPU tests passed, 3 tests requiring PyTorch were skipped in the minimal CI environment, CLI smoke passed and Ruff basic lint passed. These are software-unit results, not robot-policy experiment metrics.
 
 Strict model validation, Bayesian BIR decision logic, synthetic decision example, simulator adapter interface, correction admission, split leakage guard, SQLite case events, paired statistical gate, numerical Action Chunk checks, loss helper, API and command builders.
 

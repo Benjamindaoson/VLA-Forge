@@ -4,7 +4,7 @@
 
 VLA-Forge is an evidence-first robot policy reliability and research toolkit. It diagnoses failure mechanisms, compares controlled interventions, builds validated corrective-data manifests, recommends cost-aware repairs and gates releases using paired evaluation.
 
-**Status: experimental CPU-testable core. Not a trained robot policy, not a safety-certified controller, and not an operational multi-robot product.**
+**Status: experimental CPU-tested core. Latest checked CI: 47 passed, 3 optional torch tests skipped; basic lint/CLI passed (2026-10-09). Not a trained robot policy, not a safety-certified controller, and not an operational multi-robot product.**
 
 ## Research question
 
