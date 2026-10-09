@@ -172,6 +172,8 @@ class BudgetedRepairPlanner:
         base = self._best(belief, budget)
         if base is None:
             return float("-inf")
+        # Declining an unsafe or negative-value intervention always has utility zero.
+        base_utility = max(0.0, base[1])
         expected_after = 0.0
         for outcome in next(iter(probe.likelihoods.values())):
             probability = sum(
@@ -182,10 +184,13 @@ class BudgetedRepairPlanner:
                 continue
             after = posterior_from_probe(belief, probe, outcome).posterior
             best_after = self._best(after, budget - probe.cost)
-            if best_after is None:
-                return float("-inf")
-            expected_after += probability * best_after[1]
-        return expected_after - base[1] - self.settings.cost_weight * probe.cost
+            utility_after = max(0.0, best_after[1]) if best_after is not None else 0.0
+            expected_after += probability * utility_after
+        return (
+            expected_after - base_utility
+            - self.settings.cost_weight * probe.cost
+            - self.settings.safety_weight * probe.safety_risk
+        )
 
     def recommend(self, belief: FailureBelief, budget: float | None = None) -> Recommendation:
         self._validate(belief)
@@ -210,6 +215,11 @@ class BudgetedRepairPlanner:
                     expected_utility=best[1] + value, net_information_value=value,
                     reason="Diagnostic test has positive expected net information value.",
                 )
+        if best[1] <= 0:
+            return Recommendation(
+                mode="escalate", choice_id=None, expected_utility=0.0,
+                reason="No eligible repair has positive expected net utility.",
+            )
         return Recommendation(
             mode="repair", choice_id=best[0].option_id,
             expected_utility=best[1],
