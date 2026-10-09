@@ -108,3 +108,28 @@ def test_voi_is_finite():
     prior, options, probe, settings = example()
     planner = BudgetedRepairPlanner(options, [probe], settings)
     assert math.isfinite(planner.net_value_of_information(prior, probe, 5))
+
+
+def test_negative_expected_repair_value_leads_to_escalation():
+    prior = FailureBelief(probabilities={"timing": 1.0})
+    negative = RepairOption(
+        option_id="harmful_update", kind=RepairKind.POLICY_UPDATE,
+        cost=1, safety_risk=0, regression_risk=0,
+        estimated_gain_by_hypothesis={"timing": -0.2},
+    )
+    decision = BudgetedRepairPlanner(
+        [negative], [], PlannerSettings(budget=2, cost_weight=0.01)
+    ).recommend(prior)
+    assert decision.mode == "escalate"
+    assert decision.choice_id is None
+
+
+def test_diagnostic_safety_risk_is_included_in_value():
+    prior, options, probe, settings = example()
+    settings.max_safety_risk = 0.5
+    low_risk = BudgetedRepairPlanner(options, [probe], settings)
+    risky_probe = probe.model_copy(update={"safety_risk": 0.2})
+    high_risk = BudgetedRepairPlanner(options, [risky_probe], settings)
+    normal_value = low_risk.net_value_of_information(prior, probe, 5)
+    risk_value = high_risk.net_value_of_information(prior, risky_probe, 5)
+    assert risk_value == pytest.approx(normal_value - settings.safety_weight * 0.2)
