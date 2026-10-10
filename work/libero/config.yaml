@@ -1,0 +1,5 @@
+benchmark_root: /data/VLA-Forge/third_party/LIBERO-8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero
+bddl_files: /data/VLA-Forge/third_party/LIBERO-8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files
+init_states: /data/VLA-Forge/third_party/LIBERO-8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/init_files
+datasets: /data/VLA-Forge/data/libero/datasets
+assets: /data/VLA-Forge/Assets/LIBERO-assets
