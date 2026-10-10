@@ -1,0 +1,120 @@
+{"runtime_distribution": "hf-libero", "version": "0.1.4", "runtime_package": "/data/vla-forge/.venv/lib/python3.12/site-packages/libero/libero", "asset_reference": "/data/vla-forge/external/LIBERO/libero/libero", "config": {"benchmark_root": "/data/vla-forge/external/LIBERO/libero/libero", "bddl_files": "/data/vla-forge/external/LIBERO/libero/libero/bddl_files", "init_states": "/data/vla-forge/external/LIBERO/libero/libero/init_files", "datasets": "/data/vla-forge/data", "assets": "/data/vla-forge/.venv/lib/python3.12/site-packages/libero/libero/assets"}, "config_sha256": "2ff807399c962db9f55d3b6b0f9b7f2ade9f00302e7ace5a16ea250c22e03f91"}
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 463.71it/s]
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 637.05it/s]
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /data/vla-forge/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /data/vla-forge/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Loading  /data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467 weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  30%|███       | 149/489 [00:00<00:00, 1459.27it/s]Loading weights:  81%|████████  | 397/489 [00:00<00:00, 2025.86it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 2179.26it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+{"phase": "smoke", "suite": "spatial", "task_id": 0, "episode_id": 0, "attempt": 1, "status": "error", "success": null, "action_steps": 0, "seconds": 10.560911652999494, "error": "RuntimeError: The size of tensor a (6) must match the size of tensor b (8) at non-singleton dimension 1"}
+{"phase": "smoke", "suite": "spatial", "task_id": 0, "episode_id": 1, "attempt": 1, "status": "error", "success": null, "action_steps": 0, "seconds": 10.094418702999974, "error": "RuntimeError: The size of tensor a (6) must match the size of tensor b (8) at non-singleton dimension 1"}
+{"phase": "smoke", "suite": "spatial", "task_id": 0, "episode_id": 2, "attempt": 1, "status": "error", "success": null, "action_steps": 0, "seconds": 10.275582319998648, "error": "RuntimeError: The size of tensor a (6) must match the size of tensor b (8) at non-singleton dimension 1"}
+{"phase_status": "INCOMPLETE", "metrics": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/metrics.json", "report": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/REPORT.md", "episodes_csv": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/episodes.csv"}
+{"runtime_distribution": "hf-libero", "version": "0.1.4", "runtime_package": "/data/vla-forge/.venv/lib/python3.12/site-packages/libero/libero", "asset_reference": "/data/vla-forge/external/LIBERO/libero/libero", "config": {"benchmark_root": "/data/vla-forge/external/LIBERO/libero/libero", "bddl_files": "/data/vla-forge/external/LIBERO/libero/libero/bddl_files", "init_states": "/data/vla-forge/external/LIBERO/libero/libero/init_files", "datasets": "/data/vla-forge/data", "assets": "/data/vla-forge/.venv/lib/python3.12/site-packages/libero/libero/assets"}, "config_sha256": "2ff807399c962db9f55d3b6b0f9b7f2ade9f00302e7ace5a16ea250c22e03f91"}
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 505.76it/s]
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 606.25it/s]
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /data/vla-forge/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /data/vla-forge/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Loading  /data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467 weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  25%|██▍       | 122/489 [00:00<00:00, 1218.44it/s]Loading weights:  62%|██████▏   | 301/489 [00:00<00:00, 1550.97it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 1979.75it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Could not load symbol cudnnGetLibConfig. Error: /root/miniconda3/lib/python3.10/site-packages/nvidia/cudnn/lib/libcudnn_graph.so.9: undefined symbol: cudnnGetLibConfig
+reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/reproduce.sh: line 52: 99802 Aborted                 (core dumped) "$PYTHON" "$ROOT/scripts/run_m01_libero.py" --phase smoke "${COMMON[@]}"
+{"runtime_distribution": "hf-libero", "version": "0.1.4", "runtime_package": "/data/vla-forge/.venv/lib/python3.12/site-packages/libero/libero", "asset_reference": "/data/vla-forge/external/LIBERO/libero/libero", "config": {"benchmark_root": "/data/vla-forge/external/LIBERO/libero/libero", "bddl_files": "/data/vla-forge/external/LIBERO/libero/libero/bddl_files", "init_states": "/data/vla-forge/external/LIBERO/libero/libero/init_files", "datasets": "/data/vla-forge/data", "assets": "/data/vla-forge/.venv/lib/python3.12/site-packages/libero/libero/assets"}, "config_sha256": "2ff807399c962db9f55d3b6b0f9b7f2ade9f00302e7ace5a16ea250c22e03f91"}
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 596.77it/s]
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 782.91it/s]
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /data/vla-forge/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /data/vla-forge/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Loading  /data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467 weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  29%|██▉       | 141/489 [00:00<00:00, 1409.17it/s]Loading weights:  75%|███████▍  | 365/489 [00:00<00:00, 1895.16it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 2155.16it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+{"phase": "smoke", "suite": "spatial", "task_id": 0, "episode_id": 0, "attempt": 2, "status": "complete", "success": false, "action_steps": 220, "seconds": 52.822689064996666, "error": ""}
+{"phase": "smoke", "suite": "spatial", "task_id": 0, "episode_id": 1, "attempt": 2, "status": "complete", "success": true, "action_steps": 79, "seconds": 18.307191075000446, "error": ""}
+{"phase": "smoke", "suite": "spatial", "task_id": 0, "episode_id": 2, "attempt": 2, "status": "complete", "success": false, "action_steps": 220, "seconds": 50.44534319300146, "error": ""}
+{"phase_status": "SMOKE_PASS", "metrics": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/metrics.json", "report": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/REPORT.md", "episodes_csv": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/episodes.csv"}
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /data/vla-forge/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /data/vla-forge/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Loading  /data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467 weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  30%|███       | 149/489 [00:00<00:00, 1432.69it/s]Loading weights:  78%|███████▊  | 381/489 [00:00<00:00, 1922.08it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 2136.14it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "action_steps": 220, "seconds": 52.68143631100247, "error": ""}
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "action_steps": 79, "seconds": 18.892066289001377, "error": ""}
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "action_steps": 220, "seconds": 50.31362845900003, "error": ""}
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "action_steps": 81, "seconds": 18.908078494998335, "error": ""}
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "action_steps": 220, "seconds": 51.46896787000151, "error": ""}
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "action_steps": 220, "seconds": 50.313428904999455, "error": ""}
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "action_steps": 75, "seconds": 17.63557099099853, "error": ""}
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "action_steps": 220, "seconds": 50.65546760800498, "error": ""}
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "action_steps": 83, "seconds": 19.35079984299955, "error": ""}
+{"phase": "formal", "suite": "spatial", "task_id": 0, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "action_steps": 76, "seconds": 17.78803224400326, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "action_steps": 129, "seconds": 19.633492216002196, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "action_steps": 128, "seconds": 19.00331804400048, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "action_steps": 117, "seconds": 16.915053122000245, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "action_steps": 280, "seconds": 41.32166035299451, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "action_steps": 126, "seconds": 18.65350098699855, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "action_steps": 280, "seconds": 41.01157588099886, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "action_steps": 143, "seconds": 21.17023332900135, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "action_steps": 280, "seconds": 41.34776123500342, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "action_steps": 129, "seconds": 18.705868516997725, "error": ""}
+{"phase": "formal", "suite": "object", "task_id": 0, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "action_steps": 280, "seconds": 39.87255352400098, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "action_steps": 135, "seconds": 26.053807961005077, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "action_steps": 123, "seconds": 24.166170420001436, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "action_steps": 117, "seconds": 23.256896900005813, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "action_steps": 126, "seconds": 24.52542741599609, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "action_steps": 128, "seconds": 24.67357745699701, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "action_steps": 118, "seconds": 22.394768173995544, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "action_steps": 125, "seconds": 24.360558047999803, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "action_steps": 127, "seconds": 25.422002161998535, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "action_steps": 128, "seconds": 26.073818414995912, "error": ""}
+{"phase": "formal", "suite": "goal", "task_id": 0, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "action_steps": 123, "seconds": 25.275803676995565, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "action_steps": 520, "seconds": 81.28853838899522, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "action_steps": 259, "seconds": 41.65684599099768, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "action_steps": 520, "seconds": 87.43142888999864, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "action_steps": 261, "seconds": 43.0361305309998, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "action_steps": 520, "seconds": 88.12774557700322, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "action_steps": 264, "seconds": 43.14571824199811, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "action_steps": 520, "seconds": 84.29515478800022, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "action_steps": 520, "seconds": 84.61836585000128, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "action_steps": 520, "seconds": 81.64934416100004, "error": ""}
+{"phase": "formal", "suite": "long", "task_id": 0, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "action_steps": 520, "seconds": 82.67633341100009, "error": ""}
+{"phase_status": "PASS", "metrics": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/metrics.json", "report": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/REPORT.md", "episodes_csv": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/episodes.csv"}

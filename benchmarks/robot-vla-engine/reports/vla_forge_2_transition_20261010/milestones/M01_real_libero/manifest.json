@@ -1,0 +1,335 @@
+{
+  "milestone": "M01_real_libero",
+  "model": {
+    "repo_id": "lerobot/smolvla_libero",
+    "revision": "31d453f7edd78c839a8bbc39744a292686daf0de",
+    "snapshot_path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de",
+    "files": [
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/.gitattributes",
+        "size_bytes": 1519,
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/README.md",
+        "size_bytes": 1686,
+        "sha256": "a20b9db396342b7c37a07125c619266289831ac9fa7b3c759ff7239d2b4362a6"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/config.json",
+        "size_bytes": 2419,
+        "sha256": "5c9f3ba9f5f37ea7024c9501b0b20b1941f232989c2167853cb46d9071a70dd7"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/model.safetensors",
+        "size_bytes": 906712520,
+        "sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_postprocessor.json",
+        "size_bytes": 660,
+        "sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+        "size_bytes": 5676,
+        "sha256": "b0cdde6e8a6f49a8e19eefb376728e47c09d3b3cc20ce3a97c45619fe7a732d9"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_preprocessor.json",
+        "size_bytes": 2042,
+        "sha256": "122ec5106602b1bf129f49690d05ab2f49748a0ac6119de55ea0677d4e90d248"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_preprocessor_step_5_normalizer_processor.safetensors",
+        "size_bytes": 5676,
+        "sha256": "b0cdde6e8a6f49a8e19eefb376728e47c09d3b3cc20ce3a97c45619fe7a732d9"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/train_config.json",
+        "size_bytes": 9631,
+        "sha256": "df25e6fce4cf2161b7a22c495230e332bad5f73f1ca07605b35fa77500917b9c"
+      }
+    ]
+  },
+  "vision_language_backbone": {
+    "repo_id": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+    "revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+    "snapshot_path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+    "files": [
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/added_tokens.json",
+        "size_bytes": 4739,
+        "sha256": "74135b8664b56088c0006f1c8e848d79a8eba003411f72ebf1dc2ee96227be3a"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/chat_template.json",
+        "size_bytes": 430,
+        "sha256": "b585e3598909a5687f9f9d738d35223724dedef256b9b274e1cbfb32b13c74bf"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/config.json",
+        "size_bytes": 3767,
+        "sha256": "ea6bc1237e96247f6258de3e202e2e62b93d6f386dc47e7b36b5588bf3a15e17"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/generation_config.json",
+        "size_bytes": 136,
+        "sha256": "34835060c9f0f74d1acb456cc72ca32746d3843d9eb5f578f9cbffac1d2eb840"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/merges.txt",
+        "size_bytes": 466391,
+        "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/model.safetensors",
+        "size_bytes": 2029990624,
+        "sha256": "b9bfd456c9472c0acd5719d6e514c4b859891af205ee1a736552fd3497b8b0c3"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/preprocessor_config.json",
+        "size_bytes": 599,
+        "sha256": "149e315d9410368e5491455bb06e0f763426e9e56cca731c13b24404a29b6374"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json",
+        "size_bytes": 67,
+        "sha256": "f3ad45028447b3562b4752be0d5916d6806c1ef589091a469608dcf0faa1737c"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/special_tokens_map.json",
+        "size_bytes": 868,
+        "sha256": "2dfea2a426162316ff1567c82bc6d36d9690cd9f90455f075c77daca78b45c60"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer.json",
+        "size_bytes": 3548256,
+        "sha256": "5ece781dc8d2b2f3e2f289ca0ae50b17cfc27dd27bfe7971bb8241e0b964331a"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer_config.json",
+        "size_bytes": 28626,
+        "sha256": "dd9ce2ab89a3dd881bd9378f1a79b943a064b9275a7e1706d5b7b47b68977913"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/vocab.json",
+        "size_bytes": 800662,
+        "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79"
+      }
+    ]
+  },
+  "dataset": {
+    "repo_id": "lerobot/libero",
+    "revision": "a1aaacb7f6cd6ee5fb43120f673cebb0cfea7dd4",
+    "metadata_sha256": "630630a1a4f07fc9fc1f1b2b7987ed3bd034bd8cffaaf8a0e6939ae9c468445d",
+    "metadata_path": "/data/vla-forge/data/libero/meta/info.json",
+    "episode_count": 1693,
+    "task_count": 40
+  },
+  "runtime": {
+    "packages": {
+      "lerobot": "0.6.2",
+      "torch": "2.7.1+cu128",
+      "transformers": "5.5.4",
+      "huggingface-hub": "1.33.0",
+      "hf-libero": "0.1.4",
+      "mujoco": "3.8.1",
+      "robosuite": "1.4.0",
+      "av": "15.1.0",
+      "safetensors": "0.8.0"
+    },
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 3090",
+      "total_memory_bytes": 25296044032,
+      "cuda": "12.8",
+      "device_index": 0,
+      "pytorch_allocator_budget": {
+        "device_name": "NVIDIA GeForce RTX 3090",
+        "physical_bytes": 25296044032,
+        "allocator_limit_bytes": 23622320128,
+        "allocator_fraction": 0.9338345591949988,
+        "scope": "PyTorch caching allocator only; CUDA context and renderer require separate device monitoring"
+      }
+    },
+    "mujoco_gl": "egl",
+    "libero_config": "/data/vla-forge/work/libero"
+  },
+  "policy_contract": {
+    "policy_type": "smolvla",
+    "input_features": {
+      "observation.state": [
+        6
+      ],
+      "observation.images.camera1": [
+        3,
+        256,
+        256
+      ],
+      "observation.images.camera2": [
+        3,
+        256,
+        256
+      ],
+      "observation.images.camera3": [
+        3,
+        256,
+        256
+      ]
+    },
+    "output_features": {
+      "action": [
+        7
+      ]
+    },
+    "n_action_steps": 50,
+    "chunk_size": 50,
+    "image_resolution": [
+      256,
+      256
+    ],
+    "resize_imgs_with_padding": [
+      512,
+      512
+    ],
+    "checkpoint_empty_cameras": 0,
+    "dataset_repo_id": "lerobot/libero",
+    "dataset_revision": null
+  },
+  "experiment_contract": {
+    "suite_task_selection": {
+      "spatial": {
+        "benchmark_suite": "libero_spatial",
+        "task_id": 0
+      },
+      "object": {
+        "benchmark_suite": "libero_object",
+        "task_id": 0
+      },
+      "goal": {
+        "benchmark_suite": "libero_goal",
+        "task_id": 0
+      },
+      "long": {
+        "benchmark_suite": "libero_10",
+        "task_id": 0
+      }
+    },
+    "long_suite_compatibility": "LIBERO's pinned official API names this suite libero_10",
+    "smoke": {
+      "suite": "spatial",
+      "task_id": 0,
+      "episodes": 3,
+      "initial_state_indices": [
+        0,
+        1,
+        2
+      ]
+    },
+    "formal_episodes_per_suite": 10,
+    "formal_initial_state_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "seed_rule": "seed_base + suite_ordinal*100 + episode_id",
+    "control_mode": "relative (pinned LiberoEnv default; verified from installed LeRobot source)",
+    "action_execution": "policy.select_action dequeues one action from the configured predicted chunk; postprocessor unnormalizes; command is clipped to [-1,1] and passed to env.step",
+    "executed_action_evidence": "trajectory actions are the exact float32 vectors passed as env.step arguments; simulator internal actuator forces are not instrumented",
+    "camera_mapping": {
+      "observation.images.image": "observation.images.camera1",
+      "observation.images.image2": "observation.images.camera2",
+      "camera3": "not fabricated; pinned config empty_cameras=0 and policy accepts present images"
+    },
+    "state_projection": "official LiberoProcessorStep order is eef position xyz + axis-angle xyz + gripper qpos[2]; checkpoint normalizer declares state dim 6, so only the first six pose components are retained"
+  },
+  "source": {
+    "execution_checkout_revision": "f4037c32b87f56a53d005a8f02653a173c90d3a5",
+    "execution_worktree_status": [
+      "?? reports/libero_runtime_provenance.json",
+      "?? reports/server_3090_20261010/asset_transfer.json",
+      "?? reports/server_3090_20261010/collector_preflight_remote.log",
+      "?? reports/server_3090_20261010/doctor.log",
+      "?? reports/server_3090_20261010/gpu_scene_smoke.json",
+      "?? reports/server_3090_20261010/gpu_scene_smoke.log",
+      "?? reports/server_3090_20261010/gpu_training_profile.log",
+      "?? reports/server_3090_20261010/installed_packages.txt",
+      "?? reports/server_3090_20261010/libero_runtime_provenance.json",
+      "?? reports/server_3090_20261010/linux_full_tests.log",
+      "?? reports/server_3090_20261010/qualification_v1.json",
+      "?? reports/server_3090_20261010/remote_preflight/",
+      "?? reports/server_3090_20261010/runtime_verification.json",
+      "?? reports/server_3090_20261010/smoke_probe.py",
+      "?? reports/vla_forge_2_transition_20261010/",
+      "?? scripts/run_m01_libero.py",
+      "?? src/robot_vla/m01.py",
+      "?? tests/test_m01.py"
+    ],
+    "requested_source_revision": "e99cf86d9322c472c4cb62f3bc431a1f45c4d12c",
+    "tracked_source_hashes": {
+      "scripts/run_m01_libero.py": "ace053dbd44f66cffa9cf2640350305c009731730c464ab14be41fb1ede70477",
+      "src/robot_vla/m01.py": "7b84e449c8c73b979f33ec6022bf03f59713cc8ce2a2a37f5e92130246ff3479",
+      "scripts/evaluate_policy.py": "bb6ad00268f93569e54a6efde0c212a57235db340a391b3a14a3e02d408c6f86",
+      "src/robot_vla/rollout.py": "5e82ebe795c6edca0cd0724779580dd6ddc75cce3ed8982dca795e2894d18ee6",
+      "src/robot_vla/observations.py": "b4c7bf656cd2c314108fbe86f535253d7f5c7205874402d1d6438e2aaa19a5cb",
+      "src/robot_vla/instrumentation.py": "a25fa01635b5f822b6f62cd2bbcf3d6327ccefa1402cbb0a23cd51a38171c739",
+      "configs/data_protocol_v1.json": "8b36708efaf90088c0bdc6077b4243f5fbbc07739be47fb89f2ab143df9de460"
+    }
+  },
+  "started_at": "2026-10-10T00:35:30.432700+00:00",
+  "runs": [
+    {
+      "phase": "smoke",
+      "started_at": "2026-10-10T00:35:30.432974+00:00",
+      "model_load_seconds": 7.906952648001607,
+      "ended_at": "2026-10-10T00:36:02.974712+00:00",
+      "elapsed_seconds": 32.540015301001404,
+      "phase_status": "INCOMPLETE",
+      "runtime_errors": 3
+    },
+    {
+      "phase": "smoke",
+      "started_at": "2026-10-10T00:46:33.549276+00:00",
+      "model_load_seconds": 7.70702688399615
+    },
+    {
+      "phase": "smoke",
+      "started_at": "2026-10-10T01:18:31.199370+00:00",
+      "model_load_seconds": 7.7966437229988514,
+      "ended_at": "2026-10-10T01:21:04.676833+00:00",
+      "elapsed_seconds": 153.47551211599784,
+      "phase_status": "SMOKE_PASS",
+      "runtime_errors": 0
+    },
+    {
+      "phase": "formal",
+      "started_at": "2026-10-10T01:21:29.140315+00:00",
+      "model_load_seconds": 7.654693921998842,
+      "ended_at": "2026-10-10T01:54:06.179102+00:00",
+      "elapsed_seconds": 1957.0357097730011,
+      "phase_status": "PASS",
+      "runtime_errors": 0
+    }
+  ],
+  "checkpoint_training_config": {
+    "pretrained_path": null,
+    "empty_cameras": 0,
+    "load_vlm_weights": true,
+    "processor_rename_map": {
+      "observation.images.image": "observation.images.camera1",
+      "observation.images.image2": "observation.images.camera2"
+    }
+  },
+  "model_load_seconds": 7.906952648001607,
+  "model_load_peak_allocated_bytes": 927002112,
+  "model_load_peak_reserved_bytes": 950009856,
+  "latest_status": "PASS",
+  "updated_at": "2026-10-10T01:54:06.179123+00:00"
+}

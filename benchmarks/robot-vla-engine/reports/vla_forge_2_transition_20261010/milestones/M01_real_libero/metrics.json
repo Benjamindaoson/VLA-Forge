@@ -1,0 +1,79 @@
+{
+  "milestone": "M01_real_libero",
+  "status": "PASS",
+  "smoke_gate_passed": true,
+  "formal_coverage_complete": true,
+  "at_least_one_video_sha256_verified": true,
+  "verified_video_count": 43,
+  "formal": {
+    "spatial": {
+      "completed_episodes": 10,
+      "successes": 5,
+      "failures": 5,
+      "success_rate": 0.5
+    },
+    "object": {
+      "completed_episodes": 10,
+      "successes": 6,
+      "failures": 4,
+      "success_rate": 0.6
+    },
+    "goal": {
+      "completed_episodes": 10,
+      "successes": 10,
+      "failures": 0,
+      "success_rate": 1.0
+    },
+    "long": {
+      "completed_episodes": 10,
+      "successes": 3,
+      "failures": 7,
+      "success_rate": 0.3
+    }
+  },
+  "smoke": {
+    "spatial": {
+      "completed_episodes": 3,
+      "successes": 1,
+      "failures": 2,
+      "success_rate": 0.3333333333333333
+    }
+  },
+  "formal_task_timing": {
+    "spatial": {
+      "episode_wall_seconds_mean": 34.80074770150095,
+      "policy_inference_mean_ms_across_episodes": 9.600637136220271,
+      "policy_inference_p95_ms_mean_across_episodes": 2.7804965499999987
+    },
+    "object": {
+      "episode_wall_seconds_mean": 27.76350172079983,
+      "policy_inference_mean_ms_across_episodes": 8.828990793709679,
+      "policy_inference_p95_ms_mean_across_episodes": 2.732701305
+    },
+    "goal": {
+      "episode_wall_seconds_mean": 24.62028306299908,
+      "policy_inference_mean_ms_across_episodes": 9.31140254752528,
+      "policy_inference_p95_ms_mean_across_episodes": 2.7893033099999993
+    },
+    "long": {
+      "episode_wall_seconds_mean": 71.79256058299943,
+      "policy_inference_mean_ms_across_episodes": 8.300397707392662,
+      "policy_inference_p95_ms_mean_across_episodes": 2.5700950399999987
+    }
+  },
+  "formal_completed_episodes": 40,
+  "formal_expected_episodes": 40,
+  "smoke_completed_episodes": 3,
+  "smoke_expected_episodes": 3,
+  "runtime_error_rows": 0,
+  "episode_wall_seconds_sum": 1711.3461540159915,
+  "gpu_peak_allocated_bytes": 964068864,
+  "gpu_peak_reserved_bytes": 1002438656,
+  "phase_status": "PASS",
+  "phase_reason": null,
+  "phase_elapsed_seconds": 1957.0243692000004,
+  "model_load_seconds": 7.654693921998842,
+  "model_load_peak_allocated_bytes": 927002112,
+  "model_load_peak_reserved_bytes": 950009856,
+  "gpu_peak_system_memory_mib": 1297.0
+}

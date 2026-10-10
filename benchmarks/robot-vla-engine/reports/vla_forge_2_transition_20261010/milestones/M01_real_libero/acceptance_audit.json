@@ -1,0 +1,1868 @@
+{
+  "audit": "independent_m01_artifact_validation",
+  "audited_at_utc": "2026-10-10T01:58:43Z",
+  "audit_seconds": 8.524,
+  "result": "PASS",
+  "formal_rows": 40,
+  "smoke_rows": 3,
+  "unique_episode_ids": 43,
+  "unique_episode_ids_expected": 43,
+  "decoded_videos": 43,
+  "video_frames_min": 75,
+  "video_frames_max": 520,
+  "verified_trajectories": 43,
+  "exact_action_trace_matches": 43,
+  "verified_checkpoint_files": 21,
+  "verified_dataset_info_sha256": "630630a1a4f07fc9fc1f1b2b7987ed3bd034bd8cffaaf8a0e6939ae9c468445d",
+  "attempt_records": 46,
+  "attempt_errors": 3,
+  "current_csv_runtime_errors": 0,
+  "formal_successes": 24,
+  "formal_total": 40,
+  "problems": [],
+  "videos": [
+    {
+      "episode": [
+        "smoke",
+        "spatial",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/smoke_spatial_task0_episode00_attempt2.mp4",
+      "sha256": "fd921dbacb017490b5d056e1cb7f3d8f1741a494ede7abd8866fde0c940d4912",
+      "bytes": 165180,
+      "decoded_frames": 220
+    },
+    {
+      "episode": [
+        "smoke",
+        "spatial",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/smoke_spatial_task0_episode01_attempt2.mp4",
+      "sha256": "8d2483984d58c2ff339929b88bf70d893acec13f60286492847a1a4902c27e18",
+      "bytes": 62010,
+      "decoded_frames": 79
+    },
+    {
+      "episode": [
+        "smoke",
+        "spatial",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/smoke_spatial_task0_episode02_attempt2.mp4",
+      "sha256": "7a93c506cc99afaf404683b40642ebc000c695cc72612d6f98431555b4a1c06b",
+      "bytes": 151212,
+      "decoded_frames": 220
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode00_attempt1.mp4",
+      "sha256": "fd921dbacb017490b5d056e1cb7f3d8f1741a494ede7abd8866fde0c940d4912",
+      "bytes": 165180,
+      "decoded_frames": 220
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode01_attempt1.mp4",
+      "sha256": "8d2483984d58c2ff339929b88bf70d893acec13f60286492847a1a4902c27e18",
+      "bytes": 62010,
+      "decoded_frames": 79
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode02_attempt1.mp4",
+      "sha256": "7a93c506cc99afaf404683b40642ebc000c695cc72612d6f98431555b4a1c06b",
+      "bytes": 151212,
+      "decoded_frames": 220
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode03_attempt1.mp4",
+      "sha256": "0d13ad9d0901590c9eafdbc86d96d9b6c4ae6d1de0e1d621b6259caa6e880479",
+      "bytes": 64490,
+      "decoded_frames": 81
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode04_attempt1.mp4",
+      "sha256": "10bcb57901310fe077c998119647d0808ec481bc927ae054d0bdc2e927057db3",
+      "bytes": 161268,
+      "decoded_frames": 220
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode05_attempt1.mp4",
+      "sha256": "679295ef9d741964237bc26eb2bcaa82e49beaafcb653f183364cdf960ec3c66",
+      "bytes": 167194,
+      "decoded_frames": 220
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode06_attempt1.mp4",
+      "sha256": "c61ece08c9d413a5eae4c919989475db31fdf3c379906ab3495222aca25500e7",
+      "bytes": 60208,
+      "decoded_frames": 75
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode07_attempt1.mp4",
+      "sha256": "32756e26612540a666c652c6bde2b6a130116a1070830990c9532cb4b8871fbc",
+      "bytes": 157352,
+      "decoded_frames": 220
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode08_attempt1.mp4",
+      "sha256": "e6d0d0a14b38087c7ad05456f68b7453de22882516ae3161832c232ff2db851b",
+      "bytes": 64689,
+      "decoded_frames": 83
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_spatial_task0_episode09_attempt1.mp4",
+      "sha256": "706ea0f280ea483ae35f94b7730827ef7ec4de9e9cc1895bae0fa4cef4df0cd2",
+      "bytes": 62584,
+      "decoded_frames": 76
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode00_attempt1.mp4",
+      "sha256": "137e687311c4e0ef1c524c3991052cc6c7989f31199068fe18dd3a5e4e43281b",
+      "bytes": 80540,
+      "decoded_frames": 129
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode01_attempt1.mp4",
+      "sha256": "eb65bad9d581983c9fae69214a3ee4545cb4f99639e35294a3ca85eedd8166af",
+      "bytes": 77664,
+      "decoded_frames": 128
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode02_attempt1.mp4",
+      "sha256": "ecb4310db289595c756352ae4e0a8992ef94dfcc3b06da1081e4c4f61c390abb",
+      "bytes": 70003,
+      "decoded_frames": 117
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode03_attempt1.mp4",
+      "sha256": "4defae939d83885d02a3ad4cbe257abdf3483870b1a8f2029e7dd415622ae403",
+      "bytes": 185866,
+      "decoded_frames": 280
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode04_attempt1.mp4",
+      "sha256": "058c149608003e81c877f24e2f1a74bbed148ee19ab920252df27463ca64a39c",
+      "bytes": 76511,
+      "decoded_frames": 126
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode05_attempt1.mp4",
+      "sha256": "8e8910cc8b8c2305d2bd703795f4442f4c74ff27aeb3598a5f9a969cbc3072e7",
+      "bytes": 168098,
+      "decoded_frames": 280
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode06_attempt1.mp4",
+      "sha256": "8d6af22faeb87d938acb03f9ada230d75bc4f0652a95440a2929a7efb164af1f",
+      "bytes": 84347,
+      "decoded_frames": 143
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode07_attempt1.mp4",
+      "sha256": "bde1a1938b54a1e0e6097aaa5695b78b285be995b99bc2d4d944f1d9e179efc3",
+      "bytes": 162842,
+      "decoded_frames": 280
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode08_attempt1.mp4",
+      "sha256": "b45b8dda062b721741376a19e60d81addf708da0c9696934786496246376fffe",
+      "bytes": 76618,
+      "decoded_frames": 129
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_object_task0_episode09_attempt1.mp4",
+      "sha256": "002bf5d330034b90b13e7863738eab62296c57b0e7bc5683afbce8ceda36b140",
+      "bytes": 168537,
+      "decoded_frames": 280
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode00_attempt1.mp4",
+      "sha256": "c0e6d4b2ee5d73fb167e42b5172390ec454c69452457917d6127d735ee4fd7e1",
+      "bytes": 92537,
+      "decoded_frames": 135
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode01_attempt1.mp4",
+      "sha256": "a693fbf9c1bb14b9fd1b5695d80dd855c750ec95e15089ffc37ced648a40cbe5",
+      "bytes": 84971,
+      "decoded_frames": 123
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode02_attempt1.mp4",
+      "sha256": "33dfe8b155fb737a204679d8698fc7f1c23a02fdca196f001b294526d4a83d83",
+      "bytes": 79592,
+      "decoded_frames": 117
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode03_attempt1.mp4",
+      "sha256": "2d18481c3e423a318cd17feb67dba5775af3fdc78b538ee5dc4d9183e7ba15fc",
+      "bytes": 91341,
+      "decoded_frames": 126
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode04_attempt1.mp4",
+      "sha256": "95c60b63c2a13b7dc8ccd86a96fd427d8cf56b183adc204a61ebfeb34087a1f4",
+      "bytes": 88708,
+      "decoded_frames": 128
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode05_attempt1.mp4",
+      "sha256": "73443fba98717ee900fd6b9fc724b48cfeb2c3b92a443e9ae1166e1f6a839b87",
+      "bytes": 77888,
+      "decoded_frames": 118
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode06_attempt1.mp4",
+      "sha256": "e6ebd929018d36dd0a8ceecd285206a7ee5d4fca49ed217b073f7ec78537c37b",
+      "bytes": 81873,
+      "decoded_frames": 125
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode07_attempt1.mp4",
+      "sha256": "e1021a34f117a754d53ef364bdcf0833168559c89cf08b6b2c9762346bc273b3",
+      "bytes": 86763,
+      "decoded_frames": 127
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode08_attempt1.mp4",
+      "sha256": "115b2d92a3a0310301578e8112f8dd777935d6895ae24dbfc2b7e48f52923cfc",
+      "bytes": 90357,
+      "decoded_frames": 128
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_goal_task0_episode09_attempt1.mp4",
+      "sha256": "7374058ecbc8cd4a351cd604d86865bde9e6b56ec8bbc54a5bc6ae9167b753e4",
+      "bytes": 87924,
+      "decoded_frames": 123
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode00_attempt1.mp4",
+      "sha256": "f37050398635e6b35ba41c7e7c64036c01e1b425c574f5b5d2b079102178feb5",
+      "bytes": 404413,
+      "decoded_frames": 520
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode01_attempt1.mp4",
+      "sha256": "f44892777658149d7e92c42c8e7131b1cbc1fd308eb7495e5b197ad1669b00c5",
+      "bytes": 174227,
+      "decoded_frames": 259
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode02_attempt1.mp4",
+      "sha256": "356c64d7ce4afde2e11df68505cf466c1cfd39553a2b397839f6db1925cb5d39",
+      "bytes": 325946,
+      "decoded_frames": 520
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode03_attempt1.mp4",
+      "sha256": "78aa365f22db9f8e4c37de1c082d723d336d370e87b2f635c7e659472a52d69d",
+      "bytes": 167946,
+      "decoded_frames": 261
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode04_attempt1.mp4",
+      "sha256": "99c6116931c48400894c8978ed10c1ad7830eb15500400d6f572dbb50a717464",
+      "bytes": 347125,
+      "decoded_frames": 520
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode05_attempt1.mp4",
+      "sha256": "1bf3977362212dd70e1b77a0f3fc0650be1a994af37b95483690fdb46f7aa4e8",
+      "bytes": 172677,
+      "decoded_frames": 264
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode06_attempt1.mp4",
+      "sha256": "42b7f1d194c9372a0b19742ea31311b7384143be06a9d41cbdbe4af65a8f893f",
+      "bytes": 340794,
+      "decoded_frames": 520
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode07_attempt1.mp4",
+      "sha256": "3ccc0fe04a7dcb75b5c8b9abe36859883b71950ddd56cd595a253198390072cd",
+      "bytes": 314675,
+      "decoded_frames": 520
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode08_attempt1.mp4",
+      "sha256": "86c3ef89b631b9cf359e89fbfeed75e04dc200de6533d50da3b6bfa38fab41ab",
+      "bytes": 373185,
+      "decoded_frames": 520
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/videos/formal_long_task0_episode09_attempt1.mp4",
+      "sha256": "ddd42d314b22f589286115691af87b61149cd4ca0b0f7691648e468b126e757d",
+      "bytes": 369576,
+      "decoded_frames": 520
+    }
+  ],
+  "trajectories": [
+    {
+      "episode": [
+        "smoke",
+        "spatial",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T011831-b12b7d109da3/rollout-d56469c55924d030/trajectory.npz",
+      "sha256": "b2a84ac69f68b96eb9d9332eba9781f6a60b1059a44b01edda66bfeba947e626",
+      "action_shape": [
+        220,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "smoke",
+        "spatial",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T011831-b12b7d109da3/rollout-c78d52d48007795b/trajectory.npz",
+      "sha256": "6024890dcd91d81b8fb62076e667faaf91ac5acb052a1a47f5bb77497eb2c975",
+      "action_shape": [
+        79,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "smoke",
+        "spatial",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T011831-b12b7d109da3/rollout-c1d9c353cda6b08f/trajectory.npz",
+      "sha256": "905debde4702a11972fdef1b210a9528a9207fe765d22a47e5c5cc04edc8adc5",
+      "action_shape": [
+        220,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-d56469c55924d030/trajectory.npz",
+      "sha256": "af689a110a0038857da085197e97f65107b7c67dea55f0b019bc6dc4513e103e",
+      "action_shape": [
+        220,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-c78d52d48007795b/trajectory.npz",
+      "sha256": "0e9245b755180f30850134ca56a24b9290eb3586af6c2f74ec3c2ec9062dbf8d",
+      "action_shape": [
+        79,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-c1d9c353cda6b08f/trajectory.npz",
+      "sha256": "ac6349080f5acdfb3299483d3900b4e04eeb781e72820f4f32e955cdccac1a3f",
+      "action_shape": [
+        220,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-226dee0c2e93bcef/trajectory.npz",
+      "sha256": "bb2e08637d274c10271c8d406404f426340556620474ccec3fbe17482878ee34",
+      "action_shape": [
+        81,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-ce788b9018e2a09a/trajectory.npz",
+      "sha256": "9489db93fdf8c3739d4e8ebcaf35b679e37cb08fdf462605fef02d72549b71ed",
+      "action_shape": [
+        220,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-fc208b35efe02f24/trajectory.npz",
+      "sha256": "9978c4fc8a4bd53bd84f4039eb4217e04b813347336a504120d4d0a7a1c6ffe8",
+      "action_shape": [
+        220,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-1d2b9a08abee05d0/trajectory.npz",
+      "sha256": "217a1e722da94ae9ebba9751ec2349249ccb1b72b1d80b5b8e2e7cc0e963bcb5",
+      "action_shape": [
+        75,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-14bc254a0d23b2a9/trajectory.npz",
+      "sha256": "49702925927d540eadbf112008cf99f21132371487d9dc33c93f75e3d6bfff61",
+      "action_shape": [
+        220,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-aa1e5b66a0dae49c/trajectory.npz",
+      "sha256": "bd95898697bf3e8e21dc2c2c68d1d83efd57962fadf7dbed5e39407dd79df158",
+      "action_shape": [
+        83,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-ce76f747f091db27/trajectory.npz",
+      "sha256": "bf0ae60cd980751accdbe51688276cf9e05a4a4d29e08e4a79471c01ce7f15d8",
+      "action_shape": [
+        76,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-5862f636e75f5689/trajectory.npz",
+      "sha256": "f77a1ba18e3cad96e8f1b9099fd36f77f095fafbb2b1166101744381b6998d18",
+      "action_shape": [
+        129,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-83b89c96c6d9025d/trajectory.npz",
+      "sha256": "1498f8275a9a6107620cd85ab5c8ea82b6a59c0abc6aba4b95e040ffaba86f78",
+      "action_shape": [
+        128,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-bdba6cb61281ff07/trajectory.npz",
+      "sha256": "db87aa766a132b323b26a4660545ceddf16ab545c2b61538c4988411ae728610",
+      "action_shape": [
+        117,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-aefee65f72554983/trajectory.npz",
+      "sha256": "dc852d7bbf41e3cba8709f420e9f8382128d98cfa97f83f5a50e5ec9aaf7d492",
+      "action_shape": [
+        280,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-096e93ad562cd55e/trajectory.npz",
+      "sha256": "ae5ca2021bcfe5c80d029cf53ebd8df7541d3b7cc795b40e62682aab919c5bbb",
+      "action_shape": [
+        126,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-125dd979068244e8/trajectory.npz",
+      "sha256": "4387dd631661493827c15990158be18249839643c29b5e30d77591db272e598f",
+      "action_shape": [
+        280,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-590b3907839ac5fc/trajectory.npz",
+      "sha256": "7f5abbd574dc335e5725b4310f64d380c84c46be615f1a98a69ac14f00d6903a",
+      "action_shape": [
+        143,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-33cfb8b6683936f8/trajectory.npz",
+      "sha256": "70e7a16186c6d3071927b4f271988424514c96386f56435c950487c1248e1ad5",
+      "action_shape": [
+        280,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-481ca3e860364bb9/trajectory.npz",
+      "sha256": "dc7186af3509a1b21fef77a6bb8e6fc140bc06325e777d3131fba0c942375e5b",
+      "action_shape": [
+        129,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-62ab2b7d3dcae335/trajectory.npz",
+      "sha256": "05d0b4174727835238a35a395d53d0cfe0c4312c929dce22af89c3bc1c908b50",
+      "action_shape": [
+        280,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-eb5ebd355fe36fe2/trajectory.npz",
+      "sha256": "f1901fb56fa359e9e0ec3b13b49cbe2fa774ee9e1c2632c86a23fa13712669a0",
+      "action_shape": [
+        135,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-bb8337d9a080b35a/trajectory.npz",
+      "sha256": "b95fe66481bcd51e70026bf1a15b66f372eac44149edf5da894a2f7168c08826",
+      "action_shape": [
+        123,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-ff335f858b07a1dc/trajectory.npz",
+      "sha256": "986e3259224d8a3ab1bcabaa362603a17b0e441e9235355515236a290680804b",
+      "action_shape": [
+        117,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-b91ede655cb58568/trajectory.npz",
+      "sha256": "930e0e358ec872d1949dd5b95b81d6b23052c18fe8615542431cd5d0bd34549d",
+      "action_shape": [
+        126,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-92a712b213f6e0c2/trajectory.npz",
+      "sha256": "424f83de87a699a1bf5019d36da3129ab8266806dc042ac40ec549a4927987f3",
+      "action_shape": [
+        128,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-cf9875702c9e83fb/trajectory.npz",
+      "sha256": "6e5b2da960378a5aaeca1a4f2b0b680ae4d2280e7db1dfcad2a3e818e7ac4980",
+      "action_shape": [
+        118,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-054ccba83dd0518f/trajectory.npz",
+      "sha256": "8f5e604e1a8c68fb67fd26abd5bf2a7a44daa029d0aeb2800fc0fdf9a8ae08c5",
+      "action_shape": [
+        125,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-8c57c34155d886d2/trajectory.npz",
+      "sha256": "92fd5c3e3d0ff5a5eb9805beef6c251fa1467a5f768a6a867682d794367d783f",
+      "action_shape": [
+        127,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-8bd121ce36441523/trajectory.npz",
+      "sha256": "8c54acc54921d6e2dbd31aedec93a5ce1328cb73325f8a96b89f393180014a4c",
+      "action_shape": [
+        128,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-e60d2b51184b3ad2/trajectory.npz",
+      "sha256": "877c8c812674117df2116973efcb76eed8ec897f612a5bb727562fda83d408a4",
+      "action_shape": [
+        123,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-6419c99f4e375b46/trajectory.npz",
+      "sha256": "49edeb8cbd40959bf171db1170a50b51955ece202694ee94ef0667e2e0390457",
+      "action_shape": [
+        520,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-c347d383408d995b/trajectory.npz",
+      "sha256": "8f77d537fc944df1c85118666fe19071065bd4f77bc133b96e9360e9505e30e5",
+      "action_shape": [
+        259,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-ba518afe894d136d/trajectory.npz",
+      "sha256": "f8d4e010cbe450e16e3271b4d7b457db9fdc2ae0e4ed56add412151047c07fa5",
+      "action_shape": [
+        520,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-ab7e469dccf64ab6/trajectory.npz",
+      "sha256": "92ba71eec58d8a22dda11cc29e42f77ebff2dd4ed21c6e4108f5707833a4fa14",
+      "action_shape": [
+        261,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-7ec80b64ef9c0e1b/trajectory.npz",
+      "sha256": "9d0b56ade460714fc9367f205f782348a078cbf807d836bd9beddf5a1d174162",
+      "action_shape": [
+        520,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-afe29bcb41bcaf80/trajectory.npz",
+      "sha256": "ffe3536c50d0685b5f1e4c3b40bf1b1859a4e52bfc81b6d95b18fb94a10dd863",
+      "action_shape": [
+        264,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-e90a041041da3aa2/trajectory.npz",
+      "sha256": "c767b1310cd1989b6d6b5071bb9ae9e7d36728231db5dacbad1e2d0614874fd4",
+      "action_shape": [
+        520,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-946cf3bbfb1303ca/trajectory.npz",
+      "sha256": "ac3a1c352322182a91b126ae9ad649d0ac1d56b15d6f5a8f6e4131173c8b4c8d",
+      "action_shape": [
+        520,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-9f61057b565c53d9/trajectory.npz",
+      "sha256": "d2fd3ce1e2554f9a23ffb447547c83b1e4d08c490f600a73732c9bb0e62c8250",
+      "action_shape": [
+        520,
+        7
+      ]
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/rollout-1df95d15006135c0/trajectory.npz",
+      "sha256": "400a71629f0bc18b23f127cc147c959de6ba0b875d643c6a452d4543b541e2fc",
+      "action_shape": [
+        520,
+        7
+      ]
+    }
+  ],
+  "action_trace_checks": [
+    {
+      "episode": [
+        "smoke",
+        "spatial",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T011831-b12b7d109da3/episodes/smoke_spatial_task0_episode00_attempt2/action_trace.json",
+      "steps": 220,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "smoke",
+        "spatial",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T011831-b12b7d109da3/episodes/smoke_spatial_task0_episode01_attempt2/action_trace.json",
+      "steps": 79,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "smoke",
+        "spatial",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T011831-b12b7d109da3/episodes/smoke_spatial_task0_episode02_attempt2/action_trace.json",
+      "steps": 220,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode00_attempt1/action_trace.json",
+      "steps": 220,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode01_attempt1/action_trace.json",
+      "steps": 79,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode02_attempt1/action_trace.json",
+      "steps": 220,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode03_attempt1/action_trace.json",
+      "steps": 81,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode04_attempt1/action_trace.json",
+      "steps": 220,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode05_attempt1/action_trace.json",
+      "steps": 220,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode06_attempt1/action_trace.json",
+      "steps": 75,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode07_attempt1/action_trace.json",
+      "steps": 220,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode08_attempt1/action_trace.json",
+      "steps": 83,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "spatial",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_spatial_task0_episode09_attempt1/action_trace.json",
+      "steps": 76,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode00_attempt1/action_trace.json",
+      "steps": 129,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode01_attempt1/action_trace.json",
+      "steps": 128,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode02_attempt1/action_trace.json",
+      "steps": 117,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode03_attempt1/action_trace.json",
+      "steps": 280,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode04_attempt1/action_trace.json",
+      "steps": 126,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode05_attempt1/action_trace.json",
+      "steps": 280,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode06_attempt1/action_trace.json",
+      "steps": 143,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode07_attempt1/action_trace.json",
+      "steps": 280,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode08_attempt1/action_trace.json",
+      "steps": 129,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "object",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_object_task0_episode09_attempt1/action_trace.json",
+      "steps": 280,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode00_attempt1/action_trace.json",
+      "steps": 135,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode01_attempt1/action_trace.json",
+      "steps": 123,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode02_attempt1/action_trace.json",
+      "steps": 117,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode03_attempt1/action_trace.json",
+      "steps": 126,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode04_attempt1/action_trace.json",
+      "steps": 128,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode05_attempt1/action_trace.json",
+      "steps": 118,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode06_attempt1/action_trace.json",
+      "steps": 125,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode07_attempt1/action_trace.json",
+      "steps": 127,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode08_attempt1/action_trace.json",
+      "steps": 128,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "goal",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_goal_task0_episode09_attempt1/action_trace.json",
+      "steps": 123,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "0"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode00_attempt1/action_trace.json",
+      "steps": 520,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "1"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode01_attempt1/action_trace.json",
+      "steps": 259,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "2"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode02_attempt1/action_trace.json",
+      "steps": 520,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "3"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode03_attempt1/action_trace.json",
+      "steps": 261,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "4"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode04_attempt1/action_trace.json",
+      "steps": 520,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "5"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode05_attempt1/action_trace.json",
+      "steps": 264,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "6"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode06_attempt1/action_trace.json",
+      "steps": 520,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "7"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode07_attempt1/action_trace.json",
+      "steps": 520,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "8"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode08_attempt1/action_trace.json",
+      "steps": 520,
+      "exact_match": true
+    },
+    {
+      "episode": [
+        "formal",
+        "long",
+        "0",
+        "9"
+      ],
+      "path": "/data/vla-forge/reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/registry/runs/20261010T012129-4990a90f17c7/episodes/formal_long_task0_episode09_attempt1/action_trace.json",
+      "steps": 520,
+      "exact_match": true
+    }
+  ],
+  "checkpoint_files": [
+    {
+      "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/.gitattributes",
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "bytes": 1519
+    },
+    {
+      "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/README.md",
+      "sha256": "a20b9db396342b7c37a07125c619266289831ac9fa7b3c759ff7239d2b4362a6",
+      "bytes": 1686
+    },
+    {
+      "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/config.json",
+      "sha256": "5c9f3ba9f5f37ea7024c9501b0b20b1941f232989c2167853cb46d9071a70dd7",
+      "bytes": 2419
+    },
+    {
+      "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/model.safetensors",
+      "sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+      "bytes": 906712520
+    },
+    {
+      "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_postprocessor.json",
+      "sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "bytes": 660
+    },
+    {
+      "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+      "sha256": "b0cdde6e8a6f49a8e19eefb376728e47c09d3b3cc20ce3a97c45619fe7a732d9",
+      "bytes": 5676
+    },
+    {
+      "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_preprocessor.json",
+      "sha256": "122ec5106602b1bf129f49690d05ab2f49748a0ac6119de55ea0677d4e90d248",
+      "bytes": 2042
+    },
+    {
+      "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_preprocessor_step_5_normalizer_processor.safetensors",
+      "sha256": "b0cdde6e8a6f49a8e19eefb376728e47c09d3b3cc20ce3a97c45619fe7a732d9",
+      "bytes": 5676
+    },
+    {
+      "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/train_config.json",
+      "sha256": "df25e6fce4cf2161b7a22c495230e332bad5f73f1ca07605b35fa77500917b9c",
+      "bytes": 9631
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/added_tokens.json",
+      "sha256": "74135b8664b56088c0006f1c8e848d79a8eba003411f72ebf1dc2ee96227be3a",
+      "bytes": 4739
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/chat_template.json",
+      "sha256": "b585e3598909a5687f9f9d738d35223724dedef256b9b274e1cbfb32b13c74bf",
+      "bytes": 430
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/config.json",
+      "sha256": "ea6bc1237e96247f6258de3e202e2e62b93d6f386dc47e7b36b5588bf3a15e17",
+      "bytes": 3767
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/generation_config.json",
+      "sha256": "34835060c9f0f74d1acb456cc72ca32746d3843d9eb5f578f9cbffac1d2eb840",
+      "bytes": 136
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/merges.txt",
+      "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+      "bytes": 466391
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/model.safetensors",
+      "sha256": "b9bfd456c9472c0acd5719d6e514c4b859891af205ee1a736552fd3497b8b0c3",
+      "bytes": 2029990624
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/preprocessor_config.json",
+      "sha256": "149e315d9410368e5491455bb06e0f763426e9e56cca731c13b24404a29b6374",
+      "bytes": 599
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json",
+      "sha256": "f3ad45028447b3562b4752be0d5916d6806c1ef589091a469608dcf0faa1737c",
+      "bytes": 67
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/special_tokens_map.json",
+      "sha256": "2dfea2a426162316ff1567c82bc6d36d9690cd9f90455f075c77daca78b45c60",
+      "bytes": 868
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer.json",
+      "sha256": "5ece781dc8d2b2f3e2f289ca0ae50b17cfc27dd27bfe7971bb8241e0b964331a",
+      "bytes": 3548256
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer_config.json",
+      "sha256": "dd9ce2ab89a3dd881bd9378f1a79b943a064b9275a7e1706d5b7b47b68977913",
+      "bytes": 28626
+    },
+    {
+      "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/vocab.json",
+      "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79",
+      "bytes": 800662
+    }
+  ],
+  "timing_scope": "Recomputed from saved per-control-step latency arrays in the 40 formal rollout trajectories; chunk generation is independently read from the recorded CUDA-synchronized chunk profiler.",
+  "formal_inference_timing_ms_by_suite": {
+    "spatial": {
+      "select_action_including_queue": {
+        "n": 1494,
+        "mean_ms": 9.567796862784473,
+        "p50_ms": 1.854124,
+        "p95_ms": 2.868583849999999,
+        "p99_ms": 302.381356,
+        "max_ms": 1086.63279
+      },
+      "chunk_generation_cuda_synchronized": {
+        "n": 35,
+        "mean_ms": 325.46874802857144,
+        "p50_ms": 298.99762,
+        "p95_ms": 349.7907231999999,
+        "p99_ms": 844.2780927399975,
+        "max_ms": 1083.602831
+      }
+    },
+    "object": {
+      "select_action_including_queue": {
+        "n": 1892,
+        "mean_ms": 8.68277091860465,
+        "p50_ms": 1.854047,
+        "p95_ms": 2.7034704499999966,
+        "p99_ms": 301.61957392999994,
+        "max_ms": 386.576606
+      },
+      "chunk_generation_cuda_synchronized": {
+        "n": 42,
+        "mean_ms": 304.39571452380954,
+        "p50_ms": 298.50041650000003,
+        "p95_ms": 330.83747535,
+        "p99_ms": 369.57003894999986,
+        "max_ms": 384.629669
+      }
+    },
+    "goal": {
+      "select_action_including_queue": {
+        "n": 1250,
+        "mean_ms": 9.29525208,
+        "p50_ms": 1.8449274999999998,
+        "p95_ms": 2.8503022499999986,
+        "p99_ms": 304.32347574,
+        "max_ms": 391.326759
+      },
+      "chunk_generation_cuda_synchronized": {
+        "n": 30,
+        "mean_ms": 306.8988905333334,
+        "p50_ms": 301.1327455,
+        "p95_ms": 357.4445585999998,
+        "p99_ms": 386.69837166,
+        "max_ms": 388.818372
+      }
+    },
+    "long": {
+      "select_action_including_queue": {
+        "n": 4424,
+        "mean_ms": 8.243358950271247,
+        "p50_ms": 1.8202595000000001,
+        "p95_ms": 2.6395241499999966,
+        "p99_ms": 295.78012233,
+        "max_ms": 397.349204
+      },
+      "chunk_generation_cuda_synchronized": {
+        "n": 95,
+        "mean_ms": 296.25110771578943,
+        "p50_ms": 293.70392,
+        "p95_ms": 310.9015453,
+        "p99_ms": 384.06633922000003,
+        "max_ms": 395.306095
+      }
+    }
+  },
+  "formal_episode_wall_seconds": 1589.770930682993,
+  "smoke_episode_wall_seconds": 121.57522333299858,
+  "formal_phase_wall_seconds": 1957.0357097730011,
+  "successful_smoke_phase_wall_seconds": 153.47551211599784,
+  "successful_experiment_phase_wall_seconds": 2110.511221888999,
+  "task_success_rates": {
+    "spatial": {
+      "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "successes": 5,
+      "episodes": 10,
+      "success_rate": 0.5
+    },
+    "object": {
+      "task_name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "successes": 6,
+      "episodes": 10,
+      "success_rate": 0.6
+    },
+    "goal": {
+      "task_name": "open_the_middle_drawer_of_the_cabinet",
+      "successes": 10,
+      "episodes": 10,
+      "success_rate": 1.0
+    },
+    "long": {
+      "task_name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+      "successes": 3,
+      "episodes": 10,
+      "success_rate": 0.3
+    }
+  },
+  "runtime_packages": {
+    "lerobot": "0.6.2",
+    "torch": "2.7.1+cu128",
+    "transformers": "5.5.4",
+    "huggingface-hub": "1.33.0",
+    "hf-libero": "0.1.4",
+    "mujoco": "3.8.1",
+    "robosuite": "1.4.0",
+    "av": "15.1.0",
+    "safetensors": "0.8.0"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3090",
+    "total_memory_bytes": 25296044032,
+    "cuda": "12.8",
+    "device_index": 0,
+    "pytorch_allocator_budget": {
+      "device_name": "NVIDIA GeForce RTX 3090",
+      "physical_bytes": 25296044032,
+      "allocator_limit_bytes": 23622320128,
+      "allocator_fraction": 0.9338345591949988,
+      "scope": "PyTorch caching allocator only; CUDA context and renderer require separate device monitoring"
+    }
+  },
+  "official_policy": {
+    "repo_id": "lerobot/smolvla_libero",
+    "revision": "31d453f7edd78c839a8bbc39744a292686daf0de",
+    "weights_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8"
+  },
+  "official_vlm": {
+    "repo_id": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+    "revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+    "weights_sha256": "b9bfd456c9472c0acd5719d6e514c4b859891af205ee1a736552fd3497b8b0c3"
+  },
+  "source_revision": "e99cf86d9322c472c4cb62f3bc431a1f45c4d12c"
+}

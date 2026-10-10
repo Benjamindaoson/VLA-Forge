@@ -1,0 +1,4 @@
+schema: spec-driven
+created: 2026-10-10
+goal: Execute 400 reproducible real MuJoCo episodes and deliver an
+  evidence-backed failure database.

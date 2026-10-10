@@ -1,0 +1,60 @@
+{
+  "milestone": "M01_real_libero",
+  "result": "PASS",
+  "verified_at_utc": "2026-10-10T01:58:43Z",
+  "source_revision": "e99cf86d9322c472c4cb62f3bc431a1f45c4d12c",
+  "source_branch": "feat/observable-baseline",
+  "checks": [
+    {
+      "command": ".venv/bin/pytest -q",
+      "host": "authorized RTX 3090 server, /data/vla-forge",
+      "result": "PASS",
+      "passed": 214,
+      "skipped": 0,
+      "elapsed_seconds": 40.73
+    },
+    {
+      "command": ".venv/bin/pytest -q tests/test_m01.py",
+      "host": "authorized RTX 3090 server, /data/vla-forge",
+      "result": "PASS",
+      "passed": 7,
+      "skipped": 0,
+      "elapsed_seconds": 1.43
+    },
+    {
+      "command": ".venv/bin/ruff check scripts/run_m01_libero.py src/robot_vla/m01.py tests/test_m01.py",
+      "host": "authorized RTX 3090 server, /data/vla-forge",
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m py_compile scripts/run_m01_libero.py src/robot_vla/m01.py",
+      "host": "authorized RTX 3090 server, /data/vla-forge",
+      "result": "PASS"
+    },
+    {
+      "command": "openspec validate m01-real-libero-closed-loop",
+      "host": "local robot-vla checkout",
+      "result": "PASS"
+    },
+    {
+      "command": "python -m pytest -q tests/test_m01.py",
+      "host": "local robot-vla checkout",
+      "result": "PASS",
+      "passed": 7,
+      "skipped": 0,
+      "elapsed_seconds": 5.49
+    },
+    {
+      "command": "independent artifact validation recorded in acceptance_audit.json",
+      "host": "authorized RTX 3090 server, /data/vla-forge",
+      "result": "PASS",
+      "unique_episodes": 43,
+      "decoded_videos": 43,
+      "trajectory_action_exact_matches": 43,
+      "verified_policy_and_vlm_files": 21
+    }
+  ],
+  "known_recovered_smoke_episode_attempts": 3,
+  "known_recovered_startup_aborts": 1,
+  "known_attempts_note": "Three early smoke Episode attempts failed on the discovered 6-vs-8 state normalization mismatch, and one startup was aborted by the server base Conda cuDNN search path. The episode failures remain in episode_attempts.jsonl and all events remain in run.log; the final three smoke and forty formal episodes completed as execution records."
+}

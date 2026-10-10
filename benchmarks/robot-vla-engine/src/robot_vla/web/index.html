@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VLA-Forge · Reliability Lab</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header class="top"><div><span class="brand">VLA-Forge</span><span class="product">Reliability Lab</span></div><span class="mode">只读证据工作台</span></header>
+<main>
+<div class="page-heading"><div><h1>从失败记录，走到可复核的决定。</h1><p>查看真实开发案例与原始证据。未执行、缺失和已验证的结果分别展示。</p></div><button id="refresh">刷新证据</button></div>
+<div id="notice" role="status" aria-live="polite">正在读取项目证据…</div>
+<nav aria-label="工作区域"><button class="tab active" data-view="cases" aria-pressed="true">失败案例</button><button class="tab" data-view="readiness" aria-pressed="false">新机就绪</button><button class="tab" data-view="release" aria-pressed="false">发布门槛</button></nav>
+<section id="cases" class="view"><div class="workspace"><div class="case-list"><div class="section-heading"><h2>干预案例</h2><label>任务 <select id="task-filter"><option value="all">全部任务</option><option value="libero_10">Long · 两罐汤入篮</option><option value="libero_goal">Goal · 中间抽屉</option></select></label></div><p class="caption">同一初态的不同前缀属于相关案例，不能视为独立任务。</p><div id="case-table"></div></div><aside id="case-detail" aria-live="polite"><p>选择一个案例查看证据。</p></aside></div></section>
+<section id="readiness" class="view" hidden><div class="section-heading"><h2>新服务器验收</h2><span class="caption">最近保存的回执，不是实时GPU监控</span></div><div id="runtime-detail"></div></section>
+<section id="release" class="view" hidden><h2>候选版本发布门槛</h2><div id="release-detail"></div></section>
+<footer>开发研究工作台。工程测试、策略效果与客户收益使用不同的证据标准。<span id="updated"></span></footer>
+</main>
+</body></html>
