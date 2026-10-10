@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "project": "VLA-Forge 2.0",
+  "active_milestone": "M02_libero40_failure_mining",
+  "status": "PASS",
+  "timestamp": "2026-10-10T16:50:33+08:00",
+  "source_branch": "feat/observable-baseline",
+  "experiment_source_commit": "f43e412f627118b173e3257f71a58a64c96ef768",
+  "analysis_code_commit": "86223c78fb7e3b829040be41d34ebb3e453383a4",
+  "m01": {
+    "status": "PASS",
+    "formal_episodes": 40,
+    "formal_successes": 24,
+    "formal_success_rate": 0.6,
+    "report": "reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/REPORT.md"
+  },
+  "m02": {
+    "status": "PASS",
+    "expected_episodes": 400,
+    "completed_episodes": 400,
+    "valid_episodes": 400,
+    "task_count": 40,
+    "suite_coverage": {
+      "spatial": 100,
+      "object": 100,
+      "goal": 100,
+      "long": 100
+    },
+    "successes": 272,
+    "failures": 128,
+    "success_rate": 0.68,
+    "successes_by_suite": {
+      "spatial": 63,
+      "object": 75,
+      "goal": 84,
+      "long": 50
+    },
+    "failure_categories": {
+      "Timeout": 108,
+      "Placement / Goal Failure": 11,
+      "Sequence / Long-Horizon Failure": 4,
+      "Unknown / Insufficient Evidence": 5
+    },
+    "manual_failure_reviews": {
+      "required": 20,
+      "completed": 20,
+      "per_suite": {
+        "spatial": 5,
+        "object": 5,
+        "goal": 5,
+        "long": 5
+      }
+    },
+    "paired_videos_decoded": 400,
+    "decoded_video_frames": 83827,
+    "action_trajectory_exact_matches": 400,
+    "m03_candidates": 128,
+    "episode_wall_seconds_sum": 15108.942512808957,
+    "runner_wall_elapsed_seconds_approx": 18923,
+    "gpu": "NVIDIA GeForce RTX 3090 24 GiB",
+    "gpu_peak_memory_mib": 1297.0,
+    "gpu_mean_sampled_utilization_percent": 0.7833674397453388,
+    "report": "reports/vla_forge_2_transition_20261010/milestones/M02_libero40_failure_mining/REPORT.md",
+    "validation": "reports/vla_forge_2_transition_20261010/milestones/M02_libero40_failure_mining/validation.json",
+    "metrics": "reports/vla_forge_2_transition_20261010/milestones/M02_libero40_failure_mining/metrics.json"
+  },
+  "evidence_bundle_sha256": "ac08d116b84c61e238ac87fbaaada477b9a68a975bef8522192ed3579c821b27",
+  "previous_milestones": {
+    "M01_real_libero": {
+      "status": "PASS",
+      "formal_episodes": 40,
+      "formal_successes": 24,
+      "evidence_report": "reports/vla_forge_2_transition_20261010/milestones/M01_real_libero/REPORT.md"
+    }
+  },
+  "next_action": "Stop at M02 and wait for user review; do not start M03 until separately authorized.",
+  "historical_transition_stage_snapshot": {
+    "stage00": "PASS",
+    "stage01_repair_baseline_gate": "BLOCKED",
+    "stage02": "NOT_RUN",
+    "stage03": "NOT_RUN",
+    "stage04": "NOT_RUN",
+    "stage05": "NOT_RUN",
+    "stage06": "NOT_RUN_HANDOFF_ONLY",
+    "note": "This prior repair-baseline assessment is preserved. M01/M02 official SmolVLA baselines do not validate corrected demonstrations, repair training, or M03 intervention."
+  }
+}

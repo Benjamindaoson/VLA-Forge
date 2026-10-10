@@ -4,6 +4,7 @@ from robot_vla.m02 import (
     M02_SUITES,
     artifact_is_valid,
     classify_failure,
+    count_verified_video_frames,
     episode_seed,
     expected_episode_identities,
     select_manual_review,
@@ -109,11 +110,25 @@ def test_artifact_resume_requires_matching_hash(tmp_path):
     assert not artifact_is_valid(tmp_path / "missing.mp4", digest)
 
 
-def test_manual_review_sample_uses_every_failure_below_threshold_and_stable_first_twenty():
+def test_manual_review_sample_is_balanced_across_suites_and_spread_within_each():
     rows = [
-        {"suite": "spatial", "task_id": 0, "episode_id": index, "status": "complete", "success": False}
+        {"suite": suite, "task_id": 0, "episode_id": index, "status": "complete", "success": False}
+        for suite in M02_SUITES
         for index in range(25)
     ]
-    assert len(select_manual_review(rows)) == 20
-    assert [row["episode_id"] for row in select_manual_review(rows)] == list(range(20))
+    sample = select_manual_review(rows)
+    assert len(sample) == 20
+    assert {suite: sum(row["suite"] == suite for row in sample) for suite in M02_SUITES} == {suite: 5 for suite in M02_SUITES}
+    for suite in M02_SUITES:
+        assert [row["episode_id"] for row in sample if row["suite"] == suite] == [0, 6, 12, 18, 24]
     assert len(select_manual_review(rows[:4])) == 4
+
+
+def test_video_frame_total_reads_verified_nested_video_receipts():
+    rows = [
+        {"_video_info": {"video_decoded": True, "video": {"frames": 301}}},
+        {"_video_info": {"video_decoded": True, "video": {"frames": 152}}},
+        {"_video_info": {"video_decoded": False, "video": {}}},
+        {},
+    ]
+    assert count_verified_video_frames(rows) == 453

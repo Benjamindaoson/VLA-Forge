@@ -1,0 +1,438 @@
+{"runtime_distribution": "hf-libero", "version": "0.1.4", "runtime_package": "/data/vla-forge/.venv/lib/python3.12/site-packages/libero/libero", "asset_reference": "/data/vla-forge/external/LIBERO/libero/libero", "config": {"benchmark_root": "/data/vla-forge/external/LIBERO/libero/libero", "bddl_files": "/data/vla-forge/external/LIBERO/libero/libero/bddl_files", "init_states": "/data/vla-forge/external/LIBERO/libero/libero/init_files", "datasets": "/data/vla-forge/data", "assets": "/data/vla-forge/.venv/lib/python3.12/site-packages/libero/libero/assets"}, "config_sha256": "2ff807399c962db9f55d3b6b0f9b7f2ade9f00302e7ace5a16ea250c22e03f91"}
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+WARNING:robosuite_logs:No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+WARNING:robosuite_logs:It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /data/vla-forge/.venv-policy/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+WARNING:robosuite_logs:To setup, run: python /data/vla-forge/.venv-policy/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py
+Loading  /data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467 weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:  34%|███▎      | 164/489 [00:00<00:00, 1637.26it/s]Loading weights:  84%|████████▍ | 413/489 [00:00<00:00, 2136.66it/s]Loading weights: 100%|██████████| 489/489 [00:00<00:00, 2255.89it/s]
+Reducing the number of VLM layers to 16 ...
+Loading weights from local directory
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+{"suite": "spatial", "task_id": 0, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 79, "seconds": 19.553765027005284, "error": ""}
+{"suite": "spatial", "task_id": 0, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 53.323238319993834, "error": ""}
+{"suite": "spatial", "task_id": 0, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 83, "seconds": 19.669188173000293, "error": ""}
+{"suite": "spatial", "task_id": 0, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 52.814465262999875, "error": ""}
+{"suite": "spatial", "task_id": 0, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 111, "seconds": 26.072521305002738, "error": ""}
+{"suite": "spatial", "task_id": 0, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 79, "seconds": 18.846950626000762, "error": ""}
+{"suite": "spatial", "task_id": 0, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 79, "seconds": 18.218201461000717, "error": ""}
+{"suite": "spatial", "task_id": 0, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 50.654432423994876, "error": ""}
+{"suite": "spatial", "task_id": 0, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 77, "seconds": 17.902233189997787, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 113, "seconds": 26.087548709998373, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 50.10178320600244, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 106, "seconds": 24.87885677000304, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 104, "seconds": 24.634872155002085, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 48.213377590000164, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 105, "seconds": 25.148877824998635, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 112, "seconds": 25.456205504997342, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 106, "seconds": 24.335763135997695, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 50.75280717699934, "error": ""}
+{"suite": "spatial", "task_id": 1, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 114, "seconds": 26.186101587001758, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 102, "seconds": 23.76532661699457, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 92, "seconds": 21.48930003699934, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 51.61851406400092, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 96, "seconds": 22.984741815002053, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 104, "seconds": 24.781261866999557, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 53.04316333899624, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 99, "seconds": 23.828279722001753, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 115, "seconds": 28.326349850998668, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 99, "seconds": 23.349089092000213, "error": ""}
+{"suite": "spatial", "task_id": 2, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 95, "seconds": 23.2109947429999, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 87, "seconds": 20.04738456000632, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 83, "seconds": 19.224105487999623, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 80, "seconds": 19.19201637199876, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 82, "seconds": 19.160417477003648, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 85, "seconds": 20.099640413995076, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 51.533313840998744, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 89, "seconds": 20.251695102000667, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 50.745344762995956, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 90, "seconds": 20.684113051996974, "error": ""}
+{"suite": "spatial", "task_id": 3, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 81, "seconds": 18.94014400499873, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 131, "seconds": 32.42973642099969, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 50.6926210209931, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 51.88023919799889, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 51.20209508499829, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 53.167275742998754, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 51.36690050299512, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 52.15062396499707, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 128, "seconds": 30.899974785999802, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 52.423649211996235, "error": ""}
+{"suite": "spatial", "task_id": 4, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 131, "seconds": 32.07011693399545, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 54.58527226099977, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 57.067347972995776, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 54.23195410900371, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 54.274869970999134, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 53.50372825199884, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 56.09768568900472, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 54.46995876200526, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 52.37998384299863, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 53.05401927400089, "error": ""}
+{"suite": "spatial", "task_id": 5, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 57.657288182999764, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 103, "seconds": 25.946172459996887, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 114, "seconds": 28.057660332000523, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 107, "seconds": 26.372551496002416, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 97, "seconds": 24.213975876002223, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 99, "seconds": 24.373101191995374, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 107, "seconds": 26.1330505549995, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 114, "seconds": 28.433606181999494, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 103, "seconds": 25.866930550997495, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 110, "seconds": 26.92751939199661, "error": ""}
+{"suite": "spatial", "task_id": 6, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 52.07994874799624, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 54.77345254399552, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 129, "seconds": 32.556527671004005, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 120, "seconds": 30.080985819993657, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 123, "seconds": 30.614655194003717, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 120, "seconds": 31.21701780299918, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 115, "seconds": 29.23266646800039, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 122, "seconds": 30.61862601499888, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 124, "seconds": 31.4477194889987, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 125, "seconds": 31.62910640300106, "error": ""}
+{"suite": "spatial", "task_id": 7, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 117, "seconds": 28.69253770600335, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 93, "seconds": 21.408832763001556, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 52.42499317099282, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 100, "seconds": 23.190510202999576, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 104, "seconds": 24.57891078299872, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 49.49599322199356, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 49.619210703000135, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 53.056550761000835, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 96, "seconds": 22.925822601006075, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 168, "seconds": 39.53167268800462, "error": ""}
+{"suite": "spatial", "task_id": 8, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 50.79056362799747, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 51.13516231299582, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 122, "seconds": 29.648052805001498, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 125, "seconds": 31.455712409006082, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 28.56728584499797, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 123, "seconds": 30.61592553099763, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 53.209911671001464, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 118, "seconds": 28.902272571998765, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 220, "seconds": 51.43987861200003, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 120, "seconds": 28.20064858400292, "error": ""}
+{"suite": "spatial", "task_id": 9, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 122, "seconds": 29.327233876996615, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 128, "seconds": 19.342698169995856, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 128, "seconds": 19.71040537600493, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 127, "seconds": 18.90590519199759, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 41.90880390899838, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 139, "seconds": 21.656911204998323, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 40.958089598003426, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 142, "seconds": 20.781589494996297, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 136, "seconds": 20.39263916300115, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 138, "seconds": 20.69675147900125, "error": ""}
+{"suite": "object", "task_id": 0, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 41.64630602399848, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 118, "seconds": 18.088963950998732, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 40.059423159997095, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 17.4412906869984, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 132, "seconds": 20.048208251995675, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 120, "seconds": 17.877845824004908, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 119, "seconds": 18.12734663500305, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 122, "seconds": 18.86996166100289, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 121, "seconds": 18.686057066996, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 16.801473732004524, "error": ""}
+{"suite": "object", "task_id": 1, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 119, "seconds": 17.564641429002222, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 115, "seconds": 17.662844257996767, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 40.266172006995475, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 40.784074224000506, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 123, "seconds": 19.058128295000643, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 42.0378264739993, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 17.804808648004837, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 17.479397745002643, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 114, "seconds": 17.396672650000255, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 109, "seconds": 16.59840424700087, "error": ""}
+{"suite": "object", "task_id": 2, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 110, "seconds": 16.811138636003307, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 128, "seconds": 18.438751583998965, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 123, "seconds": 17.85583881700586, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 123, "seconds": 17.573998073996336, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 39.25760369600175, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 39.90292538400536, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 122, "seconds": 17.905921288998798, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 126, "seconds": 17.991575385000033, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 125, "seconds": 18.411559143001796, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 39.951739364005334, "error": ""}
+{"suite": "object", "task_id": 3, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 136, "seconds": 19.66033179799706, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 140, "seconds": 19.278929309999512, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 139, "seconds": 20.440257105001365, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 130, "seconds": 19.04827024700353, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 134, "seconds": 19.343950580005185, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 39.775074846998905, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 142, "seconds": 20.834031534999667, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 134, "seconds": 18.862869470001897, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 136, "seconds": 18.93497354599822, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 143, "seconds": 20.153803146000428, "error": ""}
+{"suite": "object", "task_id": 4, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 146, "seconds": 19.97086262600351, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 124, "seconds": 18.577012674002617, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 123, "seconds": 18.650951764997444, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 127, "seconds": 18.910159470004146, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 125, "seconds": 18.766628197998216, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 41.63380659899849, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 17.53455404000124, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 40.219833007999114, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 41.15456844500295, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 111, "seconds": 16.849397890997352, "error": ""}
+{"suite": "object", "task_id": 5, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 17.88902009299636, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 146, "seconds": 21.111721503999433, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 40.72115647899773, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 133, "seconds": 19.872101382999972, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 133, "seconds": 19.700203392007097, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 139, "seconds": 20.325187645998085, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 142, "seconds": 20.49044922900066, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 151, "seconds": 21.905521312997735, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 131, "seconds": 19.254649980997783, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 135, "seconds": 20.223796065998613, "error": ""}
+{"suite": "object", "task_id": 6, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 146, "seconds": 20.652541560004465, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 135, "seconds": 20.008674405995407, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 123, "seconds": 18.586442140003783, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 42.49092236100114, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 126, "seconds": 18.96746990900283, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 41.50732627900288, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 42.818637686999864, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 124, "seconds": 18.87149475500337, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 41.47087474900036, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 124, "seconds": 18.323392370002693, "error": ""}
+{"suite": "object", "task_id": 7, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 117, "seconds": 17.400224864002666, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 142, "seconds": 20.368899747998512, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 148, "seconds": 21.146419792996312, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 148, "seconds": 21.645004311001685, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 42.40580852700077, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 146, "seconds": 22.690000052003597, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 147, "seconds": 22.76449883099849, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 143, "seconds": 22.595925014000386, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 142, "seconds": 22.25720646099944, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 153, "seconds": 24.666522958003043, "error": ""}
+{"suite": "object", "task_id": 8, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 141, "seconds": 22.077783440996427, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 44.73416103499767, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 118, "seconds": 19.075345851997554, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 43.9654882390023, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 44.770080555004824, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 18.942152884003008, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 44.378794427000685, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 119, "seconds": 19.365232302996446, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 121, "seconds": 19.754569051001454, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 18.759397584995895, "error": ""}
+{"suite": "object", "task_id": 9, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 280, "seconds": 43.447931403999974, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 129, "seconds": 27.80420667800354, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 129, "seconds": 27.699467867998464, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 118, "seconds": 25.487533293002343, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 145, "seconds": 28.302133110002615, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 124, "seconds": 24.741253993997816, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 120, "seconds": 23.41378825299762, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 126, "seconds": 24.712235927996517, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 124, "seconds": 24.417734034002933, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 139, "seconds": 28.221522943997115, "error": ""}
+{"suite": "goal", "task_id": 0, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 122, "seconds": 25.116500525000447, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 88, "seconds": 18.70475029600493, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 88, "seconds": 19.747031232000154, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 84, "seconds": 18.62873267300165, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 93, "seconds": 20.66451876600331, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 88, "seconds": 19.5233112959977, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 90, "seconds": 19.267066221997084, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 96, "seconds": 21.035458979000396, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 89, "seconds": 20.043968625999696, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 80, "seconds": 16.751105593997636, "error": ""}
+{"suite": "goal", "task_id": 1, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 86, "seconds": 17.885913268997683, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 88, "seconds": 19.48760863699863, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 104, "seconds": 23.36290389199712, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 96, "seconds": 21.517159987000923, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 60.479658609998296, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 95, "seconds": 21.146973082999466, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 90, "seconds": 19.47895175799931, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 87, "seconds": 19.10158282300108, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 86, "seconds": 19.503413120000914, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 95, "seconds": 21.748592249001376, "error": ""}
+{"suite": "goal", "task_id": 2, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 88, "seconds": 19.399578025993833, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 66.04869016700104, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 178, "seconds": 39.181098660003045, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 174, "seconds": 39.112536619999446, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 181, "seconds": 38.96918313400238, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 181, "seconds": 39.61640373300179, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 63.76643900600175, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 180, "seconds": 40.090621601004386, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 66.55582501100434, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 184, "seconds": 41.12626994099992, "error": ""}
+{"suite": "goal", "task_id": 3, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 192, "seconds": 40.010734904004494, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 116, "seconds": 23.945856539998204, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 83, "seconds": 17.407297862999258, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 82, "seconds": 16.836549486994045, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 87, "seconds": 18.40376259000186, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 63.98443369600136, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 84, "seconds": 18.005761018001067, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 112, "seconds": 24.353226692001044, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 81, "seconds": 17.499297474998457, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 89, "seconds": 18.27078435599833, "error": ""}
+{"suite": "goal", "task_id": 4, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 91, "seconds": 19.475904386003094, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 129, "seconds": 25.378163604000292, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 104, "seconds": 20.529814839996106, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 132, "seconds": 25.95080292700004, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 128, "seconds": 25.385889452998526, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 129, "seconds": 24.864343168999767, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 119, "seconds": 23.72991492899746, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 133, "seconds": 26.047361117998662, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 126, "seconds": 25.384154701001535, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 130, "seconds": 25.319876843997918, "error": ""}
+{"suite": "goal", "task_id": 5, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 58.81366622600035, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 65.49760120599967, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 62.36152421300358, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 63.41963138400024, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 91, "seconds": 19.135183799000515, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 63.706896814001084, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 97, "seconds": 20.343374342999596, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 63.38459013299871, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 63.18681847499829, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 85, "seconds": 17.677377303996764, "error": ""}
+{"suite": "goal", "task_id": 6, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 83, "seconds": 17.75554186399677, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 77, "seconds": 16.61367599300138, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 76, "seconds": 15.984029963998182, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 61.36034424299578, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 77, "seconds": 16.196590385006857, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 72, "seconds": 14.920059010000841, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 76, "seconds": 16.11954435199732, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 79, "seconds": 16.566881651000585, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 63.128275391994976, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 104, "seconds": 22.04664475900063, "error": ""}
+{"suite": "goal", "task_id": 7, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 68, "seconds": 14.179073587001767, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 79, "seconds": 16.425542386001325, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 75, "seconds": 15.559132583999599, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 62.44733888299379, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 76, "seconds": 15.567082128996844, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 77, "seconds": 15.838811567999073, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 76, "seconds": 15.90361947799829, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 78, "seconds": 16.164718531006656, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 300, "seconds": 62.214714834000915, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 83, "seconds": 17.290621843996632, "error": ""}
+{"suite": "goal", "task_id": 8, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 79, "seconds": 17.059579342996585, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 144, "seconds": 29.947087548003765, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 153, "seconds": 32.76439070199558, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 134, "seconds": 28.032808814001328, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 123, "seconds": 25.12028732500039, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 126, "seconds": 26.094177414001024, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 129, "seconds": 27.08805784300057, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 129, "seconds": 25.850081620999845, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 121, "seconds": 25.307529666002665, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 131, "seconds": 26.401042188001156, "error": ""}
+{"suite": "goal", "task_id": 9, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 120, "seconds": 24.769025579997106, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 84.6921249540028, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 265, "seconds": 43.79425386599905, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 84.4357642479954, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 261, "seconds": 43.73638843400113, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 85.411587513001, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 86.96650082799897, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 86.05236875499395, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 86.23401955999725, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 84.35624440800166, "error": ""}
+{"suite": "long", "task_id": 0, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 85.39592527299828, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 232, "seconds": 38.80245863000164, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 85.4543367610022, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 89.0119839580002, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 83.94767330800096, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 244, "seconds": 41.01516286799597, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 285, "seconds": 46.96286677400349, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 239, "seconds": 39.34388734000095, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 84.64190247900115, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 86.04205465600535, "error": ""}
+{"suite": "long", "task_id": 1, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 427, "seconds": 70.7199894180012, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 116.0975945350001, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 115.05796387800365, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 113.85879738399672, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 249, "seconds": 55.08772978399793, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 396, "seconds": 88.02059904199996, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 115.98143166299997, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 114.27544832400599, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 249, "seconds": 55.97719051999593, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 243, "seconds": 53.80750375500065, "error": ""}
+{"suite": "long", "task_id": 2, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 266, "seconds": 61.02467092000006, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 214, "seconds": 33.25908335600252, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 82.80204850799782, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 359, "seconds": 55.57718145599938, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 234, "seconds": 36.46973028299544, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 223, "seconds": 36.02695413100446, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 216, "seconds": 33.80528679800045, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 214, "seconds": 33.164484597997216, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 216, "seconds": 34.37967664399912, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 237, "seconds": 36.35733430900291, "error": ""}
+{"suite": "long", "task_id": 3, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 224, "seconds": 34.83627428099862, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 58.17809171000408, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 58.41227659400465, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 56.67426617399906, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 56.92043442100112, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 227, "seconds": 24.96931211899937, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 55.77877270300087, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 54.736987844000396, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 56.373946337000234, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 240, "seconds": 27.80834109299758, "error": ""}
+{"suite": "long", "task_id": 4, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 218, "seconds": 24.918659548995493, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 164, "seconds": 19.854988351005886, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 178, "seconds": 21.38052110800345, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 221, "seconds": 26.589783855997666, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 183, "seconds": 21.901027398002043, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 63.778548494999995, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 177, "seconds": 21.697273842997674, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 156, "seconds": 18.851858378999168, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 168, "seconds": 20.90843821100134, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 8, "attempt": 1, "status": "complete", "success": true, "steps": 164, "seconds": 20.170081677999406, "error": ""}
+{"suite": "long", "task_id": 5, "episode_id": 9, "attempt": 1, "status": "complete", "success": true, "steps": 169, "seconds": 20.89270007899904, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 258, "seconds": 30.697004483001365, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 61.19947393199982, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 216, "seconds": 24.86705983399588, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 222, "seconds": 26.48637080199842, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 59.04926803700073, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 60.51694642700022, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 59.00564889499947, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 208, "seconds": 24.447325047003687, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 63.02701599599823, "error": ""}
+{"suite": "long", "task_id": 6, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 59.19790492299944, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 0, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 74.48755449700548, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 248, "seconds": 36.594133122998755, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 79.71818754899869, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 245, "seconds": 35.19914381900162, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 71.86968456599425, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 72.70880645099533, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 6, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 76.83705386800284, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 243, "seconds": 37.60211764700216, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 77.20035119899694, "error": ""}
+{"suite": "long", "task_id": 7, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 75.76071033699554, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 379, "seconds": 84.01425564799865, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 1, "attempt": 1, "status": "complete", "success": true, "steps": 393, "seconds": 87.6577199309977, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 2, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 113.78322612299962, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 3, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 118.4441170009959, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 4, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 116.4487764689984, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 5, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 115.48700279699551, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 403, "seconds": 91.77161697300471, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 7, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 116.59905817000254, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 115.3346491820048, "error": ""}
+{"suite": "long", "task_id": 8, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 115.87459985500027, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 0, "attempt": 1, "status": "complete", "success": true, "steps": 260, "seconds": 37.310542156003066, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 1, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 72.7096069629988, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 2, "attempt": 1, "status": "complete", "success": true, "steps": 254, "seconds": 36.33636826500151, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 3, "attempt": 1, "status": "complete", "success": true, "steps": 258, "seconds": 35.31979015700199, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 4, "attempt": 1, "status": "complete", "success": true, "steps": 261, "seconds": 37.408213422997505, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 5, "attempt": 1, "status": "complete", "success": true, "steps": 258, "seconds": 36.702260108999326, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 6, "attempt": 1, "status": "complete", "success": true, "steps": 250, "seconds": 36.09011093899608, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 7, "attempt": 1, "status": "complete", "success": true, "steps": 272, "seconds": 38.71306937599729, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 8, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 72.60282759900292, "error": ""}
+{"suite": "long", "task_id": 9, "episode_id": 9, "attempt": 1, "status": "complete", "success": false, "steps": 520, "seconds": 72.73281609399419, "error": ""}
+{
+  "status": "PASS",
+  "expected_episodes": 400,
+  "csv_rows": 400,
+  "valid_completed_episodes": 400,
+  "invalid_episodes": [],
+  "missing_identities": [],
+  "unexpected_identities": [],
+  "suite_coverage": {
+    "spatial": 100,
+    "object": 100,
+    "goal": 100,
+    "long": 100
+  },
+  "task_coverage_rows": 40,
+  "paired_camera_videos_decoded": 400,
+  "action_trajectory_exact_matches": 400,
+  "failure_cases": 128,
+  "manual_review_required": 20,
+  "manual_review_completed": 0,
+  "issues": [],
+  "updated_at": "2026-10-10T08:14:46.546995+00:00"
+}

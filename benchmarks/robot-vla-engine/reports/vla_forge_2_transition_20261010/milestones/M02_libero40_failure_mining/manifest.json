@@ -1,0 +1,547 @@
+{
+  "milestone": "M02_libero40_failure_mining",
+  "status": "COMPLETE",
+  "started_at": "2026-10-10T02:59:23.613730+00:00",
+  "model": {
+    "repo_id": "lerobot/smolvla_libero",
+    "revision": "31d453f7edd78c839a8bbc39744a292686daf0de",
+    "sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+    "files": [
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/.gitattributes",
+        "size_bytes": 1519,
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/README.md",
+        "size_bytes": 1686,
+        "sha256": "a20b9db396342b7c37a07125c619266289831ac9fa7b3c759ff7239d2b4362a6"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/config.json",
+        "size_bytes": 2419,
+        "sha256": "5c9f3ba9f5f37ea7024c9501b0b20b1941f232989c2167853cb46d9071a70dd7"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/model.safetensors",
+        "size_bytes": 906712520,
+        "sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_postprocessor.json",
+        "size_bytes": 660,
+        "sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+        "size_bytes": 5676,
+        "sha256": "b0cdde6e8a6f49a8e19eefb376728e47c09d3b3cc20ce3a97c45619fe7a732d9"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_preprocessor.json",
+        "size_bytes": 2042,
+        "sha256": "122ec5106602b1bf129f49690d05ab2f49748a0ac6119de55ea0677d4e90d248"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/policy_preprocessor_step_5_normalizer_processor.safetensors",
+        "size_bytes": 5676,
+        "sha256": "b0cdde6e8a6f49a8e19eefb376728e47c09d3b3cc20ce3a97c45619fe7a732d9"
+      },
+      {
+        "path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de/train_config.json",
+        "size_bytes": 9631,
+        "sha256": "df25e6fce4cf2161b7a22c495230e332bad5f73f1ca07605b35fa77500917b9c"
+      }
+    ],
+    "snapshot_path": "/data/models/smolvla_libero/31d453f7edd78c839a8bbc39744a292686daf0de"
+  },
+  "vision_language_backbone": {
+    "repo_id": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+    "revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+    "files": [
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/added_tokens.json",
+        "size_bytes": 4739,
+        "sha256": "74135b8664b56088c0006f1c8e848d79a8eba003411f72ebf1dc2ee96227be3a"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/chat_template.json",
+        "size_bytes": 430,
+        "sha256": "b585e3598909a5687f9f9d738d35223724dedef256b9b274e1cbfb32b13c74bf"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/config.json",
+        "size_bytes": 3767,
+        "sha256": "ea6bc1237e96247f6258de3e202e2e62b93d6f386dc47e7b36b5588bf3a15e17"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/generation_config.json",
+        "size_bytes": 136,
+        "sha256": "34835060c9f0f74d1acb456cc72ca32746d3843d9eb5f578f9cbffac1d2eb840"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/merges.txt",
+        "size_bytes": 466391,
+        "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/model.safetensors",
+        "size_bytes": 2029990624,
+        "sha256": "b9bfd456c9472c0acd5719d6e514c4b859891af205ee1a736552fd3497b8b0c3"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/preprocessor_config.json",
+        "size_bytes": 599,
+        "sha256": "149e315d9410368e5491455bb06e0f763426e9e56cca731c13b24404a29b6374"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json",
+        "size_bytes": 67,
+        "sha256": "f3ad45028447b3562b4752be0d5916d6806c1ef589091a469608dcf0faa1737c"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/special_tokens_map.json",
+        "size_bytes": 868,
+        "sha256": "2dfea2a426162316ff1567c82bc6d36d9690cd9f90455f075c77daca78b45c60"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer.json",
+        "size_bytes": 3548256,
+        "sha256": "5ece781dc8d2b2f3e2f289ca0ae50b17cfc27dd27bfe7971bb8241e0b964331a"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer_config.json",
+        "size_bytes": 28626,
+        "sha256": "dd9ce2ab89a3dd881bd9378f1a79b943a064b9275a7e1706d5b7b47b68977913"
+      },
+      {
+        "path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467/vocab.json",
+        "size_bytes": 800662,
+        "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79"
+      }
+    ],
+    "snapshot_path": "/data/models/smolvlm_full/7b375e1b73b11138ff12fe22c8f2822d8fe03467"
+  },
+  "model_config_sha256": "5c9f3ba9f5f37ea7024c9501b0b20b1941f232989c2167853cb46d9071a70dd7",
+  "processor": {
+    "camera_rename_map": {
+      "observation.images.image": "observation.images.camera1",
+      "observation.images.image2": "observation.images.camera2"
+    },
+    "fitted_state_normalizer_width": 8
+  },
+  "runtime": {
+    "packages": {
+      "lerobot": "0.6.2",
+      "torch": "2.7.1+cu128",
+      "transformers": "5.5.4",
+      "huggingface-hub": "1.33.0",
+      "hf-libero": "0.1.4",
+      "mujoco": "3.8.1",
+      "robosuite": "1.4.0",
+      "av": "15.1.0",
+      "safetensors": "0.8.0"
+    },
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 3090",
+      "total_memory_bytes": 25296044032,
+      "cuda": "12.8",
+      "device_index": 0,
+      "allocator_budget": {
+        "device_name": "NVIDIA GeForce RTX 3090",
+        "physical_bytes": 25296044032,
+        "allocator_limit_bytes": 23622320128,
+        "allocator_fraction": 0.9338345591949988,
+        "scope": "PyTorch caching allocator only; CUDA context and renderer require separate device monitoring"
+      }
+    },
+    "mujoco_gl": "egl",
+    "libero_config": "/data/vla-forge/work/libero"
+  },
+  "dataset": {
+    "repo_id": "lerobot/libero",
+    "revision": "a1aaacb7f6cd6ee5fb43120f673cebb0cfea7dd4",
+    "metadata_path": "/data/vla-forge/data/libero/meta/info.json",
+    "metadata_sha256": "630630a1a4f07fc9fc1f1b2b7987ed3bd034bd8cffaaf8a0e6939ae9c468445d",
+    "episode_count": 1693,
+    "task_count": 40
+  },
+  "protocol": {
+    "protocol_sha256": "8b36708efaf90088c0bdc6077b4243f5fbbc07739be47fb89f2ab143df9de460",
+    "suite_task_order_index": 0,
+    "suite_task_names": {
+      "spatial": [
+        {
+          "task_id": 0,
+          "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+        },
+        {
+          "task_id": 1,
+          "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl next to the ramekin and place it on the plate"
+        },
+        {
+          "task_id": 2,
+          "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl from table center and place it on the plate"
+        },
+        {
+          "task_id": 3,
+          "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl on the cookie box and place it on the plate"
+        },
+        {
+          "task_id": 4,
+          "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+        },
+        {
+          "task_id": 5,
+          "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl on the ramekin and place it on the plate"
+        },
+        {
+          "task_id": 6,
+          "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl next to the cookie box and place it on the plate"
+        },
+        {
+          "task_id": 7,
+          "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl on the stove and place it on the plate"
+        },
+        {
+          "task_id": 8,
+          "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl next to the plate and place it on the plate"
+        },
+        {
+          "task_id": 9,
+          "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate",
+          "instruction": "pick up the black bowl on the wooden cabinet and place it on the plate"
+        }
+      ],
+      "object": [
+        {
+          "task_id": 0,
+          "name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+          "instruction": "pick up the alphabet soup and place it in the basket"
+        },
+        {
+          "task_id": 1,
+          "name": "pick_up_the_cream_cheese_and_place_it_in_the_basket",
+          "instruction": "pick up the cream cheese and place it in the basket"
+        },
+        {
+          "task_id": 2,
+          "name": "pick_up_the_salad_dressing_and_place_it_in_the_basket",
+          "instruction": "pick up the salad dressing and place it in the basket"
+        },
+        {
+          "task_id": 3,
+          "name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+          "instruction": "pick up the bbq sauce and place it in the basket"
+        },
+        {
+          "task_id": 4,
+          "name": "pick_up_the_ketchup_and_place_it_in_the_basket",
+          "instruction": "pick up the ketchup and place it in the basket"
+        },
+        {
+          "task_id": 5,
+          "name": "pick_up_the_tomato_sauce_and_place_it_in_the_basket",
+          "instruction": "pick up the tomato sauce and place it in the basket"
+        },
+        {
+          "task_id": 6,
+          "name": "pick_up_the_butter_and_place_it_in_the_basket",
+          "instruction": "pick up the butter and place it in the basket"
+        },
+        {
+          "task_id": 7,
+          "name": "pick_up_the_milk_and_place_it_in_the_basket",
+          "instruction": "pick up the milk and place it in the basket"
+        },
+        {
+          "task_id": 8,
+          "name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+          "instruction": "pick up the chocolate pudding and place it in the basket"
+        },
+        {
+          "task_id": 9,
+          "name": "pick_up_the_orange_juice_and_place_it_in_the_basket",
+          "instruction": "pick up the orange juice and place it in the basket"
+        }
+      ],
+      "goal": [
+        {
+          "task_id": 0,
+          "name": "open_the_middle_drawer_of_the_cabinet",
+          "instruction": "open the middle drawer of the cabinet"
+        },
+        {
+          "task_id": 1,
+          "name": "put_the_bowl_on_the_stove",
+          "instruction": "put the bowl on the stove"
+        },
+        {
+          "task_id": 2,
+          "name": "put_the_wine_bottle_on_top_of_the_cabinet",
+          "instruction": "put the wine bottle on top of the cabinet"
+        },
+        {
+          "task_id": 3,
+          "name": "open_the_top_drawer_and_put_the_bowl_inside",
+          "instruction": "open the top drawer and put the bowl inside"
+        },
+        {
+          "task_id": 4,
+          "name": "put_the_bowl_on_top_of_the_cabinet",
+          "instruction": "put the bowl on top of the cabinet"
+        },
+        {
+          "task_id": 5,
+          "name": "push_the_plate_to_the_front_of_the_stove",
+          "instruction": "push the plate to the front of the stove"
+        },
+        {
+          "task_id": 6,
+          "name": "put_the_cream_cheese_in_the_bowl",
+          "instruction": "put the cream cheese in the bowl"
+        },
+        {
+          "task_id": 7,
+          "name": "turn_on_the_stove",
+          "instruction": "turn on the stove"
+        },
+        {
+          "task_id": 8,
+          "name": "put_the_bowl_on_the_plate",
+          "instruction": "put the bowl on the plate"
+        },
+        {
+          "task_id": 9,
+          "name": "put_the_wine_bottle_on_the_rack",
+          "instruction": "put the wine bottle on the rack"
+        }
+      ],
+      "long": [
+        {
+          "task_id": 0,
+          "name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+          "instruction": "put both the alphabet soup and the tomato sauce in the basket"
+        },
+        {
+          "task_id": 1,
+          "name": "LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket",
+          "instruction": "put both the cream cheese box and the butter in the basket"
+        },
+        {
+          "task_id": 2,
+          "name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it",
+          "instruction": "turn on the stove and put the moka pot on it"
+        },
+        {
+          "task_id": 3,
+          "name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it",
+          "instruction": "put the black bowl in the bottom drawer of the cabinet and close it"
+        },
+        {
+          "task_id": 4,
+          "name": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+          "instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+        },
+        {
+          "task_id": 5,
+          "name": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+          "instruction": "pick up the book and place it in the back compartment of the caddy"
+        },
+        {
+          "task_id": 6,
+          "name": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+          "instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+        },
+        {
+          "task_id": 7,
+          "name": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket",
+          "instruction": "put both the alphabet soup and the cream cheese box in the basket"
+        },
+        {
+          "task_id": 8,
+          "name": "KITCHEN_SCENE8_put_both_moka_pots_on_the_stove",
+          "instruction": "put both moka pots on the stove"
+        },
+        {
+          "task_id": 9,
+          "name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it",
+          "instruction": "put the yellow and white mug in the microwave and close it"
+        }
+      ]
+    },
+    "episodes_per_task": 10,
+    "initial_state_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "seed_rule": "seed_base + suite_ordinal*1000 + task_id*10 + init_state_id",
+    "seed_base": 82000,
+    "horizons": {
+      "libero_spatial": 220,
+      "libero_object": 280,
+      "libero_goal": 300,
+      "libero_10": 520
+    },
+    "control_frequency_hz": 20,
+    "num_steps_wait": 10,
+    "hard_reset": true,
+    "control_mode": "relative",
+    "action_chunk_size": 50,
+    "action_execution_steps": 50,
+    "camera_views": [
+      "image",
+      "image2"
+    ],
+    "paired_video_layout": "image left, image2 right"
+  },
+  "policy_contract": {
+    "policy_type": "smolvla",
+    "input_features": {
+      "observation.state": [
+        6
+      ],
+      "observation.images.camera1": [
+        3,
+        256,
+        256
+      ],
+      "observation.images.camera2": [
+        3,
+        256,
+        256
+      ],
+      "observation.images.camera3": [
+        3,
+        256,
+        256
+      ]
+    },
+    "normalizer_state_width": 8,
+    "output_features": {
+      "action": [
+        7
+      ]
+    },
+    "action_chunk_size": 50,
+    "action_execution_steps": 50,
+    "resize_imgs_with_padding": [
+      512,
+      512
+    ]
+  },
+  "source": {
+    "revision": "f43e412f627118b173e3257f71a58a64c96ef768",
+    "files": {
+      "scripts/run_m02_libero40.py": "63a141d406600ff44842650e92db6756b10d5f769a8dc7673874876a5e7842c9",
+      "src/robot_vla/m02.py": "040add390bc3bf899083c7edcc0df7d50b3b3cc9a5429919c6f7dbff5dd30bde",
+      "scripts/analyze_m02_libero40.py": "88c11ca9906e1c6ba933dd5819331fca8dd690e3977f7c3faa4eb9ab3ea9311c",
+      "tests/test_m02.py": "634af14e3e314be0598333a119386dc46b11d97e61fb702818d176096dfdfe6e",
+      "src/robot_vla/rollout.py": "5e82ebe795c6edca0cd0724779580dd6ddc75cce3ed8982dca795e2894d18ee6",
+      "src/robot_vla/observations.py": "b4c7bf656cd2c314108fbe86f535253d7f5c7205874402d1d6438e2aaa19a5cb",
+      "configs/data_protocol_v1.json": "8b36708efaf90088c0bdc6077b4243f5fbbc07739be47fb89f2ab1433df9de460"
+    },
+    "commit_scope": "local source commit; exact M02 code and test bundle",
+    "worktree_status_at_start": "remote checkout contains pre-existing unrelated/untracked assets preserved"
+  },
+  "baseline_m01_manifest_sha256": "4f23688c66afde0982682c78cdc52577664c0dc368076f3542444617d3c9bbf9",
+  "artifact_root": "/data/vla-forge-artifacts/M02_libero40",
+  "runs": [
+    {
+      "run_id": "20261010T025923-ad165caa4668",
+      "started_at": "2026-10-10T02:59:23.832142+00:00",
+      "model_load_seconds": 9.594797550002113,
+      "ended_at": "2026-10-10T02:59:45.348630+00:00",
+      "elapsed_seconds": 31.33838248399843,
+      "completed_episodes": 0
+    },
+    {
+      "run_id": "20261010T030116-08cb3efcaefe",
+      "started_at": "2026-10-10T03:01:16.667992+00:00",
+      "model_load_seconds": 9.36137344299641,
+      "ended_at": "2026-10-10T03:01:46.776578+00:00",
+      "elapsed_seconds": 39.667197233997285,
+      "completed_episodes": 1
+    },
+    {
+      "run_id": "20261010T030315-982cacc8515f",
+      "started_at": "2026-10-10T03:03:15.938327+00:00",
+      "model_load_seconds": 9.552537294002832,
+      "ended_at": "2026-10-10T08:14:23.312389+00:00",
+      "elapsed_seconds": 18677.124796251002,
+      "completed_episodes": 400
+    }
+  ],
+  "latest_completed_episodes": 400,
+  "updated_at": "2026-10-10T16:50:33+08:00",
+  "acceptance_status": "PASS",
+  "analysis": {
+    "valid_episodes": 400,
+    "failures": 128,
+    "m03_candidates": 128,
+    "manual_review_completed": 20,
+    "manual_review_required": 20
+  },
+  "source_history": [
+    {
+      "revision": "f4037c32b87f56a53d005a8f02653a173c90d3a5",
+      "files": {
+        "scripts/run_m02_libero40.py": "d88a08bda134ad8db0f8eb1de660af37008409e13fe6761bc4514d7fe2d3ab86",
+        "src/robot_vla/m02.py": "040add390bc3bf899083c7edcc0df7d50b3b3cc9a5429919c6f7dbff5dd30bde",
+        "src/robot_vla/rollout.py": "5e82ebe795c6edca0cd0724779580dd6ddc75cce3ed8982dca795e2894d18ee6",
+        "src/robot_vla/observations.py": "b4c7bf656cd2c314108fbe86f535253d7f5c7205874402d1d6438e2aaa19a5cb",
+        "configs/data_protocol_v1.json": "8b36708efaf90088c0bdc6077b4243f5fbbc07739be47fb89f2ab143df9de460"
+      },
+      "run_id": "20261010T025923-ad165caa4668",
+      "scope": "failed first acceptance-gate attempt retained as infrastructure error"
+    }
+  ],
+  "delivery_examples": [
+    {
+      "suite": "goal",
+      "task_id": 0,
+      "episode_id": 0,
+      "outcome": "success",
+      "local_path": "manual_review/sample_videos/goal_task00_episode00_attempt1.mp4",
+      "external_path": "/data/vla-forge-artifacts/M02_libero40/registry/runs/20261010T030315-982cacc8515f/videos/goal_task00_episode00_attempt1.mp4",
+      "sha256": "00cb5b928d874977da8fab45ea1750b7bedcf0a513b17cc6c26444a7f1990eed",
+      "size_bytes": 256977
+    },
+    {
+      "suite": "spatial",
+      "task_id": 3,
+      "episode_id": 7,
+      "outcome": "failure",
+      "local_path": "manual_review/sample_videos/spatial_task03_episode07_attempt1.mp4",
+      "external_path": "/data/vla-forge-artifacts/M02_libero40/registry/runs/20261010T030315-982cacc8515f/videos/spatial_task03_episode07_attempt1.mp4",
+      "sha256": "aa3f6ad3be23902a401e5e07c63e55decd7c7273a4359058b683eb99b6fca307",
+      "size_bytes": 459287
+    }
+  ],
+  "analysis_code": {
+    "revision": "86223c78fb7e3b829040be41d34ebb3e453383a4",
+    "commit_scope": "stratified per-suite manual failure review and verified paired-video frame totals",
+    "files": {
+      "src/robot_vla/m02.py": "6aad8f5d280cefa51677ae6332792702b6a32e6e975e25aee5fab202e99e57b5",
+      "scripts/analyze_m02_libero40.py": "2c241f653879aea501d94b2585a918b75bfdebe2d55fd7c56f97370b19df4055",
+      "tests/test_m02.py": "1bcfdecb1218e2d770b1a882f22a3fa3dd18391c300a07d47e6dd1adc98308b6"
+    }
+  }
+}

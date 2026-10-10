@@ -19,6 +19,7 @@ from robot_vla.m02 import (
     aggregate_binary,
     artifact_is_valid,
     classify_failure,
+    count_verified_video_frames,
     expected_episode_identities,
     select_manual_review,
     task_and_suite_metrics,
@@ -191,7 +192,7 @@ def analyze(output: Path):
         "gpu_peak_allocated_bytes": max((row.get("gpu_peak_allocated_bytes") or 0 for row in valid_rows), default=0),
         "gpu_peak_reserved_bytes": max((row.get("gpu_peak_reserved_bytes") or 0 for row in valid_rows), default=0),
         "nvidia_smi_resource_monitor": resource_summary,
-        "video_frame_count": sum(row.get("_video_info", {}).get("frames", 0) for row in valid_rows),
+        "video_frame_count": count_verified_video_frames(valid_rows),
     }
     _write_json(output / "suite_metrics.json", summary_metrics)
     _write_json(output / "metrics.json", summary_metrics)
@@ -261,6 +262,7 @@ def analyze(output: Path):
     hardest_md = "\n".join(f"- `{row['suite']}` task {row['task_id']} — {_task_name(next(item for item in valid_rows if item['suite']==row['suite'] and item['task_id']==row['task_id']))}: {row['successes']}/{row['episodes']} ({_pct(row['success_rate'])})." for row in hardest)
     failure_md = "\n".join(f"- {name}: {count} ({_pct(count / len(failures) if failures else None)})." for name, count in top_failures) or "- No measured failures."
     review_md = "\n".join(f"- `{row['suite']}` task {row['task_id']} Episode {row['episode_id']}: {row['video_path']}" for row in review_queue)
+    review_sheets_md = "\n".join(f"- `manual_review/stratified_review_page{index}.jpg` ({suite} sample)." for index, suite in enumerate(M02_SUITES, start=1))
     report = f"""# M02 — Standard LIBERO 40 benchmark and failure mining
 
 **Acceptance: {report_status}.** Benchmark status: {validation['status']}. A complete success rate is reported only when all 400 Episodes and required artifacts validate. Manual failure review is {validation['manual_review_completed']}/{len(review_queue)}.
@@ -280,12 +282,16 @@ def analyze(output: Path):
 {failure_md}
 - Verified M03 candidate failures: {sum(item['m03_candidate'] for item in candidates)}.
 - Cause is assigned only for horizon timeout or explicit manual video/trajectory review. Other failures remain Unknown / Insufficient Evidence.
+- Evidence integrity: {validation['paired_camera_videos_decoded']}/400 paired-camera videos decoded; {validation['action_trajectory_exact_matches']}/400 action traces exactly match recorded environment commands; {summary_metrics['video_frame_count']} decoded video frames total.
 - Three lowest task success rates:
 {hardest_md}
 
 ## Manual review sample
 
-The review queue contains {len(review_queue)} failures (all failures if fewer than 20). Results and evidence notes are in `manual_failure_review.jsonl`; the current status is {validation['manual_review_completed']}/{len(review_queue)} reviewed.
+The deterministic review sample takes five failures per suite, spread across that suite's sorted failures. Results, evidence notes, and video/contact-sheet hashes are in `manual_failure_review.jsonl`; the current status is {validation['manual_review_completed']}/{len(review_queue)} reviewed.
+
+Review contact sheets:
+{review_sheets_md}
 
 {review_md}
 
@@ -308,6 +314,8 @@ The review queue contains {len(review_queue)} failures (all failures if fewer th
 ## Limitations
 
 This is a single fixed 10-initial-state sample per task under one frozen policy and simulator protocol. It does not establish multi-seed robustness. Visual failure review is evidence-bound and does not create corrected demonstrations. No training or intervention was performed in M02.
+
+The attempt ledger preserves one failed preflight recording attempt caused by a missing video output directory. The directory creation fix was applied before the benchmark queue; that preflight error is retained in `episode_attempts.jsonl` and excluded from the 400 formal Episode denominator. All 400 formal Episodes subsequently passed artifact verification.
 """
     (output / "failure_analysis.md").write_text(report, encoding="utf-8")
     (output / "REPORT.md").write_text(report, encoding="utf-8")

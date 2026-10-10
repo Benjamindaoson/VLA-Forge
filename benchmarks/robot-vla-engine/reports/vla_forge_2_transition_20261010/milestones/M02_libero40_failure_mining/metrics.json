@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "suites": {
+    "spatial": {
+      "successes": 63,
+      "episodes": 100,
+      "failures": 37,
+      "success_rate": 0.63,
+      "wilson_95": [
+        0.5322052958094291,
+        0.7181763946567546
+      ],
+      "task_count": 10,
+      "task_macro_success_rate": 0.63,
+      "task_macro_successes": 0.63
+    },
+    "object": {
+      "successes": 75,
+      "episodes": 100,
+      "failures": 25,
+      "success_rate": 0.75,
+      "wilson_95": [
+        0.656955364519384,
+        0.8245478863771232
+      ],
+      "task_count": 10,
+      "task_macro_success_rate": 0.75,
+      "task_macro_successes": 0.75
+    },
+    "goal": {
+      "successes": 84,
+      "episodes": 100,
+      "failures": 16,
+      "success_rate": 0.84,
+      "wilson_95": [
+        0.7557973061072976,
+        0.8990471151119521
+      ],
+      "task_count": 10,
+      "task_macro_success_rate": 0.84,
+      "task_macro_successes": 0.8400000000000001
+    },
+    "long": {
+      "successes": 50,
+      "episodes": 100,
+      "failures": 50,
+      "success_rate": 0.5,
+      "wilson_95": [
+        0.4038315303659956,
+        0.5961684696340044
+      ],
+      "task_count": 10,
+      "task_macro_success_rate": 0.5,
+      "task_macro_successes": 0.5
+    }
+  },
+  "overall_pooled": {
+    "successes": 272,
+    "episodes": 400,
+    "failures": 128,
+    "success_rate": 0.68,
+    "wilson_95": [
+      0.632759697663558,
+      0.7238158763760955
+    ]
+  },
+  "overall_task_macro_success_rate": 0.68,
+  "inference_latency_episode_mean_ms": {
+    "episodes": 400,
+    "mean": 9.034809118356536,
+    "p50": 8.864557892857142,
+    "p95": 10.412167061880877,
+    "max": 17.566709367088606
+  },
+  "inference_latency_episode_p95_ms": {
+    "episodes": 400,
+    "mean": 2.7184603806249994,
+    "p50": 2.697264999999998,
+    "p95": 3.1660146950000003,
+    "max": 3.6105559999999937
+  },
+  "action_chunk_generation_episode_mean_ms": {
+    "episodes": 400,
+    "mean": 310.01847868874245,
+    "p50": 305.51286975000005,
+    "p95": 333.59239481249995,
+    "max": 615.8040065
+  },
+  "episode_wall_seconds_sum": 15108.942512808957,
+  "gpu_peak_allocated_bytes": "964068864",
+  "gpu_peak_reserved_bytes": "1002438656",
+  "nvidia_smi_resource_monitor": {
+    "samples": 17592,
+    "peak_memory_mib": 1297.0,
+    "mean_utilization_percent": 0.7833674397453388,
+    "mean_power_watts": 111.6524386084584
+  },
+  "video_frame_count": 83827
+}

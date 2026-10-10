@@ -165,4 +165,47 @@ def select_manual_review(rows, *, minimum: int = 20):
         (row for row in rows if row.get("status") == "complete" and row.get("success") is False),
         key=lambda row: (row["suite"], int(row["task_id"]), int(row["episode_id"])),
     )
-    return failed[:minimum] if len(failed) >= minimum else failed
+    if len(failed) <= minimum:
+        return failed
+
+    groups = {
+        suite: [row for row in failed if row["suite"] == suite]
+        for suite in M02_SUITES
+    }
+    suite_order = [suite for suite in M02_SUITES if groups[suite]]
+    allocation = {suite: 0 for suite in suite_order}
+    base, remainder = divmod(minimum, len(suite_order))
+    for index, suite in enumerate(suite_order):
+        allocation[suite] = min(len(groups[suite]), base + (index < remainder))
+    remaining = minimum - sum(allocation.values())
+    while remaining:
+        progressed = False
+        for suite in suite_order:
+            if allocation[suite] < len(groups[suite]):
+                allocation[suite] += 1
+                remaining -= 1
+                progressed = True
+                if not remaining:
+                    break
+        if not progressed:
+            break
+
+    sample = []
+    for suite in suite_order:
+        group = groups[suite]
+        count = allocation[suite]
+        indices = (
+            [round((len(group) - 1) / 2)]
+            if count == 1
+            else [round(index * (len(group) - 1) / (count - 1)) for index in range(count)]
+        )
+        sample.extend(group[index] for index in indices)
+    return sample
+
+
+def count_verified_video_frames(rows):
+    """Sum frame counts from the analyzer's nested paired-video receipts."""
+    return sum(
+        int((row.get("_video_info") or {}).get("video", {}).get("frames", 0) or 0)
+        for row in rows
+    )

@@ -1,0 +1,3 @@
+suite,task_id,episode_id,outcome,local_path,external_path,sha256,size_bytes
+goal,0,0,success,manual_review/sample_videos/goal_task00_episode00_attempt1.mp4,/data/vla-forge-artifacts/M02_libero40/registry/runs/20261010T030315-982cacc8515f/videos/goal_task00_episode00_attempt1.mp4,00cb5b928d874977da8fab45ea1750b7bedcf0a513b17cc6c26444a7f1990eed,256977
+spatial,3,7,failure,manual_review/sample_videos/spatial_task03_episode07_attempt1.mp4,/data/vla-forge-artifacts/M02_libero40/registry/runs/20261010T030315-982cacc8515f/videos/spatial_task03_episode07_attempt1.mp4,aa3f6ad3be23902a401e5e07c63e55decd7c7273a4359058b683eb99b6fca307,459287

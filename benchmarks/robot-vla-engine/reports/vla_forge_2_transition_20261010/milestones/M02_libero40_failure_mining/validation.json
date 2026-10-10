@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "expected_episodes": 400,
+  "csv_rows": 400,
+  "valid_completed_episodes": 400,
+  "invalid_episodes": [],
+  "missing_identities": [],
+  "unexpected_identities": [],
+  "suite_coverage": {
+    "spatial": 100,
+    "object": 100,
+    "goal": 100,
+    "long": 100
+  },
+  "task_coverage_rows": 40,
+  "paired_camera_videos_decoded": 400,
+  "action_trajectory_exact_matches": 400,
+  "failure_cases": 128,
+  "manual_review_required": 20,
+  "manual_review_completed": 20,
+  "issues": [],
+  "updated_at": "2026-10-10T08:43:40.280378+00:00"
+}
