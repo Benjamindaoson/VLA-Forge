@@ -103,6 +103,8 @@ def compare_reference(path: Path, sample: dict, tolerance: dict, *, create: bool
 
 def valid_receipt(receipt: dict, case: dict, condition: str, model_sha: str, protocol_sha: str) -> bool:
     if (receipt.get('status') != 'complete' or receipt.get('condition') != condition
+            or receipt.get('floating_parameter_dtypes') != ['torch.float32']
+            or receipt.get('tf32_allowed') is not False
             or receipt.get('source_group') != case['source_group']
             or receipt.get('checkpoint_sha256') != model_sha
             or receipt.get('protocol_sha256') != protocol_sha
@@ -152,7 +154,15 @@ def run_condition(condition: str, cases: list[dict], out: Path, protocol: dict, 
     model_file = model_path / ('adapter_model.safetensors' if adapter else 'model.safetensors')
     if sha256(model_file) != digest:
         raise ValueError(f'Model drift: {condition}')
+    torch.backends.cuda.matmul.allow_tf32 = False
+    torch.backends.cudnn.allow_tf32 = False
     policy, pre, post = load_policy(Path(adapter) if adapter else None, train=False, lora=False)
+    policy = policy.to(dtype=torch.float32)
+    floating_tensors = list(policy.parameters()) + list(policy.buffers())
+    floating_dtypes = sorted({str(tensor.dtype) for tensor in floating_tensors
+                              if tensor.is_floating_point()})
+    if floating_dtypes != ['torch.float32'] or torch.is_autocast_enabled('cuda'):
+        raise ValueError(f'Formal FP32 Eager runtime not established: {floating_dtypes}')
     base = policy.get_base_model() if adapter else policy
     measured = ChunkProfiler(base, torch.cuda.synchronize)
     settings = json.loads((ENGINE / 'configs/data_protocol_v1.json').read_text())
@@ -269,7 +279,8 @@ def run_condition(condition: str, cases: list[dict], out: Path, protocol: dict, 
                     'chunk_calls': len(chunks), 'gpu_peak_allocated': int(torch.cuda.max_memory_allocated()),
                     'gpu_peak_reserved': int(torch.cuda.max_memory_reserved()),
                     'checkpoint_sha256': digest, 'protocol_sha256': sha256(PROTO),
-                    'registry_run_id': registry_run.run_id, 'initial_match': match,
+                    'floating_parameter_dtypes': floating_dtypes,
+                    'tf32_allowed': False, 'registry_run_id': registry_run.run_id, 'initial_match': match,
                     'input_shapes': input_shapes, 'latency': result['latency'],
                     'video': {'path': str(video_path), 'sha256': sha256(video_path)},
                     'trajectory': {'path': result['trajectory_path'], 'sha256': sha256(Path(result['trajectory_path']))},
@@ -304,7 +315,7 @@ def main():
     protocol = json.loads(PROTO.read_text())
     if protocol['status'] != 'FROZEN_NOT_EXECUTED' or len(protocol['cases']) != 400:
         raise ValueError('M06 frozen protocol missing or invalid')
-    out = EVIDENCE / ('dev_smoke' if args.dev_smoke else 'formal')
+    out = EVIDENCE / ('dev_smoke_fp32' if args.dev_smoke else 'formal')
     out.joinpath('receipts').mkdir(parents=True, exist_ok=True)
     cases = ([{'suite': 'goal', 'task_id': 6, 'init_state_id': args.dev_init,
                'source_group': f'goal:6:{args.dev_init}', 'seed': 515500 + args.dev_init,

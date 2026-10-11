@@ -39,6 +39,7 @@ def test_receipt_rejects_missing_or_changed_artifact(tmp_path):
         paths[kind] = {'path': str(p), 'sha256': runner.sha256(p)}
     receipt = {'status': 'complete', 'condition': 'frozen', 'source_group': 'goal:6:40',
                'checkpoint_sha256': 'model', 'protocol_sha256': 'protocol',
+               'floating_parameter_dtypes': ['torch.float32'], 'tf32_allowed': False,
                'success': False, 'initial_match': {'matched': True}, **paths}
     assert runner.valid_receipt(receipt, case, 'frozen', 'model', 'protocol')
     (tmp_path / 'video').write_bytes(b'changed')

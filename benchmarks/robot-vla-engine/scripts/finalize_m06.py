@@ -62,7 +62,9 @@ def validate_outputs(protocol: dict, grouped: dict) -> tuple[dict, dict, dict, d
                     or row.get('protocol_sha256') != sha256(EVIDENCE / 'protocol_frozen.json')
                     or row.get('source_group') != case['source_group']
                     or row.get('seed') != case['seed']
-                    or type(row.get('success')) is not bool):
+                    or type(row.get('success')) is not bool
+                    or row.get('floating_parameter_dtypes') != ['torch.float32']
+                    or row.get('tf32_allowed') is not False):
                 raise ValueError(f'Identity drift: {condition}/{key}')
             match = row.get('initial_match', {})
             if not match.get('matched') or not match.get('reference_sha256'):
@@ -129,6 +131,7 @@ def validate_outputs(protocol: dict, grouped: dict) -> tuple[dict, dict, dict, d
                   'physical_starts_matched': 1600, 'decoded_video_frames': frames_total,
                   'executed_actions': steps_total, 'failed_attempts_preserved': len(errors),
                   'all_artifact_hashes_valid': True, 'all_checkpoint_hashes_valid': True,
+                  'floating_parameter_dtypes': ['torch.float32'], 'tf32_allowed': False,
                   'source_cases': 400, 'illegal_executed_actions': 0,
                   'clipped_raw_commands': dict(clipped),
                   'license': 'Private visual evidence; no public redistribution clearance asserted'}
