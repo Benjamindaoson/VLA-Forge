@@ -3,6 +3,7 @@ import pytest
 
 from robot_vla.m04_interventions import (
     benchmark_suite_name,
+    brightness_camera_keys,
     intervention_is_active,
     m02_source_episode_name,
     scale_environment_action,
@@ -39,3 +40,20 @@ def test_m02_source_keys_map_to_official_benchmark_names():
     assert m02_source_episode_name("goal", 6, 7) == "goal_task06_episode07_attempt1"
     with pytest.raises(ValueError):
         benchmark_suite_name("unknown")
+
+
+@pytest.mark.parametrize(
+    ("camera", "expected"),
+    [
+        ("both", ("observation.images.image", "observation.images.image2")),
+        ("agentview", ("observation.images.image",)),
+        ("wrist", ("observation.images.image2",)),
+    ],
+)
+def test_brightness_intervention_targets_declared_camera_inputs(camera, expected):
+    assert brightness_camera_keys(camera) == expected
+
+
+def test_rejects_unknown_brightness_camera():
+    with pytest.raises(ValueError):
+        brightness_camera_keys("third_person_guess")

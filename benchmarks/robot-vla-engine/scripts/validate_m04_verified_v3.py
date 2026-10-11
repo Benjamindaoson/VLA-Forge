@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -11,7 +12,11 @@ import torch
 from lerobot.datasets.lerobot_dataset import LeRobotDataset
 from lerobot.processor.env_processor import LiberoProcessorStep
 
-DATASET = Path("/data/VLA-Forge/Evidence/M04/dataset/lerobot_v3_verified_r2")
+DATASET = Path(
+    os.environ.get(
+        "M04_DATASET_PATH", "/data/VLA-Forge/Evidence/M04/dataset/lerobot_v3_verified_r2"
+    )
+)
 OUT = DATASET / "independent_validation.json"
 
 

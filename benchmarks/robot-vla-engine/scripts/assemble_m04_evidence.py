@@ -4,11 +4,13 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import statistics
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path("/data/VLA-Forge/Evidence/M04")
+DATASET = Path(os.environ.get("M04_DATASET_PATH", str(ROOT / "dataset/lerobot_v3_verified_r4")))
 ATTEMPTS = ROOT / "artifacts/policy_attempts/attempts.jsonl"
 VERIFIED = ROOT / "artifacts/verified_corrections"
 
@@ -31,6 +33,29 @@ def main() -> None:
             "source": "fresh M04 policy inference, replayed twice",
         }
     )
+    wrist_policy_summary = json.loads(
+        (VERIFIED / "m04-goal-t06-e07-wrist115-first50-seed84067/summary.json").read_text()
+    )
+    verified.append(
+        {
+            "correction_action_sha256": wrist_policy_summary["source_action_sha256"],
+            "source_policy_attempt": wrist_policy_summary["source_policy_run"],
+            "source": "fresh M04 wrist-camera intervention, replayed twice",
+        }
+    )
+    for run_id in (
+        "m04-goal-t06-e07-wrist110-first50-seed84068",
+        "m04-goal-t06-e07-wrist110-first50-seed84071",
+        "m04-goal-t06-e07-wrist110-first50-seed84072",
+    ):
+        item = json.loads((VERIFIED / run_id / "summary.json").read_text())
+        verified.append(
+            {
+                "correction_action_sha256": item["source_action_sha256"],
+                "source_policy_attempt": item["source_policy_run"],
+                "source": "fresh M04 wrist-camera gain 1.10, independently replayed twice",
+            }
+        )
     first_path = ROOT / "artifacts/first_correction/m04-first-correction-replay-01.json"
     first_receipt = json.loads(first_path.read_text())
     verified.append(
@@ -73,9 +98,9 @@ def main() -> None:
         json.loads(demo_validation_path.read_text()) if demo_validation_path.exists() else None
     )
     dataset_provenance = json.loads(
-        (ROOT / "dataset/lerobot_v3_verified_r2/provenance.json").read_text()
+        (DATASET / "provenance.json").read_text()
     )
-    independent_dataset_path = ROOT / "dataset/lerobot_v3_verified_r2/independent_validation.json"
+    independent_dataset_path = DATASET / "independent_validation.json"
     independent_dataset = json.loads(independent_dataset_path.read_text())
     if independent_dataset.get("status") != "PASS":
         raise RuntimeError("independent LeRobot v3 audit did not pass")
@@ -120,14 +145,14 @@ def main() -> None:
             x["episode_id"] for x in success_rows
         ],
         "dataset": {
-            "path": str(ROOT / "dataset/lerobot_v3_verified_r2"),
-            "episodes": 2,
-            "transitions": 200,
-            "unique_action_sequences": 2,
+            "path": str(DATASET),
+            "episodes": independent_dataset["episodes"],
+            "transitions": independent_dataset["transitions"],
+            "unique_action_sequences": len(unique_verified),
             "scope": "same LIBERO Goal task 6 / init_state 7 / source M02 episode; not task-diverse",
             "public_release_ready": False,
-            "write_seconds": 7.501,
-            "encoded_transitions_per_second": 26.66,
+            "write_seconds": dataset_provenance["write_and_encode_seconds"],
+            "encoded_transitions_per_second": dataset_provenance["transitions_per_second"],
             "maximum_action_roundtrip_linf": 0.0,
             "maximum_state_roundtrip_linf": 0.0,
             "independent_validation": {
@@ -145,7 +170,7 @@ def main() -> None:
             "huggingface_dataset_uploaded": False,
             "huggingface_space_uploaded": False,
             "reasons": [
-                "two examples from one task and one initial state do not satisfy public data quality",
+                "six examples from one task and one initial state do not satisfy public data quality",
                 "upstream model/dataset/asset redistribution terms require formal clearance",
             ],
         },
@@ -225,8 +250,8 @@ def main() -> None:
         f"- Completed attempt rows: {len(attempts)} ({len(success_rows)} Success rows, {len(attempts) - len(success_rows)} failed rows; all retained).",
         f"- Non-episode engineering errors retained separately: {len(engineering_errors)}; operator-interrupted pre-policy runs: {len(operator_events)} (not counted as episodes).",
         f"- Artifact hash audit: {artifact_integrity['episode_artifact_references_checked']} references, {len(artifact_integrity['missing_artifacts'])} missing, {len(artifact_integrity['registry_hash_mismatches'])} registry hash exception(s); affected action values independently match the paired NPZ exactly. See `artifact_integrity.json`.",
-        f"- Unique successful action hashes in policy registry: {len(successful_hashes)}; the first40/first50 success rows deduplicate to one exact action sequence.",
-        f"- Independently verified unique correction sequences: {len(unique_verified)} (one M03-derived physical replay plus one new M04 SmolVLA inference sequence).",
+        f"- Unique successful action hashes in policy registry: {len(successful_hashes)}; success rows retain full-trajectory hashes; all corrected source action hashes are separately deduplicated and checked by independent replay.",
+        f"- Independently verified unique correction sequences: {len(unique_verified)} (one M03-derived physical replay plus {sum(bool(e.get('source_policy_attempt')) for e in unique_verified.values())} fresh M04 SmolVLA inference sequences).",
         f"- M04 RTX 3090 allocated runtime over all fresh policy attempts: {gpu_hours:.6f} GPU-hours; peak allocated memory: {peak_vram / 1024**3:.3f} GiB.",
         f"- Episode-level median policy-call latency percentiles (ms): {metrics['policy_call_latency_ms_median_of_episode_percentiles']}; chunk medians p50={metrics['action_chunk_latency_ms_median_of_episode_p50']:.1f} ms, p95={metrics['action_chunk_latency_ms_median_of_episode_p95']:.1f} ms, worst observed per-episode p99={metrics['action_chunk_latency_ms_max_episode_p99']:.1f} ms.",
         f"- LeRobotDataset v3 writer: {dataset_provenance.get('write_seconds', 7.501):.3f}s; throughput receipt reports 26.66 transitions/s.",
@@ -236,7 +261,7 @@ def main() -> None:
         else "- Demo video: not yet validated.",
         "",
         "## Verified LeRobotDataset v3 candidate",
-        "`dataset/lerobot_v3_verified_r2` contains 2 verified episodes / 200 transitions and 2 unique correction action sequences; action/state round-trip errors are zero in the export receipt. Both episodes derive from LIBERO Goal task 6, init state 7 and the same M02 source failure. This is not a diverse or publicly releasable benchmark dataset.",
+        "`dataset/lerobot_v3_verified_r4` contains 6 verified episodes (5 fresh M04 policy sequences plus one M03-derived replay), from one task/init-state/source failure; action/state round-trip errors are zero in the export receipt. All sequences derive from LIBERO Goal task 6, init state 7 and the same M02 source failure. This is not a diverse or publicly releasable benchmark dataset.",
         "",
         "## Performance decision",
         "The FP32 baseline was retained. BF16 and TF32 candidates failed the predeclared output-fidelity/speed gate; no inference speedup is claimed.",
@@ -245,7 +270,7 @@ def main() -> None:
         "No Hugging Face Dataset or Space was uploaded. Current data volume and task diversity are inadequate for release, and redistribution terms for upstream assets require clearance. Draft cards and a local Space package are retained in `publication/`.",
         "",
         "## Remaining acceptance gaps",
-        "- At least 10 independent corrected trajectories have not been achieved; only 2 unique sequences are independently verified.",
+        "- At least 10 independent corrected trajectories have not been achieved; 5 fresh policy correction sequences plus 1 M03-derived replay are independently verified.",
         "- Verified data cover one task and one initial state only; no claim of generalization is supported.",
         "- Performance optimization was measured and rejected; no validated speedup exists.",
         "- Public Dataset/Space release is blocked by data quality and asset/license review.",
@@ -275,9 +300,9 @@ def main() -> None:
         "gates": {
             "real_mujoco_smoke": "PASS",
             "exact_prefix_state_recovery": "PASS: 0 qpos/qvel/time error on recorded recovered starts",
-            "M04_fresh_policy_success_independently_replayed_twice": "PASS: one unique action sequence",
-            "unique_verified_corrections_at_least_10": "FAIL: 2 unique sequences total (1 fresh M04 sequence + 1 M03-derived replay)",
-            "task_diversity": "FAIL: both verified sequences are Goal task 6 / init state 7",
+            "M04_fresh_policy_success_independently_replayed_twice": f"PASS: {sum(bool(e.get('source_policy_attempt')) for e in unique_verified.values())} fresh unique action sequences independently replayed twice",
+            "unique_verified_corrections_at_least_10": f"FAIL: {len(unique_verified)} unique sequences total ({sum(bool(e.get('source_policy_attempt')) for e in unique_verified.values())} fresh M04 sequences + 1 M03-derived replay)",
+            "task_diversity": "FAIL: all verified sequences are Goal task 6 / init state 7 / same M02 source failure",
             "lerobot_v3_roundtrip": f"PASS: independent audit {independent_dataset['episodes']} episodes / {independent_dataset['transitions']} transitions; action/state Linf {independent_dataset['action_max_linf']}/{independent_dataset['state_max_linf']}",
             "episode_artifact_integrity": f"PARTIAL: {len(artifact_integrity['missing_artifacts'])} missing artifacts; {len(artifact_integrity['registry_hash_mismatches'])} registry hash mismatch (action values match NPZ exactly)",
             "BF16_or_TF32_speedup": "NOT DEMONSTRATED: candidates rejected by correctness/speed gates",
@@ -298,7 +323,7 @@ def main() -> None:
         "evidence": {
             "report": str(ROOT / "REPORT.md"),
             "metrics": str(ROOT / "metrics.json"),
-            "dataset": str(ROOT / "dataset/lerobot_v3_verified_r2"),
+            "dataset": str(DATASET),
             "attempt_registry": str(ATTEMPTS),
             "demo_video": str(ROOT / "demo/M04_demo_200s.mp4") if demo_validation else None,
             "offline_gallery": str(ROOT / "demo/visualization/index.html"),
@@ -318,7 +343,7 @@ def main() -> None:
         "independently_verified_unique_corrections": len(unique_verified),
         "verified_correction_action_hashes": sorted(unique_verified),
         "gpu_hours_all_attempts_including_failures": gpu_hours,
-        "dataset_provenance": str(ROOT / "dataset/lerobot_v3_verified_r2/provenance.json"),
+        "dataset_provenance": str(DATASET / "provenance.json"),
         "dataset_independent_validation": str(independent_dataset_path),
         "artifact_integrity_audit": str(artifact_integrity_path),
         "demo_video_validation": str(demo_validation_path) if demo_validation else None,

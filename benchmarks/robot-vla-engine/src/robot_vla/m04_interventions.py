@@ -16,6 +16,19 @@ def scale_environment_action(action: np.ndarray, scale: float) -> np.ndarray:
     return np.clip(command * value, -1.0, 1.0).astype(np.float32, copy=False)
 
 
+def brightness_camera_keys(camera: str) -> tuple[str, ...]:
+    """Return model-batch image keys targeted by an observation intervention."""
+    cameras = {
+        "both": ("observation.images.image", "observation.images.image2"),
+        "agentview": ("observation.images.image",),
+        "wrist": ("observation.images.image2",),
+    }
+    try:
+        return cameras[camera]
+    except KeyError as exc:
+        raise ValueError(f"unsupported camera intervention: {camera}") from exc
+
+
 def intervention_is_active(step: int, start: int, duration: int) -> bool:
     """Return whether an observation-time intervention is active at a policy call."""
     if start < 0 or duration < 0:

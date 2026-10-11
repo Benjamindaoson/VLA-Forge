@@ -28,6 +28,7 @@ from robot_vla.instrumentation import ChunkProfiler
 from robot_vla.m01 import fit_libero_state_to_checkpoint
 from robot_vla.m04_interventions import (
     benchmark_suite_name,
+    brightness_camera_keys,
     intervention_is_active,
     scale_environment_action,
 )
@@ -180,7 +181,10 @@ def main():
         # Every condition has an explicit default no-op observation window.
         # Brightness interventions override it; action-scale conditions do not.
         intervention_start = 0
+        brightness_camera = "both"
         if condition_key == "brightness_first50":
+            brightness_camera = os.environ.get("M04_BRIGHTNESS_CAMERA", "both")
+            brightness_camera_keys(brightness_camera)
             gain = float(os.environ.get("M04_BRIGHTNESS_GAIN", str(gain)))
             intervention_steps = int(
                 os.environ.get("M04_INTERVENTION_STEPS", str(intervention_steps))
@@ -192,7 +196,10 @@ def main():
                 )
             if intervention_start < 0 or intervention_start + intervention_steps > 120:
                 raise ValueError("brightness intervention window must fit the 120-step horizon")
-            condition = f"input_brightness_gain_{gain:g}_steps{intervention_start}-{intervention_start + intervention_steps}"
+            condition = (
+                f"input_brightness_gain_{gain:g}_steps{intervention_start}-"
+                f"{intervention_start + intervention_steps}_camera_{brightness_camera}"
+            )
         elif condition_key == "action_scale":
             action_scale = float(os.environ.get("M04_ACTION_SCALE", str(action_scale)))
             # Validate before any expensive model or environment work begins.
@@ -245,6 +252,7 @@ def main():
                 "episode_id": attempt_id,
                 "condition": condition,
                 "brightness_gain": gain,
+                "brightness_camera": brightness_camera,
                 "seed": ENV_SEED,
                 "init_state_id": SOURCE_EPISODE_ID,
                 "policy_seed": POLICY_SEED,
@@ -351,7 +359,7 @@ def main():
                     else 1.0
                 )
                 if step_gain != 1.0:
-                    for key in ("observation.images.image", "observation.images.image2"):
+                    for key in brightness_camera_keys(brightness_camera):
                         if key in batch:
                             batch[key] = torch.clamp(batch[key] * step_gain, 0.0, 1.0)
                 processed = pre(batch)
@@ -459,6 +467,7 @@ def main():
             "vlm_model_sha256": vlm_hash,
             "condition": condition,
             "brightness_gain": gain,
+            "brightness_camera": brightness_camera,
             "intervention_observation_steps": intervention_steps,
             "intervention_start": intervention_start
             if condition_key == "brightness_first50"

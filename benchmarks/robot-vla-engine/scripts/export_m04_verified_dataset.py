@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import time
 from pathlib import Path
 
@@ -14,7 +15,7 @@ from lerobot.processor.env_processor import LiberoProcessorStep
 
 ROOT = Path("/data/VLA-Forge")
 EVID = ROOT / "Evidence/M04"
-DEST = EVID / "dataset/lerobot_v3_verified_r2"
+DEST = Path(os.environ.get("M04_DATASET_PATH", EVID / "dataset/lerobot_v3_verified_r2"))
 REPO_ID = "vla_forge/m04_verified_corrections"
 FPS = 20
 SOURCE_SPECS = [
@@ -33,6 +34,36 @@ SOURCE_SPECS = [
         / "artifacts/verified_corrections/m04-goal-t06-e07-brightness115-first50-seed84075/m04-goal-t06-e07-brightness115-first50-seed84075-independent-replay-01.json",
         "start": 100,
         "unique_action_source": "fresh M04 SmolVLA inference at policy seed 84075 with 1.15 RGB gain for the first 50 post-checkpoint observations, independently replayed twice",
+    },
+    {
+        "episode_id": "m04-policy-wrist-camera115-replay-01",
+        "npz": EVID
+        / "artifacts/verified_corrections/m04-goal-t06-e07-wrist115-first50-seed84067/m04-goal-t06-e07-wrist115-first50-seed84067-independent-replay-01.npz",
+        "json": EVID
+        / "artifacts/verified_corrections/m04-goal-t06-e07-wrist115-first50-seed84067/m04-goal-t06-e07-wrist115-first50-seed84067-independent-replay-01.json",
+        "start": 100,
+        "unique_action_source": "fresh M04 SmolVLA inference at policy seed 84067 with 1.15 gain applied only to wrist-camera observations for the first 50 post-checkpoint policy calls, independently replayed twice",
+    },
+    {
+        "episode_id": "m04-policy-wrist110-seed84068-replay-01",
+        "npz": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84068/m04-goal-t06-e07-wrist110-first50-seed84068-independent-replay-01.npz",
+        "json": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84068/m04-goal-t06-e07-wrist110-first50-seed84068-independent-replay-01.json",
+        "start": 100,
+        "unique_action_source": "fresh M04 SmolVLA inference at seed 84068 with 1.10 wrist-camera gain for 50 policy calls; independently replayed twice",
+    },
+    {
+        "episode_id": "m04-policy-wrist110-seed84071-replay-01",
+        "npz": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84071/m04-goal-t06-e07-wrist110-first50-seed84071-independent-replay-01.npz",
+        "json": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84071/m04-goal-t06-e07-wrist110-first50-seed84071-independent-replay-01.json",
+        "start": 100,
+        "unique_action_source": "fresh M04 SmolVLA inference at seed 84071 with 1.10 wrist-camera gain for 50 policy calls; independently replayed twice",
+    },
+    {
+        "episode_id": "m04-policy-wrist110-seed84072-replay-01",
+        "npz": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84072/m04-goal-t06-e07-wrist110-first50-seed84072-independent-replay-01.npz",
+        "json": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84072/m04-goal-t06-e07-wrist110-first50-seed84072-independent-replay-01.json",
+        "start": 100,
+        "unique_action_source": "fresh M04 SmolVLA inference at seed 84072 with 1.10 wrist-camera gain for 50 policy calls; independently replayed twice",
     },
 ]
 
@@ -271,7 +302,7 @@ def main() -> None:
         "roundtrip_validation": checks,
         "write_and_encode_seconds": encode_seconds,
         "transitions_per_second": len(loaded) / encode_seconds,
-        "release_scope": "engineering preview: both unique successful corrected trajectories originate from the same LIBERO Goal task 6, M02 init state 7, M02 failed source episode. Not evidence of task/init-state generalization; public release remains gated by data quality and asset-license audit.",
+        "release_scope": f"engineering preview: {len(seen_action_hashes)} unique successful corrected trajectories originate from the same LIBERO Goal task 6, M02 init state 7, M02 failed source episode. Not evidence of task/init-state generalization; public release remains gated by data quality and asset-license audit.",
     }
     (DEST / "provenance.json").write_text(json.dumps(receipt, indent=2) + "\n")
     print(json.dumps(receipt, indent=2))

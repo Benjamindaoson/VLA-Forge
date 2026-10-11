@@ -16,7 +16,7 @@ OUT = EVIDENCE / "demo"
 SOURCES = OUT / "source_videos"
 VIS = OUT / "visualization"
 W, H, FPS = 1920, 1080, 20
-CLIP_MAX_S = 10.0
+CLIP_MAX_S = 8.5
 M03_DUPLICATE_SHAM_VIDEOS: list[dict] = []
 
 
@@ -157,7 +157,33 @@ def m04_clips() -> list[dict]:
     )
     if success is None:
         raise RuntimeError("verified fresh M04 policy success is absent from registry")
-    chosen = [success]
+    wrist_verified = json.loads(
+        (
+            EVIDENCE
+            / "artifacts/verified_corrections/m04-goal-t06-e07-wrist115-first50-seed84067/summary.json"
+        ).read_text()
+    )
+    wrist_success = next(
+        (
+            row
+            for row in attempts
+            if row.get("episode_id") == wrist_verified["source_policy_run"] and row.get("success")
+        ),
+        None,
+    )
+    if wrist_success is None:
+        raise RuntimeError("verified wrist-camera M04 success is absent from registry")
+    chosen = [success, wrist_success]
+    for run_id in (
+        "m04-goal-t06-e07-wrist110-first50-seed84068",
+        "m04-goal-t06-e07-wrist110-first50-seed84071",
+        "m04-goal-t06-e07-wrist110-first50-seed84072",
+    ):
+        receipt = json.loads((EVIDENCE / "artifacts/verified_corrections" / run_id / "summary.json").read_text())
+        row = next((item for item in attempts if item.get("episode_id") == receipt["source_policy_run"] and item.get("success")), None)
+        if row is None:
+            raise RuntimeError(f"independently verified success absent from registry: {run_id}")
+        chosen.append(row)
     for suite in ("spatial", "long"):
         failure = next(
             (
@@ -319,8 +345,8 @@ def main() -> None:
         (
             "Dataset reality",
             [
-                "2 unique verified correction episodes | 200 transitions | LeRobot v3",
-                "Both are Goal task 6 / init state 7; not task-diverse and not public-ready",
+                "6 unique verified sequences | 533 transitions | LeRobot v3",
+                "All six are Goal task 6 / init state 7; not task-diverse and not public-ready",
             ],
             6,
         ),
@@ -343,8 +369,8 @@ def main() -> None:
         (
             "Conclusion",
             [
-                "One fresh SmolVLA correction succeeded and replayed twice from a matched prefix",
-                "M04 remains INCOMPLETE: at least 10 independent, diverse corrections are still required",
+                "Five fresh SmolVLA corrections succeeded and replayed twice from matched prefixes",
+                "M04 remains INCOMPLETE: at least 10 corrections and broader task/state coverage are required",
             ],
             8,
         ),
@@ -518,16 +544,16 @@ def main() -> None:
     cards_dir.mkdir(exist_ok=True)
     summary = {
         "status": "INCOMPLETE",
-        "verified_unique_corrections": 2,
-        "new_m04_policy_sequences": 1,
-        "dataset_episodes": 2,
-        "dataset_transitions": 200,
+        "verified_unique_corrections": 6,
+        "new_m04_policy_sequences": 5,
+        "dataset_episodes": 6,
+        "dataset_transitions": 533,
         "public_release": False,
         "reason": "insufficient task diversity and upstream redistribution review pending",
     }
     (VIS / "metrics_summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     html = [
-        "<!doctype html><html><head><meta charset='utf-8'><title>VLA-Forge M04 Evidence</title><style>body{font:16px system-ui;max-width:1100px;margin:36px auto;background:#f4f6f8;color:#17212b}article{background:white;padding:22px;margin:18px 0;border-radius:8px}video{width:100%;max-width:900px;background:#111}table{border-collapse:collapse}td,th{padding:8px;border-bottom:1px solid #ddd;text-align:left}</style></head><body><h1>VLA-Forge M04 — real correction evidence</h1><article><p><b>Status: INCOMPLETE.</b> One fresh policy-generated correction was independently replayed twice. Two unique correction sequences exist overall, both from one Goal task and initial state. No generalization or public release is claimed.</p><video controls src='../M04_demo_200s.mp4'></video></article><article><h2>Matched intervention view</h2><img width='100%' src='../M04_comparison.png'></article><article><h2>Copied source clips</h2><table><tr><th>Source</th><th>Suite/task</th><th>Result</th><th>Condition</th><th>Clip</th></tr>"
+        "<!doctype html><html><head><meta charset='utf-8'><title>VLA-Forge M04 Evidence</title><style>body{font:16px system-ui;max-width:1100px;margin:36px auto;background:#f4f6f8;color:#17212b}article{background:white;padding:22px;margin:18px 0;border-radius:8px}video{width:100%;max-width:900px;background:#111}table{border-collapse:collapse}td,th{padding:8px;border-bottom:1px solid #ddd;text-align:left}</style></head><body><h1>VLA-Forge M04 — real correction evidence</h1><article><p><b>Status: INCOMPLETE.</b> Five fresh policy-generated corrections were independently replayed twice. Six unique correction sequences exist including one M03-derived replay; all share one Goal task and initial state. No generalization or public release is claimed.</p><video controls src='../M04_demo_200s.mp4'></video></article><article><h2>Matched intervention view</h2><img width='100%' src='../M04_comparison.png'></article><article><h2>Copied source clips</h2><table><tr><th>Source</th><th>Suite/task</th><th>Result</th><th>Condition</th><th>Clip</th></tr>"
     ]
     for e in episode_entries:
         rel = Path(e["copied_path"]).relative_to(OUT)
@@ -537,7 +563,7 @@ def main() -> None:
     html += [
         "</table></article><article><h2>Dataset and metrics</h2><pre>"
         + json.dumps(summary, indent=2)
-        + "</pre><p>See ../REPORT.md, ../metrics.json, ../dataset/lerobot_v3_verified_r2/provenance.json, and ../status.json.</p></article></body></html>"
+        + "</pre><p>See ../REPORT.md, ../metrics.json, ../dataset/lerobot_v3_verified_r4/provenance.json, and ../status.json.</p></article></body></html>"
     ]
     (VIS / "index.html").write_text("\n".join(html), encoding="utf-8")
     print(
