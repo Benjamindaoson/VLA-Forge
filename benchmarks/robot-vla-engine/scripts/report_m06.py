@@ -21,6 +21,7 @@ def main():
     decisions = load('release_decisions.json')
     modelops = load('modelops/evaluations/summary.json')
     manifest = load('manifest.json')
+    publication = load('github_publication.json')
     if (validation['status'] != 'PASS' or validation['valid'] != 1600
             or not 180 <= video['duration_s'] <= 240
             or any(decisions[name]['decision'] != modelops[name]['decision'] for name in CONDITIONS)):
@@ -30,7 +31,8 @@ def main():
     modelops_commit = subprocess.check_output(['git','-C','/data/ModelOps-Platform','rev-parse','HEAD'],text=True).strip()
     lines = ['# M06 Independent Robot Policy Regression & Release Evaluation', '',
              '**Engineering acceptance: PASS.** All four frozen policy identities have 400 real FP32 Eager LIBERO/MuJoCo rollouts each (1,600 total). The registered algorithm-quality decision is separate from engineering completeness.', '',
-             f'Protocol SHA-256: `{manifest["protocol_sha256"]}`. VLA code commit `{vla_commit}`; ModelOps commit `{modelops_commit}`. GPU: `{manifest["environment"]["gpu"]}`.', '',
+             f'Protocol SHA-256: `{manifest["protocol_sha256"]}`. Local VLA code commit `{vla_commit}`; local ModelOps commit `{modelops_commit}`. GPU: `{manifest["environment"]["gpu"]}`.',
+             f'Published source: [VLA-Forge M06]({publication["vla"]["url"]}) and [ModelOps M06]({publication["modelops"]["url"]}). GitHub connector publication commits differ from the cloud-local commit IDs; the key source blob hashes were independently checked.', '',
              '## 40-task benchmark', '', '| Policy | Spatial | Object | Goal | Long | Overall | ModelOps decision |',
              '|---|---:|---:|---:|---:|---:|---|']
     for name in CONDITIONS:
@@ -54,7 +56,7 @@ def main():
         lat = p['chunk_latency_ms']
         util = p['gpu_utilization_percent_mean']
         lines.append(f'| {name} | {p["episodes"]} | {c["episode_gpu_hours"]:.3f} | {lat["p50"]:.1f}/{lat["p95"]:.1f}/{lat["p99"]:.1f} | {p["gpu_peak_allocated_bytes"]/2**30:.2f} | {util:.1f}% |' if util is not None else f'| {name} | {p["episodes"]} | {c["episode_gpu_hours"]:.3f} | {lat["p50"]:.1f}/{lat["p95"]:.1f}/{lat["p99"]:.1f} | {p["gpu_peak_allocated_bytes"]/2**30:.2f} | N/A |')
-    lines += ['', f'Measured episode-wall total: {cost["total_measured_episode_gpu_hours"]:.3f} GPU-hours; this excludes startup, model loading, idle and failed retries. Model loading and pure encoder CPU time were not timed separately, so those phase values remain N/A; `performance.json` contains measured preprocessing, policy, MuJoCo, control-cycle and resource samples plus an explicitly labeled video/loop residual upper bound. Actual rental invoice/rate is unavailable; monetary cost remains N/A. Error/retry count: {validation["failed_attempts_preserved"]}.', '',
+    lines += ['', f'Measured episode-wall total: {cost["total_measured_episode_gpu_hours"]:.3f} GPU-hours; this excludes startup, model loading, idle and failed retries. Model loading and pure encoder CPU time were not timed separately, so those phase values remain N/A; `performance.json` contains measured preprocessing, policy, MuJoCo, control-cycle and resource samples plus an explicitly labeled video/loop residual upper bound. The quarantined native-BF16 technical attempt consumed {cost["invalid_bf16_technical_attempt_gpu_wall_hours"]:.3f} additional GPU wall-hours and contributes zero formal episodes. Actual rental invoice/rate is unavailable; monetary cost remains N/A. Error/retry count: {validation["failed_attempts_preserved"]}.', '',
               '## Visual and reproducibility evidence', '',
               f'- Private film: `demo/M06_demo_200s.mp4` ({video["duration_s"]:.1f}s, 1920×1080 H.264, {video["bytes"]/2**20:.1f} MiB, SHA-256 `{video["sha256"]}`).',
               '- Offline dashboard: `visualization/index.html`. Source episode IDs, source time windows and hashes: `video_sources.json`.',

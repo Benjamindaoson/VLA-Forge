@@ -259,7 +259,13 @@ def performance_cost(chunks: dict, resource: dict, validation: dict):
         costs[condition] = {'episode_gpu_hours': total_s / 3600,
             'episode_gpu_hours_per_100_rollouts': total_s / 3600 / 4,
             'scope': 'sum of measured episode walls only; model load/setup/idle/error overhead separate'}
+    invalid_path = EVIDENCE / 'technical_attempts/bf16_native_20261011/worker_status.json'
+    invalid_worker = json.loads(invalid_path.read_text()) if invalid_path.is_file() else None
+    invalid_wall = ((invalid_worker['finished_unix'] - invalid_worker['started_unix']) / 3600
+                    if invalid_worker and 'finished_unix' in invalid_worker else None)
     cost = {'by_condition': costs, 'total_measured_episode_gpu_hours': sum(v['episode_gpu_hours'] for v in costs.values()),
+            'invalid_bf16_technical_attempt_gpu_wall_hours': invalid_wall,
+            'invalid_attempt_note': '30 quarantined receipts, zero formal denominator contribution; worker wall is rental-time proxy, not an invoice',
             'rental_rate_per_hour': None, 'rental_invoice_cost': None,
             'rental_note': 'Unknown invoice/rate; no fabricated monetary estimate',
             'retry_errors': validation['failed_attempts_preserved'],
