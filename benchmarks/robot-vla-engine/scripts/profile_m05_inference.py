@@ -34,12 +34,13 @@ def child(mode, calls, adapter):
         state, task = data["state"], str(data["task"])
     engine = PolicyEngine("m05-corrective-cam180-s5501", adapter, mode)
     warm = []
-    for _ in range(3):
+    for _ in range(100):
         warm.append(engine.predict(image1, image2, state, task, seed=991))
     measured = []
     for _ in range(calls):
         measured.append(engine.predict(image1, image2, state, task, seed=991))
     action = np.asarray(measured[0]["actions"], dtype=np.float32)
+    raw_action = np.asarray(measured[0]["raw_actions"], dtype=np.float32)
     if action.shape != (50, 7) or not np.isfinite(action).all():
         raise ValueError("Invalid continuous action output")
     if any(
@@ -50,7 +51,7 @@ def child(mode, calls, adapter):
     result = {
         "mode": mode,
         "calls": calls,
-        "warm_calls": 3,
+        "warm_calls": 100,
         "input_sha256": sha256(INPUT),
         "adapter_sha256": sha256(Path(adapter) / "adapter_model.safetensors"),
         "model_load_s": engine.load_s,
@@ -61,9 +62,10 @@ def child(mode, calls, adapter):
         "gpu_peak_reserved": max(row["gpu_reserved_peak"] for row in measured),
         "clipped_values": max(row["clipped_values"] for row in measured),
         "actions": action.tolist(),
+        "raw_actions": raw_action.tolist(),
     }
     atomic_json(OUT / (mode + ".json"), result)
-    print(json.dumps({k: v for k, v in result.items() if k != "actions"}))
+    print(json.dumps({k: v for k, v in result.items() if k not in ("actions", "raw_actions")}))
 
 
 def parent(calls, timeout):
@@ -120,16 +122,21 @@ def parent(calls, timeout):
     if receipts.get("eager", {}).get("status") != "completed":
         raise RuntimeError("Eager baseline unavailable")
     baseline = np.asarray(receipts["eager"]["actions"])
+    baseline_raw = np.asarray(receipts["eager"]["raw_actions"])
     for mode, row in receipts.items():
         if row["status"] != "completed":
             continue
         delta = np.abs(np.asarray(row["actions"]) - baseline)
         row["action_linf_vs_eager"] = float(delta.max())
         row["action_mae_vs_eager"] = float(delta.mean())
+        raw_delta = np.abs(np.asarray(row["raw_actions"]) - baseline_raw)
+        row["raw_action_linf_vs_eager"] = float(raw_delta.max())
+        row["raw_action_mae_vs_eager"] = float(raw_delta.mean())
         row["correctness_gate"] = row["action_linf_vs_eager"] <= (
             1e-6 if mode == "cuda_graph" else 0.02
         ) and row["action_mae_vs_eager"] <= (1e-6 if mode == "cuda_graph" else 0.005)
         row.pop("actions", None)
+        row.pop("raw_actions", None)
     atomic_json(
         OUT / "matrix.json",
         {

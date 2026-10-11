@@ -28,6 +28,8 @@ def test_rejects_version_and_state_mismatch():
         "state": [0] * 8,
         "task": "place bowl",
         "observation_id": "step10",
+        "image1": "AA==",
+        "image2": "AA==",
     }
     m.validate_request(r, "v1")
     with pytest.raises(ValueError):
@@ -102,3 +104,40 @@ def test_modelops_activation_is_atomic_with_version_switch(tmp_path, monkeypatch
     assert restored.status_code == 200
     assert client.get("/ready").json()["version"] == "base"
     assert calls == [("rejected", False), ("candidate", False), ("base", True)]
+
+
+def test_missing_observation_metadata_is_rejected_as_client_error(tmp_path):
+    from fastapi.testclient import TestClient
+
+    m = module()
+
+    class FakeEngine:
+        version = "base"
+        backend = "eager"
+        model_hash = "hash"
+
+    client = TestClient(m.create_app(FakeEngine(), {"base": None}, tmp_path / "events.jsonl"))
+    response = client.post("/v1/action-chunks", json={
+        "scope": "simulation", "version": "base", "state": [0] * 8,
+        "task": "place bowl", "observation_id": "step10",
+    })
+    assert response.status_code == 422
+
+
+def test_invalid_base64_camera_is_rejected_as_client_error(tmp_path):
+    from fastapi.testclient import TestClient
+
+    m = module()
+
+    class FakeEngine:
+        version = "base"
+        backend = "eager"
+        model_hash = "hash"
+
+    client = TestClient(m.create_app(FakeEngine(), {"base": None}, tmp_path / "events.jsonl"))
+    response = client.post("/v1/action-chunks", json={
+        "scope": "simulation", "version": "base", "observed_at": time.time(),
+        "state": [0] * 8, "task": "place bowl", "observation_id": "step10",
+        "image1": "!!!", "image2": "AA==",
+    })
+    assert response.status_code == 422

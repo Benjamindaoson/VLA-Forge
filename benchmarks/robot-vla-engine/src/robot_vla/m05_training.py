@@ -291,6 +291,25 @@ def train_job(config):
             expert = policy.get_base_model().model.vlm_with_expert
             original = expert.forward
             expert.forward = lambda *a, **kw: checkpoint(original, *a, use_reentrant=False, **kw)
+        if config.get("component_profile"):
+            if not config.get("profile"):
+                raise ValueError("Component instrumentation requires a Torch Profiler trace")
+            model = policy.get_base_model().model
+
+            def instrument(target, method, region):
+                original_method = getattr(target, method)
+
+                def traced(*args, **kwargs):
+                    with torch.profiler.record_function(region):
+                        return original_method(*args, **kwargs)
+
+                setattr(target, method, traced)
+
+            instrument(model, "embed_prefix", "m05/component_prefix")
+            instrument(model.vlm_with_expert.get_vlm_model().vision_model,
+                       "forward", "m05/component_vision_encoder")
+            instrument(model.vlm_with_expert, "forward", "m05/component_vlm_expert_joint")
+            instrument(model.action_out_proj, "forward", "m05/component_action_output")
         parameters = [p for p in policy.parameters() if p.requires_grad]
         names = [n for n, p in policy.named_parameters() if p.requires_grad]
         initial = {
@@ -473,6 +492,22 @@ def train_job(config):
                     break
         if profile:
             recorder.export_chrome_trace(str(out / "profile.json"))
+            if config.get("component_profile"):
+                events = []
+                for event in recorder.key_averages():
+                    if event.key.startswith("m05/"):
+                        events.append({
+                            "region": event.key,
+                            "count": event.count,
+                            "cpu_time_total_us": event.cpu_time_total,
+                            "self_cpu_time_total_us": event.self_cpu_time_total,
+                            "device_time_total_us": getattr(event, "device_time_total", None),
+                            "self_device_time_total_us": getattr(event, "self_device_time_total", None),
+                        })
+                atomic_json(out / "component_profile.json", {
+                    "scope": "eight-update profiled pilot; nested regions are not additive",
+                    "events": events,
+                })
         telemetry.phase = "checkpoint_save"
         t = time.perf_counter()
         completed_step = step + 1

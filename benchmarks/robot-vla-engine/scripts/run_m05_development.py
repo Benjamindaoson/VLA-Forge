@@ -133,10 +133,16 @@ def write_summary(output):
     )
 
 
-def execute(condition, cases, output, max_new):
+def execute(condition, cases, output, max_new, backend="eager"):
     adapter, digest = adapter_for(condition)
     policy, pre, post = load_policy(adapter, train=False, lora=False)
     base = policy.get_base_model() if adapter else policy
+    if backend == "cuda_graph":
+        from robot_vla.m04_acceleration import CudaGraphSampler
+
+        base.model.sample_actions = CudaGraphSampler(base.model)
+    elif backend != "eager":
+        raise ValueError("Unknown closed-loop backend")
     measured = ChunkProfiler(base, torch.cuda.synchronize)
     protocol = load_protocol(ROOT / "configs/data_protocol_v1.json")
     protocol = json.loads(json.dumps(protocol))
@@ -153,6 +159,7 @@ def execute(condition, cases, output, max_new):
             {
                 "scope": "M05-development-only",
                 "condition": condition,
+                "backend": backend,
                 "checkpoint_sha256": digest,
                 "cases": cases,
             }
@@ -259,7 +266,7 @@ def execute(condition, cases, output, max_new):
                         "initial_state": case["init"],
                         "suite": suite_name,
                     },
-                    policy_metadata={"condition": condition, "checkpoint_sha256": digest},
+                    policy_metadata={"condition": condition, "backend": backend, "checkpoint_sha256": digest},
                 )
                 if stream is None or not result.get("chunk_calls"):
                     raise ValueError("No measured chunk inference or frames")
@@ -283,6 +290,7 @@ def execute(condition, cases, output, max_new):
                 receipt = {
                     **case,
                     "condition": condition,
+                    "backend": backend,
                     "status": "complete",
                     "success": bool(result["success"]),
                     "steps": len(actions),
@@ -316,6 +324,7 @@ def execute(condition, cases, output, max_new):
                     {
                         **case,
                         "condition": condition,
+                        "backend": backend,
                         "status": "error",
                         "success": None,
                         "checkpoint_sha256": digest,
@@ -337,15 +346,19 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--conditions", nargs="+", choices=CONDITIONS, default=CONDITIONS)
     parser.add_argument("--max-new-per-condition", type=int)
+    parser.add_argument("--backend", choices=("eager", "cuda_graph"), default="eager")
+    parser.add_argument("--output", type=Path, default=EVIDENCE / "development")
     args = parser.parse_args()
-    output = EVIDENCE / "development"
+    output = args.output
+    if args.backend != "eager" and output.resolve() == (EVIDENCE / "development").resolve():
+        raise ValueError("Graph rollouts require a separate evidence directory")
     (output / "receipts").mkdir(parents=True, exist_ok=True)
     plan = json.loads((ROOT.parents[1] / "configs/m05/formal_protocol.json").read_text())
     cases = validate_plan(plan)
     with (EVIDENCE / "gpu.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         for condition in args.conditions:
-            execute(condition, cases, output, args.max_new_per_condition)
+            execute(condition, cases, output, args.max_new_per_condition, args.backend)
     write_summary(output)
 
 

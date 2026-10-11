@@ -14,18 +14,27 @@ MAX_AGE_S = 10.0
 def validate_request(request, version):
     if request.get("scope") != "simulation":
         raise ValueError("Only authorized simulation observations are accepted")
-    age = time.time() - float(request["observed_at"])
+    try:
+        observed_at = float(request["observed_at"])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError("Missing or invalid observation time") from exc
+    age = time.time() - observed_at
     if not 0 <= age <= MAX_AGE_S:
         raise ValueError("Expired or future observation")
     if request.get("version") != version:
         raise ValueError("Model version mismatch")
-    state = np.asarray(request.get("state"))
+    try:
+        state = np.asarray(request.get("state"), dtype=np.float32)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("Expected finite canonical 8D state") from exc
     if state.shape != (8,) or not np.isfinite(state).all():
         raise ValueError("Expected finite canonical 8D state")
     if not isinstance(request.get("task"), str) or not 0 < len(request["task"]) <= 1024:
         raise ValueError("Missing task instruction")
-    if not isinstance(request.get("observation_id"), str) or len(request["observation_id"]) > 128:
+    if not isinstance(request.get("observation_id"), str) or not 0 < len(request["observation_id"]) <= 128:
         raise ValueError("Missing observation identity")
+    if any(not isinstance(request.get(key), str) or not request[key] for key in ("image1", "image2")):
+        raise ValueError("Missing dual-camera observation")
 
 
 def validate_response(response, observation_id, version):
@@ -147,7 +156,10 @@ def decode_image(value):
     if not isinstance(value, str) or len(value) > 2_000_000:
         raise ValueError("Invalid image payload size")
     data = base64.b64decode(value, validate=True)
-    im = Image.open(io.BytesIO(data))
+    try:
+        im = Image.open(io.BytesIO(data))
+    except (OSError, ValueError) as exc:
+        raise ValueError("Invalid encoded image") from exc
     if im.size != (256, 256):
         raise ValueError("Image shape mismatch")
     return np.asarray(im.convert("RGB"))
