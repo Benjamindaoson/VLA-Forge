@@ -1,6 +1,7 @@
 """Generate evidence-bounded M05 reports for VLA-Forge and ModelOps."""
 from __future__ import annotations
 
+import csv
 import json
 import subprocess
 from pathlib import Path
@@ -30,6 +31,7 @@ def main() -> None:
     inf = read('inference/matrix.json')['modes']
     frozen = read('inference_frozen/summary.json')
     cost = read('summary/cost_report.json')
+    optimization = list(csv.DictReader((ROOT / 'summary/optimization_matrix.csv').open()))
     video = read('demo/video_validation.json')
     sources = read('demo/video_sources.json')
     ab = read('modelops/ab_comparison.json')
@@ -43,6 +45,9 @@ def main() -> None:
     lines = [
         '# VLA-Forge M05 — real SmolVLA post-training and inference systems', '',
         '**Technical validation: PASS.** All claimed GPU work below has raw receipts. This is an eight-state development evaluation; M06 formal 400-episode test remains unopened. Public visual/weight release is not authorized.', '',
+        '**Gate 1 (real post-training): PASS.** Three frozen 500-update LoRA conditions saved reloadable adapters; 32/32 development MuJoCo receipts passed integrity checks.',
+        '**Gate 2 (AI infrastructure): PASS.** Precision, memory, data and inference candidates have measured accept/reject decisions; real service, paired closed-loop rollouts and phase-bounded costs are audited.',
+        '**Gate 3 (career evidence): PASS.** Private 235-second demo, offline HTML, checkpoint hashes, reproduction entrypoint, GitHub commits and evidence-bounded résumé bullets are present.', '',
         f'VLA code: `{vla_sha}` on `codex/m05-modelops-posttraining`. ModelOps code: `{ops_sha}` on `codex/smolvla-linux-adapter`.',
         f'Unified private evidence: `{ROOT}`. Frozen official model: `lerobot/smolvla_libero` with model SHA `{read("inference_frozen/eager.json")["model_sha256"]}`.', '',
         '## What actually ran', '',
@@ -52,6 +57,27 @@ def main() -> None:
     ]
     for name, r in training.items():
         lines.append(f"| {name} | `{r['run_id']}` | {r['optimizer_updates']} | {r['loss_first']:.5f} → {r['loss_last']:.5f} | {r['process_wall_s']:.2f}s | `{r['adapter_sha256']}` |")
+    lines += ['', '## Bounded training optimization pilots', '',
+              'These are eight-update cold-process pilots on the same selected workload. '
+              'Wall-derived throughput includes process overhead and is not steady-state training speed.', '',
+              '| Candidate | Decision | Updates | Process wall | Cold effective updates/s | Peak allocated GiB |',
+              '|---|---|---:|---:|---:|---:|']
+    for row in optimization:
+        steps = int(row['optimizer_updates'])
+        wall = float(row['process_wall_s']) if row['process_wall_s'] else None
+        peak = float(row['peak_allocated_bytes']) if row['peak_allocated_bytes'] else None
+        lines.append(
+            f"| {row['candidate']} | {row['decision']} | {steps} | "
+            f"{f'{wall:.2f}s' if wall else 'N/A'} | "
+            f"{f'{steps / wall:.3f}' if wall else 'N/A'} | "
+            f"{f'{peak / 2**30:.3f}' if peak else 'N/A'} |"
+        )
+    lines += ['', 'BF16 and TF32 completed bounded runs with finite gradients but '
+              'did not establish a speed/correctness benefit; FP16 failed its finite-gradient '
+              'gate at update 2 and has no valid checkpoint. Checkpointing reduced peak '
+              'allocation in its pilot but did not improve speed. Candidate decisions and '
+              'data-loader observations are in `summary/optimization_matrix.csv` and '
+              '`summary/data_pipeline_matrix.json`.', '']
     lines += ['', 'Each run retained per-step loss, gradient, LR, data/forward/backward/optimizer timing and sampled RTX 3090 utilization/power. Adapter save and reload checks passed. Component instrumentation was compared with a new same-camera, same-seed eight-step reference and produced the exact same adapter hash and final loss; an older pre-camera-fix FP32 pilot is not treated as a valid parity reference.', '',
               '## Real MuJoCo development evaluation', '',
               'Eight frozen initial states span LIBERO Goal task 6 (4), Goal task 0 (2), and Object task 0 (2). Each condition used actual model inference, dual-camera MuJoCo rollout, raw actions, states, video and independently audited file hashes. The locked M06 init IDs 40–49 were not used.', '',
