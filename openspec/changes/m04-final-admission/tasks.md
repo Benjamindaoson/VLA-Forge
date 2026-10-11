@@ -1,0 +1,11 @@
+# M04 final closure tasks
+- [x] Preserve frozen r7 and audit actions, replay receipts and labels.
+- [x] Isolate ambiguous historical ledger ID; freeze all development groups and replacement evaluation conditions.
+- [x] Run budgeted 3-attempt cross-task check and retain all failures.
+- [x] Prepare file-level license inventory and numeric-only public allowlist.
+- [x] Reconstruct available phase costs; mark unobserved complete cost and bill N/A.
+- [x] Restore exact M03 source files and verify 91 tests.
+- [x] Prepare independently traceable branch publication and public-read verification receipts.
+- [ ] Full visual public release: blocked by asset-specific provenance/terms.
+- [ ] Complete historical allocation cost: blocked by missing phase timestamps and rental bill.
+- [x] Do not train M05 or expand search.

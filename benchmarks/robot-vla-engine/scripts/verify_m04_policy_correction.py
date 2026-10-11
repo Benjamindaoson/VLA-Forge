@@ -12,12 +12,21 @@ from pathlib import Path
 import cv2
 import numpy as np
 
+from robot_vla.m04_admission import validate_identity
+from robot_vla.m04_interventions import benchmark_suite_name
+
 ROOT = Path("/data/VLA-Forge")
 SOURCE_EP = int(os.environ.get("M04_SOURCE_EPISODE", "7"))
+SOURCE_SUITE = os.environ.get("M04_SUITE", "goal")
+SOURCE_TASK_ID = int(os.environ.get("M04_TASK_ID", "6"))
+ATTEMPT_DIR = Path(
+    os.environ.get("M04_ATTEMPT_DIR", str(ROOT / "Evidence/M04/artifacts/policy_attempts"))
+)
+
 RUN_ID = os.environ["M04_POLICY_RUN_ID"]
-POLICY_NPZ = ROOT / "Evidence/M04/artifacts/policy_attempts" / f"{RUN_ID}.npz"
-POLICY_META = ROOT / "Evidence/M04/artifacts/policy_attempts/attempts.jsonl"
-POLICY_EVENTS = ROOT / "Evidence/M04/artifacts/policy_attempts" / f"{RUN_ID}_events.jsonl"
+POLICY_NPZ = ATTEMPT_DIR / f"{RUN_ID}.npz"
+POLICY_META = ATTEMPT_DIR / "attempts.jsonl"
+POLICY_EVENTS = ATTEMPT_DIR / f"{RUN_ID}_events.jsonl"
 M03_BASELINE = (
     ROOT
     / "Evidence/M03/source/M03_interventional_diagnosis/episodes/m03-g09-goal-t06-init07_baseline.json"
@@ -28,11 +37,18 @@ EP_DIR = (
     / "Evidence/M02/source/M02_libero40/registry/runs"
     / RUN_BASE
     / "episodes"
-    / f"goal_task06_episode{SOURCE_EP:02d}_attempt1"
+    / f"{SOURCE_SUITE}_task{SOURCE_TASK_ID:02d}_episode{SOURCE_EP:02d}_attempt1"
 )
 TRACE_PATH = EP_DIR / "action_trace.json"
 EP_JSON = EP_DIR / "episode.json"
-OUT = ROOT / "Evidence/M04/artifacts/verified_corrections" / RUN_ID
+OUT = (
+    Path(
+        os.environ.get(
+            "M04_VERIFIED_DIR", str(ROOT / "Evidence/M04/artifacts/verified_corrections")
+        )
+    )
+    / RUN_ID
+)
 OUT.mkdir(parents=True, exist_ok=True)
 if any(OUT.iterdir()):
     raise FileExistsError(f"refusing to overwrite nonempty replay evidence: {OUT}")
@@ -75,7 +91,7 @@ def main() -> None:
         raise RuntimeError("policy attempt has no persisted step-100 prefix checkpoint event")
     expected_time = float(checkpoint_events[-1]["sim_time"])
     m03_baseline_comparison = None
-    if SOURCE_EP == 7:
+    if SOURCE_SUITE == "goal" and SOURCE_TASK_ID == 6 and SOURCE_EP == 7:
         baseline_reference = json.loads(M03_BASELINE.read_text())["checkpoint_state"]
         baseline_qpos = np.asarray(baseline_reference["qpos"], dtype=np.float64)
         baseline_qvel = np.asarray(baseline_reference["qvel"], dtype=np.float64)
@@ -89,7 +105,9 @@ def main() -> None:
             or m03_baseline_comparison["qvel_linf"] > 1e-4
             or m03_baseline_comparison["time_abs"] > 1e-8
         ):
-            raise RuntimeError(f"init-state-7 checkpoint differs from independent M03 reference: {m03_baseline_comparison}")
+            raise RuntimeError(
+                f"init-state-7 checkpoint differs from independent M03 reference: {m03_baseline_comparison}"
+            )
     if len(source_prefix) != 100 or all_actions.shape[0] <= 100:
         raise RuntimeError("prefix/correction segment is incomplete")
     prefix_error = float(np.max(np.abs(all_actions[:100] - source_prefix)))
@@ -106,18 +124,20 @@ def main() -> None:
     )
     if policy_row is None or policy_row.get("success") is not True:
         raise RuntimeError("source policy inference attempt is not Success=True")
+    validate_identity(policy_row, ep_meta, SOURCE_SUITE, SOURCE_TASK_ID, SOURCE_EP)
     if policy_row["policy_model_sha256"] != CHECKPOINT_SHA:
         raise RuntimeError("policy checkpoint differs from frozen M04 identity")
     source_trace_sha = sha(TRACE_PATH)
     policy_npz_sha = sha(POLICY_NPZ)
     libero_api._assets_path_cache = str(ROOT / "Assets/LIBERO-assets")
-    suite = benchmark.get_benchmark_dict()["libero_goal"]()
+    suite_name = benchmark_suite_name(SOURCE_SUITE)
+    suite = benchmark.get_benchmark_dict()[suite_name]()
     summaries = []
     for replicate in (1, 2):
         env = LiberoEnv(
             suite,
-            6,
-            "libero_goal",
+            SOURCE_TASK_ID,
+            suite_name,
             episode_length=300,
             obs_type="pixels_agent_pos",
             observation_width=256,
@@ -211,8 +231,8 @@ def main() -> None:
                 "episode_id": ep_id,
                 "policy_attempt_id": RUN_ID,
                 "source_m02_episode": ep_meta["episode_id"],
-                "source_m02_suite": "goal",
-                "source_m02_task_id": 6,
+                "source_m02_suite": SOURCE_SUITE,
+                "source_m02_task_id": SOURCE_TASK_ID,
                 "source_m02_init_state_id": SOURCE_EP,
                 "source_m02_registry_episode_path": str(EP_JSON),
                 "source_m02_trace_sha256": source_trace_sha,

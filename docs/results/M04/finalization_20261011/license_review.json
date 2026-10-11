@@ -1,0 +1,47 @@
+{
+  "sources": [
+    {
+      "name": "libero_readme",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/README.md",
+      "path": "/data/VLA-Forge/Evidence/M04/finalization_20261011/license_sources/libero_readme.txt",
+      "sha256": "e87d5b284da3d7c127e1bc8282ea80b5da02aad3e9272c13adc96c4eca0eaa41"
+    },
+    {
+      "name": "libero_license",
+      "url": "https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/LICENSE",
+      "path": "/data/VLA-Forge/Evidence/M04/finalization_20261011/license_sources/libero_license.txt",
+      "sha256": "e2885fd30a08381b799c4a33385522b23d637b4051b8f9a7f9f2519944b68ff6"
+    },
+    {
+      "name": "hope_readme",
+      "url": "https://raw.githubusercontent.com/swtyree/hope-dataset/master/README.md",
+      "path": "/data/VLA-Forge/Evidence/M04/finalization_20261011/license_sources/hope_readme.txt",
+      "sha256": "27af06152747d49bfe05dfb56f7b13950758c158109c802b8836f911eabd1f0f"
+    },
+    {
+      "name": "hope_robosuite_derivation",
+      "url": "https://raw.githubusercontent.com/NVlabs/RoboLab/main/assets/objects/hope/LICENSE",
+      "path": "/data/VLA-Forge/Evidence/M04/finalization_20261011/license_sources/hope_robosuite_derivation.txt",
+      "sha256": "b96b17501ce48eeee9f5bd5fa67506bd2434e78b6711ccfb8be436ef4b8ae705"
+    }
+  ],
+  "files_reviewed": 866,
+  "simulation_assets": 586,
+  "pinned_matches": 585,
+  "media_files_kept_private": 280,
+  "status": "PARTIAL_PUBLICATION_ALLOWED_NUMERIC_ONLY",
+  "public_allowlist_scope": "Own newly generated 7D robot commands, 8D robot proprioception, numeric terminal labels and original engineering reports. No third-party mesh, texture, RGB frame, video or object geometry.",
+  "full_dataset_and_demo": "KEEP_PRIVATE",
+  "unblocking": "For depicted HOPE assets: preserve original attribution and resolve MIT / CC-BY versus NC-SA downstream treatment. For TurboSquid/scanned/scene items: obtain exact source and redistribution terms or replace with clearly licensed assets in a future separately authorized run. Existing recordings remain unchanged.",
+  "actual_goal6_objects": [
+    "cream_cheese",
+    "akita_black_bowl",
+    "wine_bottle",
+    "plate",
+    "wooden_cabinet",
+    "flat_stove",
+    "wine_rack",
+    "table/robot/scene"
+  ],
+  "scope_boundary": "Engineering publication clearance based on inspected provenance, not a legal ruling that all rendered images are unlawful."
+}

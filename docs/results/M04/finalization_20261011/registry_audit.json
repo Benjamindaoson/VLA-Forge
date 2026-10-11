@@ -1,0 +1,595 @@
+{
+  "pass": true,
+  "original_dataset_unchanged": true,
+  "episodes": [
+    {
+      "episode_index": 0,
+      "episode_id": "m04-m03-treatment-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": []
+    },
+    {
+      "episode_index": 1,
+      "episode_id": "m04-diverse-goal-t06-init06-seed84182-verified-replay-01",
+      "source_group": "goal:6:6",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-diverse-goal-t06-init06-seed84182-independent-replay-01": true,
+        "m04-diverse-goal-t06-init06-seed84182-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-diverse-goal-t06-init06-seed84182-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 22
+          }
+        },
+        {
+          "episode_id": "m04-diverse-goal-t06-init06-seed84182-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 22
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 2,
+      "episode_id": "m04-goal-t06-e07-brightness115-first50-seed84075-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-brightness115-first50-seed84075-independent-replay-01": true,
+        "m04-goal-t06-e07-brightness115-first50-seed84075-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-brightness115-first50-seed84075-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-brightness115-first50-seed84075-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 3,
+      "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84068-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84068-independent-replay-01": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84068-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84068-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84068-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 4,
+      "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84071-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84071-independent-replay-01": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84071-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84071-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84071-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 5,
+      "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84072-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84072-independent-replay-01": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84072-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84072-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84072-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 6,
+      "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84088-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84088-independent-replay-01": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84088-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84088-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84088-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 7,
+      "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84092-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84092-independent-replay-01": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84092-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84092-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84092-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 8,
+      "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84093-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84093-independent-replay-01": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84093-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84093-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84093-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 9,
+      "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84094-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84094-independent-replay-01": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84094-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84094-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84094-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 10,
+      "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84095-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84095-independent-replay-01": true,
+        "m04-goal-t06-e07-wrist110-first50-seed84095-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84095-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-wrist110-first50-seed84095-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    },
+    {
+      "episode_index": 11,
+      "episode_id": "m04-goal-t06-e07-wrist115-first50-seed84067-verified-replay-01",
+      "source_group": "goal:6:7",
+      "checks": {
+        "source_failed": true,
+        "source_task_init_match": true,
+        "source_trace_hash": true,
+        "trajectory_hash": true,
+        "metadata_hash": true,
+        "correction_action_hash": true,
+        "source_prefix_exact": true,
+        "terminal_success": true,
+        "T_Tplus1_alignment": true,
+        "dataset_action_exact": true,
+        "dataset_state_exact": true,
+        "success_label_last_only": true,
+        "done_label_last_only": true,
+        "not_quarantined": true,
+        "policy_success": true,
+        "policy_npz_hash": true,
+        "executed_action_log_exact": true,
+        "two_independent_replays": true,
+        "m04-goal-t06-e07-wrist115-first50-seed84067-independent-replay-01": true,
+        "m04-goal-t06-e07-wrist115-first50-seed84067-independent-replay-02": true
+      },
+      "pass": true,
+      "action_abs_max": 1.0,
+      "replays": [
+        {
+          "episode_id": "m04-goal-t06-e07-wrist115-first50-seed84067-independent-replay-01",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        },
+        {
+          "episode_id": "m04-goal-t06-e07-wrist115-first50-seed84067-independent-replay-02",
+          "pass": true,
+          "recovery": {
+            "qpos_linf": 0.0,
+            "qvel_linf": 0.0,
+            "time_abs": 0.0,
+            "ncon": 32
+          }
+        }
+      ]
+    }
+  ],
+  "old_image_validation_receipt_sha256": "0c01b7e3393d63453cd69c0616ed65cf49d46a33b07f343252c3f115c71ea35a",
+  "fresh_corrections": 11,
+  "m03_derived": 1,
+  "quarantined_rows": 2
+}

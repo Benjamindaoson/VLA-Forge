@@ -1,0 +1,19 @@
+{
+  "tests": "91 passed, 1 warning",
+  "test_log_sha256": "66ee752b4be87ede8c36fb551990e833fb99b5daf662e3cc8e33a74c56fc45ac",
+  "ruff": "PASS",
+  "fresh_real_data_audit": "PASS",
+  "m03_cli_help": "PASS",
+  "terminal_controller_restart": "NO_OP",
+  "cross_task_physical_runs": 3,
+  "cross_task_successes": 0,
+  "old_physical_experiments_rerun": false,
+  "training_executed": false,
+  "project_root": "/data/VLA-Forge/project/robot-vla",
+  "original_r7_unchanged": true,
+  "m03_sources_byte_identical": true,
+  "git_diff_check": "PASS with cr-at-eol to preserve original M03 CRLF bytes; other whitespace checks enabled",
+  "public_dataset_anonymous_files": 4,
+  "public_space_anonymous_files": 17,
+  "public_space_http_status": 200
+}

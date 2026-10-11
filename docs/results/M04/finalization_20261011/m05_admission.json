@@ -1,0 +1,28 @@
+{
+  "engineering_gate": true,
+  "status": "CONDITIONAL_ENGINEERING_ADMISSION_ONLY",
+  "formal_generalization_ready": false,
+  "training_executed": false,
+  "episodes": 12,
+  "transitions": 956,
+  "fresh_corrections": 11,
+  "source_tasks": 1,
+  "source_states": 2,
+  "quarantine_excluded": true,
+  "prior_test_contamination_groups": [
+    "goal:6:0",
+    "goal:6:1",
+    "goal:6:4",
+    "goal:6:6",
+    "object:6:1",
+    "spatial:5:7"
+  ],
+  "replacement_test_count": 400,
+  "remaining_conditions": [
+    "Use replacement frozen test conditions; retire contaminated old groups.",
+    "Respect noncommercial/restricted visual asset provenance; no blanket commercial/public multimedia clearance.",
+    "One task and two source states support a bounded feasibility pilot only; no cross-task improvement claim.",
+    "Define a matched frozen baseline, training budget and evaluation protocol before a separately authorized M05 run."
+  ],
+  "legal_action_supervision": "7D finite bounded relative commands exactly match executed actions; 8D pre-action state and terminal labels verified. License clearance is a separate gate."
+}

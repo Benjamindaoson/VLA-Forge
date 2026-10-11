@@ -1,0 +1,283 @@
+{
+  "status": "ISOLATED_NOT_REPAIRED",
+  "episode_id": "m04-g09-fresh-brightness-115-first50-01",
+  "original_ledger_sha256": "7d22c6450ac82d3ee88c9fb2e66d8a4566c5af36977cc60ce9f9dc3b198c400a",
+  "rows": [
+    {
+      "row_index_zero_based": 2,
+      "row": {
+        "episode_id": "m04-g09-fresh-brightness-115-first50-01",
+        "source_m02_episode": "goal_task06_episode07_attempt1",
+        "source_trace_sha256": "2a48d8540239358c04e3523cffae680fa86e2278321992b45ea3f9c32f7bb1a2",
+        "source_checkpoint": "m03-g09-goal-t06-init07_baseline",
+        "source_checkpoint_action_trace_sha256": "2a48d8540239358c04e3523cffae680fa86e2278321992b45ea3f9c32f7bb1a2",
+        "suite": "libero_goal",
+        "task_id": 6,
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "instruction": "put the cream cheese in the bowl",
+        "init_state_id": 7,
+        "seed": 84067,
+        "prefix_steps": 100,
+        "inference_action_steps": 120,
+        "success": false,
+        "termination_reason": "budget_or_timeout",
+        "policy_repo": "lerobot/smolvla_libero",
+        "policy_revision": "31d453f7edd78c839a8bbc39744a292686daf0de",
+        "policy_model_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+        "vlm_repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+        "vlm_revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+        "vlm_model_sha256": "b9bfd456c9472c0acd5719d6e514c4b859891af205ee1a736552fd3497b8b0c3",
+        "condition": "input_brightness_gain_1.15_first50",
+        "brightness_gain": 1.15,
+        "intervention_observation_steps": 50,
+        "control_mode": "relative",
+        "action_chunk_size": 50,
+        "n_action_steps": 50,
+        "checkpoint_recovery": {
+          "qpos_linf": 0.0,
+          "qvel_linf": 0.0,
+          "time_abs": 0.0,
+          "ncon": 32
+        },
+        "state_semantics": "full LIBERO pose and gripper state; official normalizer width 8; policy feature schema width 6",
+        "reset_seconds": 9.742681959003676,
+        "model_load_seconds": 7.834882409995771,
+        "policy_inference_ms": {
+          "p50": 1.7952950074686669,
+          "p95": 2.692546651815064,
+          "p99": 304.41583968990017
+        },
+        "chunk_inference_ms": {
+          "p50": 301.963258,
+          "p95": 962.9558262999999,
+          "p99": 1021.71072126,
+          "calls": 3
+        },
+        "simulation_step_ms": {
+          "p50": 197.35828600096283,
+          "p95": 224.8753927546204,
+          "p99": 239.8549897308112
+        },
+        "gpu_peak_allocated_bytes": 964068864,
+        "gpu_peak_reserved_bytes": 1002438656,
+        "gpu_hours_allocated": 0.007581865652221798,
+        "gpu_hours_inference_estimate": 0.007581865652221798,
+        "action_components_clipped": 100,
+        "cpu_gpu_samples": [
+          {
+            "utc": "2026-10-11T00:14:32.344249+00:00",
+            "cpu_percent": 12.5,
+            "rss_bytes": 3892457472,
+            "gpu": "0, 1185, 17.12"
+          },
+          {
+            "utc": "2026-10-11T00:14:37.800671+00:00",
+            "cpu_percent": 14.6,
+            "rss_bytes": 4738396160,
+            "gpu": "0, 1297, 106.14"
+          },
+          {
+            "utc": "2026-10-11T00:14:42.260295+00:00",
+            "cpu_percent": 15.7,
+            "rss_bytes": 4747440128,
+            "gpu": "0, 1297, 107.00"
+          },
+          {
+            "utc": "2026-10-11T00:14:46.901435+00:00",
+            "cpu_percent": 15.5,
+            "rss_bytes": 4761595904,
+            "gpu": "0, 1297, 107.32"
+          },
+          {
+            "utc": "2026-10-11T00:14:51.054707+00:00",
+            "cpu_percent": 15.4,
+            "rss_bytes": 4771164160,
+            "gpu": "0, 1297, 107.53"
+          },
+          {
+            "utc": "2026-10-11T00:14:55.138222+00:00",
+            "cpu_percent": 15.7,
+            "rss_bytes": 4778373120,
+            "gpu": "0, 1297, 107.61"
+          },
+          {
+            "utc": "2026-10-11T00:14:59.638889+00:00",
+            "cpu_percent": 15.1,
+            "rss_bytes": 4786761728,
+            "gpu": "0, 1297, 107.94"
+          },
+          {
+            "utc": "2026-10-11T00:14:59.663447+00:00",
+            "cpu_percent": 6.9,
+            "rss_bytes": 4786761728,
+            "gpu": "0, 1297, 107.94"
+          }
+        ],
+        "video_fps": 20,
+        "video_frames": 221,
+        "created_at_utc": "2026-10-11T00:14:59.667687+00:00",
+        "trajectory": {
+          "path": "/data/VLA-Forge/Evidence/M04/artifacts/policy_attempts/m04-g09-fresh-brightness-115-first50-01.npz",
+          "sha256": "3772dc6ab5f1c36e64270fb7822987f10459eb87a277054bd6f5a8a5bb21ec95",
+          "bytes": 35353059
+        },
+        "video": {
+          "path": "/data/VLA-Forge/Evidence/M04/artifacts/policy_attempts/m04-g09-fresh-brightness-115-first50-01_dual_camera.mp4",
+          "sha256": "1f0cb4ba4ad34e66afc7e156fba7e69c38baace11716777a725d1076cd42f685",
+          "bytes": 1483429,
+          "fps": 20,
+          "width": 512,
+          "height": 256,
+          "cameras": [
+            "agentview_image",
+            "robot0_eye_in_hand_image"
+          ]
+        },
+        "action_trace": {
+          "path": "/data/VLA-Forge/Evidence/M04/artifacts/policy_attempts/m04-g09-fresh-brightness-115-first50-01.json",
+          "sha256": "850fa99ebe68a43aed902747c4b64183e1c558f0c28c5f77703e03288817c402"
+        }
+      }
+    },
+    {
+      "row_index_zero_based": 3,
+      "row": {
+        "episode_id": "m04-g09-fresh-brightness-115-first50-01",
+        "source_m02_episode": "goal_task06_episode07_attempt1",
+        "source_trace_sha256": "2a48d8540239358c04e3523cffae680fa86e2278321992b45ea3f9c32f7bb1a2",
+        "source_checkpoint": "m03-g09-goal-t06-init07_baseline",
+        "source_checkpoint_action_trace_sha256": "2a48d8540239358c04e3523cffae680fa86e2278321992b45ea3f9c32f7bb1a2",
+        "suite": "libero_goal",
+        "task_id": 6,
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "instruction": "put the cream cheese in the bowl",
+        "init_state_id": 7,
+        "seed": 84067,
+        "prefix_steps": 100,
+        "inference_action_steps": 120,
+        "success": false,
+        "termination_reason": "budget_or_timeout",
+        "policy_repo": "lerobot/smolvla_libero",
+        "policy_revision": "31d453f7edd78c839a8bbc39744a292686daf0de",
+        "policy_model_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+        "vlm_repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+        "vlm_revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+        "vlm_model_sha256": "b9bfd456c9472c0acd5719d6e514c4b859891af205ee1a736552fd3497b8b0c3",
+        "condition": "input_brightness_gain_1.15_first50",
+        "brightness_gain": 1.15,
+        "intervention_observation_steps": 50,
+        "control_mode": "relative",
+        "action_chunk_size": 50,
+        "n_action_steps": 50,
+        "checkpoint_recovery": {
+          "qpos_linf": 0.0,
+          "qvel_linf": 0.0,
+          "time_abs": 0.0,
+          "ncon": 32
+        },
+        "state_semantics": "full LIBERO pose and gripper state; official normalizer width 8; policy feature schema width 6",
+        "reset_seconds": 9.760154199990211,
+        "model_load_seconds": 7.932950633010478,
+        "policy_inference_ms": {
+          "p50": 1.8255279937875457,
+          "p95": 3.000852590048453,
+          "p99": 310.71504701307276
+        },
+        "chunk_inference_ms": {
+          "p50": 307.799508,
+          "p95": 959.0859830999999,
+          "p99": 1016.97811422,
+          "calls": 3
+        },
+        "simulation_step_ms": {
+          "p50": 197.1732614983921,
+          "p95": 217.48185390606523,
+          "p99": 228.98532574108685
+        },
+        "gpu_peak_allocated_bytes": 964068864,
+        "gpu_peak_reserved_bytes": 1002438656,
+        "gpu_hours_allocated": 0.007560258281110792,
+        "gpu_hours_inference_estimate": 0.007560258281110792,
+        "action_components_clipped": 100,
+        "cpu_gpu_samples": [
+          {
+            "utc": "2026-10-11T00:19:54.564989+00:00",
+            "cpu_percent": 12.4,
+            "rss_bytes": 3865563136,
+            "gpu": "0, 1185, 17.06"
+          },
+          {
+            "utc": "2026-10-11T00:19:59.925372+00:00",
+            "cpu_percent": 14.2,
+            "rss_bytes": 4739813376,
+            "gpu": "0, 1297, 106.08"
+          },
+          {
+            "utc": "2026-10-11T00:20:04.148737+00:00",
+            "cpu_percent": 15.8,
+            "rss_bytes": 4748988416,
+            "gpu": "0, 1297, 106.61"
+          },
+          {
+            "utc": "2026-10-11T00:20:08.675646+00:00",
+            "cpu_percent": 15.2,
+            "rss_bytes": 4763013120,
+            "gpu": "0, 1297, 106.77"
+          },
+          {
+            "utc": "2026-10-11T00:20:12.917114+00:00",
+            "cpu_percent": 15.4,
+            "rss_bytes": 4772843520,
+            "gpu": "0, 1297, 106.81"
+          },
+          {
+            "utc": "2026-10-11T00:20:17.305638+00:00",
+            "cpu_percent": 15.3,
+            "rss_bytes": 4780314624,
+            "gpu": "0, 1297, 107.40"
+          },
+          {
+            "utc": "2026-10-11T00:20:21.782422+00:00",
+            "cpu_percent": 15.5,
+            "rss_bytes": 4788310016,
+            "gpu": "0, 1297, 107.66"
+          },
+          {
+            "utc": "2026-10-11T00:20:21.807860+00:00",
+            "cpu_percent": 6.7,
+            "rss_bytes": 4788310016,
+            "gpu": "0, 1297, 107.66"
+          }
+        ],
+        "video_fps": 20,
+        "video_frames": 221,
+        "created_at_utc": "2026-10-11T00:20:21.810821+00:00",
+        "trajectory": {
+          "path": "/data/VLA-Forge/Evidence/M04/artifacts/policy_attempts/m04-g09-fresh-brightness-115-first50-01.npz",
+          "sha256": "3772dc6ab5f1c36e64270fb7822987f10459eb87a277054bd6f5a8a5bb21ec95",
+          "bytes": 35353059
+        },
+        "video": {
+          "path": "/data/VLA-Forge/Evidence/M04/artifacts/policy_attempts/m04-g09-fresh-brightness-115-first50-01_dual_camera.mp4",
+          "sha256": "1f0cb4ba4ad34e66afc7e156fba7e69c38baace11716777a725d1076cd42f685",
+          "bytes": 1483429,
+          "fps": 20,
+          "width": 512,
+          "height": 256,
+          "cameras": [
+            "agentview_image",
+            "robot0_eye_in_hand_image"
+          ]
+        },
+        "action_trace": {
+          "path": "/data/VLA-Forge/Evidence/M04/artifacts/policy_attempts/m04-g09-fresh-brightness-115-first50-01.json",
+          "sha256": "562df43bde07d98d9905ccd9eae65589a9262da6374143f80cfd43fd5198d34e"
+        }
+      }
+    }
+  ],
+  "current_trace_sha256": "562df43bde07d98d9905ccd9eae65589a9262da6374143f80cfd43fd5198d34e",
+  "evidence": "Two ledger rows reuse an episode ID and trace path with different timestamps and SHA256. Current bytes match the later row, not the earlier. Both are excluded from training; both attempts remain in historical cost accounting.",
+  "historical_files_modified": false,
+  "included_in_r7": false
+}

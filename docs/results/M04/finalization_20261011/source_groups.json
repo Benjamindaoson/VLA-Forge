@@ -1,0 +1,35 @@
+{
+  "all_development_groups": [
+    "goal:4:4",
+    "goal:6:0",
+    "goal:6:1",
+    "goal:6:2",
+    "goal:6:4",
+    "goal:6:6",
+    "goal:6:7",
+    "goal:8:7",
+    "long:0:0",
+    "long:0:1",
+    "long:0:2",
+    "long:4:0",
+    "long:4:1",
+    "long:4:4",
+    "object:6:1",
+    "spatial:5:0",
+    "spatial:5:1",
+    "spatial:5:7"
+  ],
+  "train_groups": [
+    "goal:6:6",
+    "goal:6:7"
+  ],
+  "retired_previous_M06_groups": [
+    "goal:6:0",
+    "goal:6:1",
+    "goal:6:4",
+    "goal:6:6",
+    "object:6:1",
+    "spatial:5:7"
+  ],
+  "policy": "All descendants of every development source, including failed and quarantined attempts, inherit development-only status."
+}

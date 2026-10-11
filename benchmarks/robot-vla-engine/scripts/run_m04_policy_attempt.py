@@ -90,6 +90,8 @@ def main():
     torch.manual_seed(84067)
     np.random.seed(84067)
     assert CHECKPOINT.is_dir() and VLM.is_dir()
+    if M02_EPISODE.get("success") is not False:
+        raise ValueError("M04 requires a recorded failed source")
     source_trace = json.loads(M02_TRACE.read_text())
     prefix = [
         np.asarray(x["env_step_argument"], dtype=np.float32) for x in source_trace["steps"][:100]
@@ -123,6 +125,7 @@ def main():
     graph_sampler = None
     if acceleration == "cuda_graph":
         from robot_vla.m04_acceleration import CudaGraphSampler
+
         graph_sampler = CudaGraphSampler(policy.model)
         policy.model.sample_actions = graph_sampler
     elif acceleration != "eager":
@@ -215,6 +218,7 @@ def main():
             # Validate before any expensive model or environment work begins.
             scale_environment_action(np.zeros(7, dtype=np.float32), action_scale)
             condition = f"action_scale_{action_scale:g}"
+        env_construct_start = time.perf_counter()
         env = LiberoEnv(
             suite,
             SOURCE_TASK_ID,
@@ -230,6 +234,7 @@ def main():
             num_steps_wait=10,
             control_mode="relative",
         )
+        env_construct_s = time.perf_counter() - env_construct_start
         env_start = time.perf_counter()
         obs, _ = env.reset(seed=ENV_SEED)
         # For M02 failures without an M03 checkpoint, establish a physical reference
@@ -301,6 +306,7 @@ def main():
             )
 
         capture(obs)
+        prefix_start = time.perf_counter()
         for action in prefix:
             obs, _, term, trunc, _ = env.step(action)
             action_trace.append({"phase": "source_prefix", "env_step_argument": action.tolist()})
@@ -317,6 +323,7 @@ def main():
             )
             if term or trunc:
                 raise RuntimeError("source prefix unexpectedly ended before checkpoint")
+        prefix_seconds = time.perf_counter() - prefix_start
         sim = env._env.sim.data
         recovery = {
             "qpos_linf": float(np.max(np.abs(sim.qpos - expected_qpos))),
@@ -529,6 +536,7 @@ def main():
         video = stem.with_name(stem.name + "_dual_camera.mp4")
         trace_path = stem.with_suffix(".json")
         arrays = {k: np.asarray([x[k] for x in state_trace]) for k in state_trace[0]}
+        trajectory_encoding_start = time.perf_counter()
         np.savez_compressed(
             npz,
             actions=np.asarray([x["env_step_argument"] for x in action_trace], dtype=np.float32),
@@ -542,6 +550,8 @@ def main():
             joint_vel=arrays["joints_vel"],
             gripper_qpos=arrays["gripper_qpos"],
         )
+        trajectory_encoding_seconds = time.perf_counter() - trajectory_encoding_start
+        video_encoding_start = time.perf_counter()
         h, w = frames[0].shape[:2]
         writer = cv2.VideoWriter(str(video), cv2.VideoWriter_fourcc(*"mp4v"), 20, (w, h))
         if not writer.isOpened():
@@ -549,6 +559,16 @@ def main():
         for f in frames:
             writer.write(cv2.cvtColor(f, cv2.COLOR_RGB2BGR))
         writer.release()
+        video_encoding_seconds = time.perf_counter() - video_encoding_start
+        result["phase_seconds"] = {
+            "model_load": model_load_s,
+            "environment_construct": env_construct_s,
+            "reset_and_reference_prefix": reset_s,
+            "recorded_prefix": prefix_seconds,
+            "policy_loop": elapsed,
+            "trajectory_encoding": trajectory_encoding_seconds,
+            "video_encoding": video_encoding_seconds,
+        }
         result["trajectory"] = {
             "path": str(npz),
             "sha256": digest(npz),

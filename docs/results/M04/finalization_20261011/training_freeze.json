@@ -1,0 +1,264 @@
+{
+  "dataset": "lerobot_v3_verified_r7",
+  "episodes": 12,
+  "transitions": 956,
+  "files": {
+    "README.md": "8b1b49145b8a5112661551fb9f8333e99f51c68e2e849c7bce389070be2f1f20",
+    "data/chunk-000/file-000.parquet": "e50b6a429cbe3ad8530ec2eb670e1b812194db9cacb2fad708e094e7edc4c8e0",
+    "independent_validation.json": "0c01b7e3393d63453cd69c0616ed65cf49d46a33b07f343252c3f115c71ea35a",
+    "lineage_validation.json": "05c1756af9fe8fb920ad79a3ebf4c0d38fc6584cf66c937931031ba0e5136c25",
+    "meta/episodes/chunk-000/file-000.parquet": "546e9782d99d8863ea8e2078284114d2b087c43da2a7c8777d82fd473acd4a64",
+    "meta/info.json": "d179b8d6e0e56a889f5d653345ae4329c3b63637fd3889840bbaeafa7d06cf83",
+    "meta/stats.json": "b0a2e1674480f1acb644715400866eafdcaf4b36d65dc3b1bf3368de1a3ca1ba",
+    "meta/tasks.parquet": "961df028c1cd0870e3248162d45120ed4f495a2d96ab15f5f37ffecde7b2ca21",
+    "provenance.json": "410169ef6638411629401a54d09127c575151c90ea822bba8f295145061c4786",
+    "videos/observation.images.agentview_image/chunk-000/file-000.mp4": "e6bbb163d441b411da9cc41475a41722f0634c0b0ab54675389134c3a17fc3b5",
+    "videos/observation.images.robot0_eye_in_hand_image/chunk-000/file-000.mp4": "06b9471fef64f3eb99ef90700d021033891bbf9dfd412c6ace3b90ad3b8d312a"
+  },
+  "provenance_sha256": "410169ef6638411629401a54d09127c575151c90ea822bba8f295145061c4786",
+  "source_groups_sha256": "a0fa04e696298b9dee8b6fc49347a9fa9ba86786c20458d62211ef807c00914c",
+  "independent_test_sha256": "d7c56a382b3d8104213cdbed5decd33128fc7d0748ace8cff4f8f60d7921ef86",
+  "excluded_episode_ids": [
+    "m04-g09-fresh-brightness-115-first50-01"
+  ],
+  "observation_semantics": "Canonical independently replayed camera frames and 8D pre-action state; corrections were proposed under declared brightness interventions. These are successful action supervision pairs, not unmodified-policy on-policy samples.",
+  "normalization": "Fit training statistics only to the frozen development set; never fit to independent_test_freeze.",
+  "task_coverage": 1,
+  "source_state_coverage": 2,
+  "policy_identity": {
+    "repo_id": "lerobot/smolvla_libero",
+    "revision": "31d453f7edd78c839a8bbc39744a292686daf0de",
+    "checkpoint_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+    "checkpoint_path": "/data/VLA-Forge/Assets/models/smolvla_libero",
+    "m02_config_hash": "219ae9f1c0c1098a480df161791a52c945c505938facde99f9d9fa092fbbcbd7",
+    "action_chunk_size": 50,
+    "action_execution_steps": 50,
+    "control_mode": "relative",
+    "camera_mapping": {
+      "observation.images.image": "observation.images.camera1",
+      "observation.images.image2": "observation.images.camera2"
+    }
+  },
+  "model_and_processor_files": {
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "b0cdde6e8a6f49a8e19eefb376728e47c09d3b3cc20ce3a97c45619fe7a732d9",
+    "model.safetensors": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+    "config.json": "5c9f3ba9f5f37ea7024c9501b0b20b1941f232989c2167853cb46d9071a70dd7",
+    "policy_preprocessor.json": "122ec5106602b1bf129f49690d05ab2f49748a0ac6119de55ea0677d4e90d248",
+    "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+    "train_config.json": "df25e6fce4cf2161b7a22c495230e332bad5f73f1ca07605b35fa77500917b9c",
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "b0cdde6e8a6f49a8e19eefb376728e47c09d3b3cc20ce3a97c45619fe7a732d9"
+  },
+  "normalizer_tensor_shapes": {
+    "action.count": [
+      1
+    ],
+    "action.max": [
+      7
+    ],
+    "action.mean": [
+      7
+    ],
+    "action.min": [
+      7
+    ],
+    "action.q01": [
+      7
+    ],
+    "action.q10": [
+      7
+    ],
+    "action.q50": [
+      7
+    ],
+    "action.q90": [
+      7
+    ],
+    "action.q99": [
+      7
+    ],
+    "action.std": [
+      7
+    ],
+    "episode_index.count": [
+      1
+    ],
+    "episode_index.max": [
+      1
+    ],
+    "episode_index.mean": [
+      1
+    ],
+    "episode_index.min": [
+      1
+    ],
+    "episode_index.q01": [
+      1
+    ],
+    "episode_index.q10": [
+      1
+    ],
+    "episode_index.q50": [
+      1
+    ],
+    "episode_index.q90": [
+      1
+    ],
+    "episode_index.q99": [
+      1
+    ],
+    "episode_index.std": [
+      1
+    ],
+    "frame_index.count": [
+      1
+    ],
+    "frame_index.max": [
+      1
+    ],
+    "frame_index.mean": [
+      1
+    ],
+    "frame_index.min": [
+      1
+    ],
+    "frame_index.q01": [
+      1
+    ],
+    "frame_index.q10": [
+      1
+    ],
+    "frame_index.q50": [
+      1
+    ],
+    "frame_index.q90": [
+      1
+    ],
+    "frame_index.q99": [
+      1
+    ],
+    "frame_index.std": [
+      1
+    ],
+    "index.count": [
+      1
+    ],
+    "index.max": [
+      1
+    ],
+    "index.mean": [
+      1
+    ],
+    "index.min": [
+      1
+    ],
+    "index.q01": [
+      1
+    ],
+    "index.q10": [
+      1
+    ],
+    "index.q50": [
+      1
+    ],
+    "index.q90": [
+      1
+    ],
+    "index.q99": [
+      1
+    ],
+    "index.std": [
+      1
+    ],
+    "observation.state.count": [
+      1
+    ],
+    "observation.state.max": [
+      8
+    ],
+    "observation.state.mean": [
+      8
+    ],
+    "observation.state.min": [
+      8
+    ],
+    "observation.state.q01": [
+      8
+    ],
+    "observation.state.q10": [
+      8
+    ],
+    "observation.state.q50": [
+      8
+    ],
+    "observation.state.q90": [
+      8
+    ],
+    "observation.state.q99": [
+      8
+    ],
+    "observation.state.std": [
+      8
+    ],
+    "task_index.count": [
+      1
+    ],
+    "task_index.max": [
+      1
+    ],
+    "task_index.mean": [
+      1
+    ],
+    "task_index.min": [
+      1
+    ],
+    "task_index.q01": [
+      1
+    ],
+    "task_index.q10": [
+      1
+    ],
+    "task_index.q50": [
+      1
+    ],
+    "task_index.q90": [
+      1
+    ],
+    "task_index.q99": [
+      1
+    ],
+    "task_index.std": [
+      1
+    ],
+    "timestamp.count": [
+      1
+    ],
+    "timestamp.max": [
+      1
+    ],
+    "timestamp.mean": [
+      1
+    ],
+    "timestamp.min": [
+      1
+    ],
+    "timestamp.q01": [
+      1
+    ],
+    "timestamp.q10": [
+      1
+    ],
+    "timestamp.q50": [
+      1
+    ],
+    "timestamp.q90": [
+      1
+    ],
+    "timestamp.q99": [
+      1
+    ],
+    "timestamp.std": [
+      1
+    ]
+  },
+  "training_adapter_condition": "Preserve 8D LIBERO pose plus gripper state. The pinned feature schema declares 6D but its actual fitted normalizer is 8D; the verified runtime retains 8D and SmolVLA pads to max_state_dim. A future trainer must use this explicit contract and verify its batch processor; do not truncate to 6D or assume generic trainer defaults work. No training-forward/backward claim is made here."
+}

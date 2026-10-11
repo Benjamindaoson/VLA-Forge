@@ -1,0 +1,142 @@
+{
+  "currency_billed": null,
+  "rental_invoice_available": false,
+  "hourly_rate": null,
+  "historical_policy_search_seconds": 2064.4759602170816,
+  "historical_success_policy_seconds": 225.15955520902935,
+  "historical_failed_policy_seconds": 1839.3164050080522,
+  "historical_model_loading": {
+    "reported_rows": 79,
+    "unique_reported_duration_sum_seconds": 632.6733159960422,
+    "per_row_sum_seconds": 640.5191620660335,
+    "exact_total": null,
+    "reason": "Historical setup timing repeats across conditions without a unique process-load identity."
+  },
+  "historical_reset": {
+    "reported_rows": 79,
+    "unique_reported_duration_sum_seconds": 1512.5307668751047,
+    "per_row_sum_seconds": 1512.5307668751047,
+    "exact_total": null,
+    "reason": "Historical setup timing repeats across conditions without a unique process-load identity."
+  },
+  "independent_replay_correction_segments_seconds_22_replays": 354.71576971905597,
+  "replay_reset_prefix_model_initialization_seconds": null,
+  "dataset_write_and_encode_seconds_r7": 36.47794516402064,
+  "historical_raw_video_and_trajectory_encode_seconds": null,
+  "demo_encoding_seconds": null,
+  "idle_allocated_seconds": null,
+  "whole_production_gpu_hours": null,
+  "recorded_nonoverlap_wall_time_lower_bound_seconds": 2455.669675100158,
+  "recorded_wall_time_lower_bound_hours_per_11_fresh_corrections": 0.06201186048232723,
+  "full_cost_per_trusted_fresh_correction": null,
+  "estimate_formula": "(measured whole production allocation hours + missing setup/encode/idle hours) * actual rate / 11; no rate or invoice available",
+  "cross_task_controller": {
+    "attempts": [
+      {
+        "run_id": "m04-final-goal04-init04-seed86144",
+        "condition": {
+          "seed": 86144,
+          "kind": "brightness_first50",
+          "camera": "wrist",
+          "gain": 1.1
+        },
+        "status": "POLICY_FAILURE_RETAINED",
+        "started_at": "2026-10-11T08:44:03.837128+00:00",
+        "exit_code": 0,
+        "wall_seconds": 110.40129669301677,
+        "success": false,
+        "phase_seconds": {
+          "model_load": 8.470750948996283,
+          "environment_construct": 0.006542130984598771,
+          "reset_and_reference_prefix": 34.04307251499267,
+          "recorded_prefix": 19.621287240996026,
+          "policy_loop": 27.72622025597957,
+          "trajectory_encoding": 3.6736516490054782,
+          "video_encoding": 0.19834275598987006
+        }
+      },
+      {
+        "run_id": "m04-final-goal04-init04-seed86145",
+        "condition": {
+          "seed": 86145,
+          "kind": "action_scale",
+          "scale": 0.9
+        },
+        "status": "POLICY_FAILURE_RETAINED",
+        "started_at": "2026-10-11T08:45:54.239367+00:00",
+        "exit_code": 0,
+        "wall_seconds": 110.22321364097297,
+        "success": false,
+        "phase_seconds": {
+          "model_load": 8.098427307995735,
+          "environment_construct": 0.006240585003979504,
+          "reset_and_reference_prefix": 34.881029784999555,
+          "recorded_prefix": 20.127446933998726,
+          "policy_loop": 27.438187085994286,
+          "trajectory_encoding": 3.6292051979980897,
+          "video_encoding": 0.19252081200829707
+        }
+      },
+      {
+        "run_id": "m04-final-goal04-init04-seed86146",
+        "condition": {
+          "seed": 86146,
+          "kind": "brightness_first50",
+          "camera": "agentview",
+          "gain": 1.15
+        },
+        "status": "POLICY_FAILURE_RETAINED",
+        "started_at": "2026-10-11T08:47:44.463685+00:00",
+        "exit_code": 0,
+        "wall_seconds": 107.84836365800584,
+        "success": false,
+        "phase_seconds": {
+          "model_load": 8.330601160007063,
+          "environment_construct": 0.006673825002508238,
+          "reset_and_reference_prefix": 33.32924442901276,
+          "recorded_prefix": 19.422991181985708,
+          "policy_loop": 27.134177537984215,
+          "trajectory_encoding": 3.645203723979648,
+          "video_encoding": 0.18619182100519538
+        }
+      }
+    ],
+    "status": "BUDGET_EXHAUSTED",
+    "started_at": "2026-10-11T08:44:03.837070+00:00",
+    "finished_at": "2026-10-11T08:49:32.313257+00:00",
+    "training_executed": false,
+    "new_verified": 0
+  },
+  "boundary": "gpu_hours_allocated historically measures policy-loop wall time, not GPU-active time, end-to-end production time, or invoiced cost. Lower bound excludes missing phases and M03 inherited production. Dataset write is CPU encoding; do not call summed phase wall times GPU-active hours.",
+  "additional_historical_failed_transfer_attempts": [
+    {
+      "episode_id": "m04-goal-t06-e00-m03-success-transfer",
+      "success": false,
+      "simulator_wall_seconds": 71.92159803099639
+    },
+    {
+      "episode_id": "m04-goal-t06-e07-m03-success-transfer-xyz0990",
+      "success": false,
+      "simulator_wall_seconds": 73.25899551299517
+    },
+    {
+      "episode_id": "m04-goal-t06-e07-m03-success-transfer-x0990",
+      "success": false,
+      "simulator_wall_seconds": 72.09336833799898
+    }
+  ],
+  "inherited_correction_M04_replay_recorded_seconds": [
+    {
+      "episode_id": "m04-first-correction-replay-01",
+      "reset_seconds": 9.877577842009487,
+      "execution_seconds": 20.284190172998933
+    },
+    {
+      "episode_id": "m04-first-correction-replay-02",
+      "reset_seconds": 9.090357816006872,
+      "execution_seconds": 19.982284876998165
+    }
+  ],
+  "optimization_benchmarks_and_engineering_failures_full_cost_seconds": null,
+  "all_known_stage_wall_time_lower_bound_seconds": 2732.178047690162
+}

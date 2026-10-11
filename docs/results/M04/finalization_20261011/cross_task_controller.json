@@ -1,0 +1,77 @@
+{
+  "attempts": [
+    {
+      "run_id": "m04-final-goal04-init04-seed86144",
+      "condition": {
+        "seed": 86144,
+        "kind": "brightness_first50",
+        "camera": "wrist",
+        "gain": 1.1
+      },
+      "status": "POLICY_FAILURE_RETAINED",
+      "started_at": "2026-10-11T08:44:03.837128+00:00",
+      "exit_code": 0,
+      "wall_seconds": 110.40129669301677,
+      "success": false,
+      "phase_seconds": {
+        "model_load": 8.470750948996283,
+        "environment_construct": 0.006542130984598771,
+        "reset_and_reference_prefix": 34.04307251499267,
+        "recorded_prefix": 19.621287240996026,
+        "policy_loop": 27.72622025597957,
+        "trajectory_encoding": 3.6736516490054782,
+        "video_encoding": 0.19834275598987006
+      }
+    },
+    {
+      "run_id": "m04-final-goal04-init04-seed86145",
+      "condition": {
+        "seed": 86145,
+        "kind": "action_scale",
+        "scale": 0.9
+      },
+      "status": "POLICY_FAILURE_RETAINED",
+      "started_at": "2026-10-11T08:45:54.239367+00:00",
+      "exit_code": 0,
+      "wall_seconds": 110.22321364097297,
+      "success": false,
+      "phase_seconds": {
+        "model_load": 8.098427307995735,
+        "environment_construct": 0.006240585003979504,
+        "reset_and_reference_prefix": 34.881029784999555,
+        "recorded_prefix": 20.127446933998726,
+        "policy_loop": 27.438187085994286,
+        "trajectory_encoding": 3.6292051979980897,
+        "video_encoding": 0.19252081200829707
+      }
+    },
+    {
+      "run_id": "m04-final-goal04-init04-seed86146",
+      "condition": {
+        "seed": 86146,
+        "kind": "brightness_first50",
+        "camera": "agentview",
+        "gain": 1.15
+      },
+      "status": "POLICY_FAILURE_RETAINED",
+      "started_at": "2026-10-11T08:47:44.463685+00:00",
+      "exit_code": 0,
+      "wall_seconds": 107.84836365800584,
+      "success": false,
+      "phase_seconds": {
+        "model_load": 8.330601160007063,
+        "environment_construct": 0.006673825002508238,
+        "reset_and_reference_prefix": 33.32924442901276,
+        "recorded_prefix": 19.422991181985708,
+        "policy_loop": 27.134177537984215,
+        "trajectory_encoding": 3.645203723979648,
+        "video_encoding": 0.18619182100519538
+      }
+    }
+  ],
+  "status": "BUDGET_EXHAUSTED",
+  "started_at": "2026-10-11T08:44:03.837070+00:00",
+  "finished_at": "2026-10-11T08:49:32.313257+00:00",
+  "training_executed": false,
+  "new_verified": 0
+}

@@ -1,0 +1,54 @@
+{
+  "old_repository_head": "f4037c3",
+  "records": [
+    {
+      "source": "/data/vla-forge/src/robot_vla/m03.py",
+      "destination": "benchmarks/robot-vla-engine/src/robot_vla/m03.py",
+      "original_sha256": "84fc894a20bdaf5173015750f9bda67c17f3e763e34e0d9322eb6bf14813ac0d",
+      "byte_identical_on_import": true,
+      "historical_source_status": "untracked in old cloud checkout; not a recoverable prior M03 commit",
+      "imported_final_sha256": "84fc894a20bdaf5173015750f9bda67c17f3e763e34e0d9322eb6bf14813ac0d"
+    },
+    {
+      "source": "/data/vla-forge/scripts/run_m03_interventions.py",
+      "destination": "benchmarks/robot-vla-engine/scripts/run_m03_interventions.py",
+      "original_sha256": "14af832401d42e62fa95eaf7d749143938c4a37aa5226eb5109eb9e5a18586e8",
+      "byte_identical_on_import": true,
+      "historical_source_status": "untracked in old cloud checkout; not a recoverable prior M03 commit",
+      "imported_final_sha256": "14af832401d42e62fa95eaf7d749143938c4a37aa5226eb5109eb9e5a18586e8"
+    },
+    {
+      "source": "/data/vla-forge/scripts/finalize_m03.py",
+      "destination": "benchmarks/robot-vla-engine/scripts/finalize_m03.py",
+      "original_sha256": "a2fe2e6d20e1c6f460ded368e6ff72f173b9545b9ca3fdac632f5813d5d105b3",
+      "byte_identical_on_import": true,
+      "historical_source_status": "untracked in old cloud checkout; not a recoverable prior M03 commit",
+      "imported_final_sha256": "a2fe2e6d20e1c6f460ded368e6ff72f173b9545b9ca3fdac632f5813d5d105b3"
+    },
+    {
+      "source": "/data/vla-forge/scripts/build_m03_demo.py",
+      "destination": "benchmarks/robot-vla-engine/scripts/build_m03_demo.py",
+      "original_sha256": "db12ab32b565efedbf129dade138dbaa482e03bd9a5f6dc6c8eab5efe43c70d5",
+      "byte_identical_on_import": true,
+      "historical_source_status": "untracked in old cloud checkout; not a recoverable prior M03 commit",
+      "imported_final_sha256": "db12ab32b565efedbf129dade138dbaa482e03bd9a5f6dc6c8eab5efe43c70d5"
+    },
+    {
+      "source": "/data/vla-forge/scripts/extract_m03_poses.py",
+      "destination": "benchmarks/robot-vla-engine/scripts/extract_m03_poses.py",
+      "original_sha256": "4650dcc3d8a272295ea485c5a3903cb4c0d8b9d48d083c179ee160e0f9b6c769",
+      "byte_identical_on_import": true,
+      "historical_source_status": "untracked in old cloud checkout; not a recoverable prior M03 commit",
+      "imported_final_sha256": "4650dcc3d8a272295ea485c5a3903cb4c0d8b9d48d083c179ee160e0f9b6c769"
+    },
+    {
+      "source": "/data/vla-forge/tests/test_m03.py",
+      "destination": "benchmarks/robot-vla-engine/tests/test_m03.py",
+      "original_sha256": "944e473ed92132809052efbc8164ee0906578d6c138f4a1cbb3859eec8976749",
+      "byte_identical_on_import": true,
+      "historical_source_status": "untracked in old cloud checkout; not a recoverable prior M03 commit",
+      "imported_final_sha256": "944e473ed92132809052efbc8164ee0906578d6c138f4a1cbb3859eec8976749"
+    }
+  ],
+  "historical_experiments_rerun": false
+}

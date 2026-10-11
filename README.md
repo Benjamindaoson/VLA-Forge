@@ -1,5 +1,14 @@
 # VLA-Forge
 
+## M04 finalization and M05 admission
+
+[Final report](docs/results/M04/finalization_20261011/FINAL_REPORT.md) · [Public numeric Dataset](https://huggingface.co/datasets/jlai300/vla-forge-m04-numeric-evidence) · [Public report Space](https://huggingface.co/spaces/jlai300/vla-forge-m04-audited-evidence)
+
+The frozen visual r7 dataset retains **12 episodes / 956 transitions: 11 fresh corrections plus one M03-derived correction**. All 12 passed a fresh source/action/state/label audit; the 11 fresh corrections retain 22 independently successful physical replay receipts. Two ambiguous historical failed ledger rows are quarantined. Six formerly reserved test source groups were used during development and have been retired; 400 replacement test conditions are frozen without source-group or initial-state byte overlap.
+
+The new public Dataset is a **numeric-only subset**, with no camera frames, video, meshes, textures or model weights. The complete visual dataset and demo remain private pending asset-specific license reconciliation. The bounded cross-task check produced **0/3 successes** on Goal task 4 and stopped after 328.473 seconds. Historical full production costs and rental billing remain unavailable; warm CUDA Graph chunk acceleration is **not an end-to-end 6.95× speedup**. M05 has conditional engineering admission only; no new policy was trained.
+
+
 **机器人策略失败恢复、可信纠正数据与高效 VLA 推理**
 *Failure recovery, replay-verified corrective data, and efficient VLA inference.*
 

@@ -1,0 +1,164 @@
+{
+  "dataset": {
+    "repo_id": "jlai300/vla-forge-m04-numeric-evidence",
+    "url": "https://huggingface.co/datasets/jlai300/vla-forge-m04-numeric-evidence",
+    "commit": "628084c3324e33b58ab0fcb5f40a701027e3b3a9",
+    "private": false,
+    "files": [
+      {
+        "file": "README.md",
+        "bytes": 2971,
+        "sha256": "c1cc87c1d42a64da3a7ae30e05d1337e0a01afa6129db5a7c8b5d92efef2c075",
+        "anonymous_readback_exact": true
+      },
+      {
+        "file": "data.parquet",
+        "bytes": 81921,
+        "sha256": "7f110799a117354d9e249b15c97c50b564a67c098ed005be14963d5e3b25b37c",
+        "anonymous_readback_exact": true
+      },
+      {
+        "file": "episodes.json",
+        "bytes": 7252,
+        "sha256": "c3e8fc5d526c2d5bd2be891e9e8ff332311a37e59f78c0fd59a4a448f190de97",
+        "anonymous_readback_exact": true
+      },
+      {
+        "file": "release_manifest.json",
+        "bytes": 726,
+        "sha256": "6c1f9a9ce8f64dfb06914280e8ade264eca8894c20e1b2beba603113aacf3ccb",
+        "anonymous_readback_exact": true
+      }
+    ]
+  },
+  "space": {
+    "repo_id": "jlai300/vla-forge-m04-audited-evidence",
+    "url": "https://huggingface.co/spaces/jlai300/vla-forge-m04-audited-evidence",
+    "commit": "02927c88795ab29de182d28a5b4f3875efdccaea",
+    "private": false,
+    "files": [
+      {
+        "file": "COST_REPORT.md",
+        "bytes": 2320,
+        "sha256": "58aed71689aae4460dc51213010be2c7b2638757df86a8d1b84f8ae7bed9fdb0",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "CROSS_TASK_REPORT.md",
+        "bytes": 844,
+        "sha256": "a4790d4cae1b6788565cdeecfede726c56b59cbccf582fccd70117e69b55cb98",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "LICENSE_REVIEW.md",
+        "bytes": 2603,
+        "sha256": "0751350880c275710191e71782cc5640b3621a0c35b71f69d8a87c9f0290ded5",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "M05_ADMISSION.md",
+        "bytes": 2531,
+        "sha256": "868324d3dc2ca6ebf8d6e3f4c7231fbcd9a1c49d0c9e858fc59acb71f0396dc9",
+        "anonymous_readback_exact": true,
+        "verified_revision": "02927c88795ab29de182d28a5b4f3875efdccaea"
+      },
+      {
+        "file": "README.md",
+        "bytes": 284,
+        "sha256": "f61c6a6e2f5a8528367fcf7c4288357b6eab051c3aef8dd447966253007e4c4d",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "REGISTRY_AUDIT.md",
+        "bytes": 1846,
+        "sha256": "0cb1859c6a8b300cc29847ee0ecd819939f996851042d847fdf64beddd9a0204",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "cost_breakdown.json",
+        "bytes": 5587,
+        "sha256": "e9bd527fcff45c4244ce61dcd3cca6bc8fd5d0eda8ad287b7b2fa85e9e40bd5e",
+        "anonymous_readback_exact": true,
+        "verified_revision": "02927c88795ab29de182d28a5b4f3875efdccaea"
+      },
+      {
+        "file": "cost_per_attempt.csv",
+        "bytes": 10153,
+        "sha256": "8079ce638a2cb763bc44ac37760242476c3b70ca16008cad98c45013e4330cef",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "independent_test_freeze.json",
+        "bytes": 283508,
+        "sha256": "d7c56a382b3d8104213cdbed5decd33128fc7d0748ace8cff4f8f60d7921ef86",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "index.html",
+        "bytes": 12738,
+        "sha256": "a706bcfcbf0426ae7c1a69fe486c1c0c37a022faece5bf9b5b0a91979bad1e01",
+        "anonymous_readback_exact": true,
+        "verified_revision": "02927c88795ab29de182d28a5b4f3875efdccaea"
+      },
+      {
+        "file": "license_inventory.csv",
+        "bytes": 558216,
+        "sha256": "724b9897d179e646f056ebd2cddcb7d6ef65ee7b816c3db802c831be0442f993",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "license_review.json",
+        "bytes": 2508,
+        "sha256": "8225619e53df97378f41859045b1bb35a8cd28c32692cce652b22490a25e5def",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "m05_admission.json",
+        "bytes": 1123,
+        "sha256": "ad4ca698d1c20c4a12dde14d1574faeab5f7981d5a6a875a83b8d5e9a8041bf5",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "quarantine_manifest.json",
+        "bytes": 11074,
+        "sha256": "c78cd0145ed132903f11984220072bc00efc6095fae9b3b513c99759d254494e",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "registry_audit.json",
+        "bytes": 19139,
+        "sha256": "3f33217ea1c69f7d0f0ac6b008d26092feb092f1fc21d318e5c18531612f1599",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "source_groups.json",
+        "bytes": 668,
+        "sha256": "a0fa04e696298b9dee8b6fc49347a9fa9ba86786c20458d62211ef807c00914c",
+        "anonymous_readback_exact": true,
+        "verified_revision": "5781d3b424e049d194969763a08416093d59970c"
+      },
+      {
+        "file": "training_freeze.json",
+        "bytes": 6689,
+        "sha256": "7f32bb695827b4089471a336bf6a447087a5c689dae0f196cf4c3f7a0667c480",
+        "anonymous_readback_exact": true,
+        "verified_revision": "02927c88795ab29de182d28a5b4f3875efdccaea"
+      }
+    ],
+    "host": "https://jlai300-vla-forge-m04-audited-evidence.static.hf.space",
+    "http_status": 200,
+    "runtime_contains_expected_report": true
+  }
+}
