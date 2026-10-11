@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import json
 import shutil
+import sqlite3
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -212,6 +213,25 @@ def comparisons(protocol: dict, grouped: dict, chunks: dict, actions: dict):
             illegal_actions=0, missing_or_corrupt=0)
     return pair_rows, target, skill, decisions
 
+def resource_payloads(run_id: str) -> list[dict]:
+    """Read exported telemetry, or the SQLite source after an interrupted run."""
+    registry = OUT / 'registry'
+    event_file = registry / 'runs' / run_id / 'events.jsonl'
+    if event_file.is_file():
+        values = [json.loads(line)['payload'] for line in event_file.read_text().splitlines()
+                  if json.loads(line)['kind'] == 'resources']
+    else:
+        db_path = registry / 'registry.sqlite'
+        if not db_path.is_file():
+            raise ValueError(f'Missing telemetry source for {run_id}')
+        with sqlite3.connect(f'file:{db_path}?mode=ro', uri=True) as db:
+            values = [json.loads(row[0]) for row in db.execute(
+                'SELECT payload_json FROM events WHERE run_id=? AND kind=? ORDER BY id',
+                (run_id, 'resources'))]
+    if not values:
+        raise ValueError(f'No resource telemetry for {run_id}')
+    return values
+
 def performance_cost(chunks: dict, resource: dict, validation: dict):
     perf = {}
     costs = {}
@@ -227,11 +247,7 @@ def performance_cost(chunks: dict, resource: dict, validation: dict):
             for row in episodes))
         samples = []
         for run_id in {row['registry_run_id'] for row in episodes}:
-            event_file = OUT / 'registry/runs' / run_id / 'events.jsonl'
-            for line in event_file.read_text().splitlines():
-                event = json.loads(line)
-                if event['kind'] == 'resources':
-                    samples.append(event['payload'])
+            samples.extend(resource_payloads(run_id))
         cpu = [float(item['process_cpu_percent']) for item in samples]
         rss = [int(item['process_rss_bytes']) for item in samples]
         gpu = []
