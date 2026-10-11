@@ -1,0 +1,114 @@
+{
+  "schema": "vla-modelops.m05.v1",
+  "scope": "M05-development-only",
+  "base_commit": "659b3db543e1b3b45ccbdf39f681b0340b56bb53",
+  "modelops_base": "1bc36a8d7580275c00cd9b4308296d98c30ad307",
+  "recipe": {
+    "precision": "fp32",
+    "microbatch": 2,
+    "accumulation": 1,
+    "lr": 0.0001,
+    "steps": 500,
+    "seed": 5501,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0,
+    "gradient_checkpointing": false,
+    "fused": false,
+    "video_backend": "pyav"
+  },
+  "algorithm_conditions": [
+    "frozen",
+    "standard",
+    "corrective",
+    "replay"
+  ],
+  "checkpoint_selection": "last update 500 only; no development success selection",
+  "development": [
+    {
+      "suite": "goal",
+      "task": 6,
+      "init": 10,
+      "seed": 105610
+    },
+    {
+      "suite": "goal",
+      "task": 6,
+      "init": 11,
+      "seed": 105611
+    },
+    {
+      "suite": "goal",
+      "task": 6,
+      "init": 12,
+      "seed": 105612
+    },
+    {
+      "suite": "goal",
+      "task": 6,
+      "init": 13,
+      "seed": 105613
+    },
+    {
+      "suite": "goal",
+      "task": 0,
+      "init": 10,
+      "seed": 105010
+    },
+    {
+      "suite": "goal",
+      "task": 0,
+      "init": 11,
+      "seed": 105011
+    },
+    {
+      "suite": "object",
+      "task": 0,
+      "init": 10,
+      "seed": 105010
+    },
+    {
+      "suite": "object",
+      "task": 0,
+      "init": 11,
+      "seed": 105011
+    }
+  ],
+  "formal_test_forbidden_init_ids": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "inference_gate": {
+    "exact_graph_linf": 1e-06,
+    "approximate_action_linf": 0.02,
+    "approximate_action_mae": 0.005,
+    "finite": true,
+    "closed_loop_success_degradation_max": 0
+  },
+  "budget": {
+    "formal_training_updates": 1500,
+    "formal_training_wall_cap_s": 3600,
+    "short_ab_updates": 20,
+    "profile_steps": 8,
+    "inference_warm_calls_per_mode": 100,
+    "compile_timeout_s": 180,
+    "development_rollouts": 48
+  },
+  "limitations": [
+    "11 fresh corrections derive from 2 source states; 1 task",
+    "expert dataset FPS metadata10 vs correction20; ordered actions preserved without interpolation",
+    "not an M06 or cross-seed statistical result",
+    "all visual material and checkpoints private research only"
+  ],
+  "optimization_selection": "FP32 chosen for stable full gradients and no AMP throughput advantage on this small LoRA workload; checkpointing overhead rejected; accumulation unnecessary at <2GiB allocated."
+}

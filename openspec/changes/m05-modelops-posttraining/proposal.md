@@ -1,0 +1,4 @@
+# M05: real SmolVLA post-training with ModelOps
+Scope: official Flow Matching training on frozen M04 corrections, matched standard-demo and replay controls; precision/memory/data profiles, eager/graph/precision/compile evaluation, simulation policy API, development rollouts and private 180–240s demo. ModelOps independent Linux job lifecycle, structured tracking/MLflow, immutable artifact registry, evaluation binding and rollback. No M06 evaluation, no hardware control, no Kubernetes claim, no new paid resources.
+
+Gates: reloadable updated checkpoint for B/C/D, matched update/exposure protocol; raw training/inference/resource logs and measured candidate decisions; real simulator development results; native-managed A/B numerical equality and recovery; complete private visual evidence and two independently traceable Git commits.
