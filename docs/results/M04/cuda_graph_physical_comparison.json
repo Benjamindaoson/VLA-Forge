@@ -1,0 +1,44 @@
+{
+  "baseline": {
+    "path": "/data/VLA-Forge/Evidence/M04/artifacts/policy_attempts/m04-diverse-goal-t06-init06-seed84182.npz",
+    "sha256": "0481f19ba6a8123dcf98900f4b84a52e8b171ed91466df8bd4184420f7d21273",
+    "bytes": 18838338
+  },
+  "candidate": {
+    "path": "/data/VLA-Forge/Evidence/M04/performance/rollouts/m04-perf-cudagraph-init06-84182.npz",
+    "sha256": "0481f19ba6a8123dcf98900f4b84a52e8b171ed91466df8bd4184420f7d21273",
+    "bytes": 18838338
+  },
+  "baseline_success": true,
+  "candidate_success": true,
+  "correction_steps": 21,
+  "identity_checks": {
+    "source_m02_episode": true,
+    "source_trace_sha256": true,
+    "suite": true,
+    "task_id": true,
+    "init_state_id": true,
+    "seed": true,
+    "policy_seed": true,
+    "policy_model_sha256": true,
+    "vlm_model_sha256": true,
+    "condition": true,
+    "control_mode": true,
+    "action_chunk_size": true,
+    "n_action_steps": true,
+    "inference_action_steps": true
+  },
+  "maximum_absolute_errors": {
+    "actions": 0.0,
+    "qpos": 0.0,
+    "qvel": 0.0,
+    "eef_pos": 0.0,
+    "eef_quat": 0.0,
+    "dual_camera_frames": 0.0
+  },
+  "baseline_policy_loop_seconds": 5.557962644001236,
+  "candidate_policy_loop_seconds_including_capture": 6.964778591005597,
+  "candidate_cold_capture_seconds": 1.6743589309917297,
+  "scope": "Registered historical eager baseline and current candidate; exact physics check, not a contemporary paired end-to-end speed experiment.",
+  "pass": true
+}

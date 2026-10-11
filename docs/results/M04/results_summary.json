@@ -1,0 +1,88 @@
+{
+  "schema": "vla-forge.m04.metrics.v1",
+  "generated_at_utc": "2026-10-11T08:04:29.430048+00:00",
+  "status": "INCOMPLETE",
+  "hardware": "NVIDIA GeForce RTX 3090 24 GiB",
+  "policy_attempt_rows": 79,
+  "policy_attempt_success_rows": 12,
+  "policy_attempt_failed_rows": 67,
+  "policy_attempt_unique_success_action_hashes": 11,
+  "independently_verified_unique_corrections": 12,
+  "m04_fresh_policy_verified_unique_corrections": 11,
+  "gpu_hours_all_policy_attempts_including_failures_and_duplicates": 0.5734655445047449,
+  "gpu_hours_per_m04_fresh_verified_unique_correction": 0.052133231318613166,
+  "peak_gpu_allocated_bytes": 964068864,
+  "dataset": {
+    "path": "/data/VLA-Forge/Evidence/M04/dataset/lerobot_v3_verified_r7",
+    "episodes": 12,
+    "transitions": 956,
+    "unique_action_sequences": 12,
+    "source_task_ids": [
+      6
+    ],
+    "source_m02_init_state_ids": [
+      6,
+      7
+    ],
+    "scope": "task ids [6]; M02 init states [6, 7]; not task-diverse",
+    "public_release_ready": false,
+    "write_seconds": 36.47794516402064,
+    "encoded_transitions_per_second": 26.20761656670654,
+    "maximum_action_roundtrip_linf": 0.0,
+    "maximum_state_roundtrip_linf": 0.0,
+    "independent_validation": {
+      "path": "/data/VLA-Forge/Evidence/M04/dataset/lerobot_v3_verified_r7/independent_validation.json",
+      "status": "PASS",
+      "action_max_linf": 0.0,
+      "state_max_linf": 0.0,
+      "mean_abs_image_error": 2.1904896213419764
+    }
+  },
+  "demo_video": {
+    "path": "/data/VLA-Forge/Evidence/M04/demo/M04_demo_200s.mp4",
+    "sha256": "fea7184ac325194b044452ea24e73f0c228f37634446998c9ed1e89f97c22c88",
+    "bytes": 43383032,
+    "duration_s": 227.934,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "fps": "30/1",
+    "full_decode_exit_code": 0,
+    "unique_episode_source_count": 37
+  },
+  "artifact_integrity": {
+    "schema": "vla-forge.m04.artifact-integrity.v1",
+    "status": "PARTIAL_WITH_DECLARED_EXCEPTION",
+    "registered_attempt_rows": 79,
+    "episode_artifact_references_checked": 237,
+    "missing_artifacts": [],
+    "registry_hash_mismatches": [
+      {
+        "episode_id": "m04-g09-fresh-brightness-115-first50-01",
+        "kind": "action_trace",
+        "path": "/data/VLA-Forge/Evidence/M04/artifacts/policy_attempts/m04-g09-fresh-brightness-115-first50-01.json",
+        "registry_sha256": "850fa99ebe68a43aed902747c4b64183e1c558f0c28c5f77703e03288817c402",
+        "current_sha256": "562df43bde07d98d9905ccd9eae65589a9262da6374143f80cfd43fd5198d34e",
+        "action_array_max_abs_error_vs_npz": 0.0,
+        "action_array_matches_npz": true
+      }
+    ],
+    "action_arrays_reconciled_against_npz": [
+      "m04-g09-fresh-brightness-115-first50-01"
+    ],
+    "demo_video_sha256_verified": true,
+    "demo_episode_sources_verified": 37,
+    "demo_episode_source_count": 37,
+    "evidence_boundary": "No file was repaired or silently rewritten. A registry hash mismatch remains a provenance exception even when stored action arrays match the NPZ exactly."
+  },
+  "source_receipts": {
+    "metrics.json": "0522b599d0960d9f492bcbf5bd8089edf24502518b7fe158b3d404b6cf5de3b3",
+    "performance/cuda_graph_benchmark.json": "e2aabdaf6125a77c44a5bd068cd9a0d97c1e3170a29e571dac77f6209b65914f",
+    "performance/cuda_graph_physical_comparison.json": "ebd43bc613125cc385f61a6e2e7370d5831026095a2f597978dccbcc55e16756",
+    "demo/video_validation.json": "df540fc4953c18bdc515c87485bf472a8bc1e78c8211f978dfd32c66b475caf6",
+    "demo/video_sources.json": "1f5f582bf142c80f003c4a44e587082fc17e31eb4bcca963c2d7aa19d810a85f"
+  },
+  "cost_scope": "Registered production policy-loop windows including failures; excludes loading, restoration, independent replay, encoding and idle time.",
+  "publication": "Text evidence only; media and dataset remain private; redistribution clearance pending."
+}

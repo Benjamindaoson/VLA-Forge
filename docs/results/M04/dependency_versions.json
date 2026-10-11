@@ -1,0 +1,13 @@
+{
+  "torch": "2.7.1+cu128",
+  "transformers": "5.5.4",
+  "lerobot": "0.6.2",
+  "mujoco": "3.8.1",
+  "robosuite": "1.4.0",
+  "numpy": "2.2.6",
+  "av": "15.1.0",
+  "pytest": "9.1.1",
+  "fastapi": "0.143.0",
+  "starlette": "1.7.0",
+  "uvicorn": "0.54.0"
+}

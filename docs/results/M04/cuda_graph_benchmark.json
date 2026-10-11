@@ -1,0 +1,266 @@
+{
+  "checkpoint_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+  "source_trajectory_sha256": "b88501b542bb33ed5d5a172364103e9cc129f36c4226e1b8a5a0a938c906cf75",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch_version": "2.7.1+cu128",
+  "samples": 18,
+  "pairs": [
+    {
+      "observation_index": 100,
+      "seed": 200,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 100,
+      "seed": 201,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 100,
+      "seed": 202,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 100,
+      "seed": 203,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 100,
+      "seed": 204,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 100,
+      "seed": 205,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 110,
+      "seed": 200,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 110,
+      "seed": 201,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 110,
+      "seed": 202,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 110,
+      "seed": 203,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 110,
+      "seed": 204,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 110,
+      "seed": 205,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 120,
+      "seed": 200,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 120,
+      "seed": 201,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 120,
+      "seed": 202,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 120,
+      "seed": 203,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 120,
+      "seed": 204,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    },
+    {
+      "observation_index": 120,
+      "seed": 205,
+      "shape": [
+        1,
+        50,
+        7
+      ],
+      "max_abs_error": 0.0,
+      "rng_equal": true
+    }
+  ],
+  "eager": {
+    "p50_ms": 391.7427705018781,
+    "p95_ms": 398.8374924607342,
+    "p99_ms": 399.07180890615564
+  },
+  "cuda_graph": {
+    "p50_ms": 56.38620299578179,
+    "p95_ms": 61.84627343900502,
+    "p99_ms": 61.87064667697996
+  },
+  "speedup": 6.9474933527832,
+  "cold_capture_seconds": 1.8158126930065919,
+  "peak_allocated_bytes": 981761024,
+  "correctness_pass": true,
+  "performance_pass": true,
+  "decision": "ACCEPT_FOR_ROLLOUT",
+  "timing_scope": "full raw action chunk, GPU synchronized; preprocessing and simulator excluded",
+  "times_ms": {
+    "eager": [
+      389.2855750164017,
+      394.08146499772556,
+      396.1784299754072,
+      392.7173859847244,
+      390.16098200227134,
+      390.65311700687744,
+      392.32944799005054,
+      391.09867499792017,
+      392.0246979978401,
+      398.7858050095383,
+      396.2533040030394,
+      391.35796899790876,
+      391.4608430059161,
+      388.5046249779407,
+      388.9254000096116,
+      392.1987009816803,
+      399.130388017511,
+      388.2087790116202
+    ],
+    "graph": [
+      61.876739986473694,
+      60.46289502410218,
+      60.616591974394396,
+      56.20852898573503,
+      56.563877005828544,
+      56.05315798311494,
+      56.11572801717557,
+      61.17544398875907,
+      61.84089698945172,
+      55.59488100698218,
+      55.47791800927371,
+      55.12172300950624,
+      61.728271015454084,
+      61.18164799408987,
+      61.76884300657548,
+      55.7833640195895,
+      55.88133700075559,
+      55.97399498219602
+    ]
+  }
+}
