@@ -145,7 +145,12 @@ def main() -> None:
     private_delivery = json.loads(private_path.read_text()) if private_path.exists() else {}
     publication_status = (
         "Private delivery: "
-        + json.dumps(private_delivery)
+        + json.dumps(
+            [
+                {k: d[k] for k in ("repo_id", "url", "private", "hash_validation") if k in d}
+                for d in private_delivery.get("delivery", [])
+            ]
+        )
         + "; PUBLIC RELEASE WITHHELD pending asset rights review."
     )
     metrics = {

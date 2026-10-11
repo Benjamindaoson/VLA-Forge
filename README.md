@@ -1,3 +1,5 @@
+> **M04 current cloud delivery (2026-10-11):** 11 fresh SmolVLA corrections each replayed twice; source-limited LeRobot v3 set has 12 episodes / 956 transitions including one separately identified M03-derived sequence. FP32 CUDA Graph: 18 matched complete chunks, 391.7 to 56.4 ms median (6.95x warm), exact outputs/RNG; one real 21-step continuation has identical actions, physical states and camera pixels. Cold capture costs 1.82 s and is not an end-to-end speedup. [Private evidence Space](https://huggingface.co/spaces/jlai300/vla-forge-m04-evidence) and [private dataset](https://huggingface.co/datasets/jlai300/vla-forge-m04-corrections-dev) are uploaded and hash-verified. Public redistribution remains pending asset-rights review. Canonical evidence: `/data/VLA-Forge/Evidence/M04/`; scope excludes M05. Earlier dated sections below are historical.
+
 # VLA-Forge
 
 **Intervention-Guided Robot Policy Repair & Continuous Improvement**

@@ -6,5 +6,5 @@
 - [x] Correct source-aware replay/export, freeze r7, and validate lineage exclusions.
 - [x] Test full root and benchmark suites: 82 passed (one upstream Starlette deprecation warning).
 - [x] Rebuild 227.934 s / 1080p / H.264 / 30 FPS demo and verify decode/source hashes.
-- [ ] Verify private Dataset/Space delivery and freeze uploaded hashes.
+- [x] Verify private Dataset (11 files) and Space (82 files) remote hashes; Space static runtime RUNNING.
 - [ ] Public redistribution: withheld pending exact asset rights; never infer a license from missing metadata.
