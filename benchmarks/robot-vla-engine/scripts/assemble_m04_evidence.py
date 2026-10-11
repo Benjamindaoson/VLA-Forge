@@ -218,8 +218,16 @@ def main() -> None:
         "demo_video": demo_validation,
         "diverse_source_search": diversity_summary,
         "publication": {
-            "huggingface_dataset_uploaded": False,
-            "huggingface_space_uploaded": False,
+            "huggingface_dataset_uploaded": any(
+                d.get("repo_type") == "dataset" and d.get("hash_validation") == "PASS"
+                for d in private_delivery.get("delivery", [])
+            ),
+            "huggingface_space_uploaded": any(
+                d.get("repo_type") == "space" and d.get("hash_validation") == "PASS"
+                for d in private_delivery.get("delivery", [])
+            ),
+            "visibility": "private",
+            "public_release": False,
             "reasons": [
                 f"{independent_dataset['episodes']} examples form a source-limited internal dataset; do not claim generalization",
                 "upstream model/dataset/asset redistribution terms require formal clearance",
@@ -464,7 +472,8 @@ def main() -> None:
         if diversity_summary
         else None,
         "public_dataset_uploaded": False,
-        "space_uploaded": False,
+        "space_uploaded": metrics["publication"]["huggingface_space_uploaded"],
+        "private_dataset_uploaded": metrics["publication"]["huggingface_dataset_uploaded"],
         "updated_at_utc": status["updated_at_utc"],
     }
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
