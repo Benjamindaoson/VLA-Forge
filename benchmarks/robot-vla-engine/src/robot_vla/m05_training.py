@@ -173,6 +173,21 @@ def corrective_dataset(backend="pyav"):
     )
 
 
+def dataset_fingerprint(kind):
+    """Bind every supervision source that a training condition can sample."""
+    if kind == "corrective":
+        return sha256(DATA / "provenance.json")
+    if kind == "standard":
+        return sha256(EVIDENCE / "data/selection.json")
+    if kind == "replay":
+        sources = {
+            "corrective": sha256(DATA / "provenance.json"),
+            "expert": sha256(EVIDENCE / "data/selection.json"),
+        }
+        return hashlib.sha256(json.dumps(sources, sort_keys=True).encode()).hexdigest()
+    raise ValueError("Unknown training data condition")
+
+
 def training_batch(dataset, indices):
     import torch
     from torch.utils.data import default_collate
@@ -185,7 +200,10 @@ def training_batch(dataset, indices):
             ("observation.images.robot0_eye_in_hand_image", "observation.images.image2"),
         ]:
             if old in item:
-                item[new] = item.pop(old)
+                # M04 stores raw simulator frames. The frozen LIBERO inference
+                # processor rotates these cameras 180 degrees before SmolVLA.
+                # Official LeRobot expert frames already use model orientation.
+                item[new] = torch.flip(item.pop(old), dims=(-2, -1))
         required = [
             "observation.images.image",
             "observation.images.image2",
@@ -291,9 +309,7 @@ def train_job(config):
                 "normalizer_sha256": sha256(
                     BASE / "policy_preprocessor_step_5_normalizer_processor.safetensors"
                 ),
-                "dataset_sha256": sha256(DATA / "provenance.json")
-                if config["dataset"] == "corrective"
-                else sha256(EVIDENCE / "data/selection.json"),
+                "dataset_sha256": dataset_fingerprint(config["dataset"]),
                 "code_commit": subprocess.check_output(
                     ["git", "rev-parse", "HEAD"], text=True
                 ).strip(),

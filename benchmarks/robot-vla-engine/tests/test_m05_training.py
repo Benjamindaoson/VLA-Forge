@@ -89,3 +89,42 @@ def test_replay_collation_normalizes_camera_names_before_stacking():
     assert batch["observation.images.image2"].shape == (2, 3, 16, 16)
     assert batch["observation.images.image2"].sum() == 1536
     assert batch["action"].shape == (2, 50, 7)
+
+
+def test_raw_m04_images_are_rotated_but_official_expert_images_are_not():
+    import torch
+
+    m = module()
+    pixels = torch.arange(3 * 16 * 16).reshape(3, 16, 16).float()
+    common = {
+        "observation.state": torch.zeros(8),
+        "action": torch.zeros(50, 7),
+        "action_is_pad": torch.zeros(50, dtype=torch.bool),
+        "task": "same",
+    }
+    raw = {
+        **common,
+        "observation.images.agentview_image": pixels,
+        "observation.images.robot0_eye_in_hand_image": pixels,
+    }
+    official = {**common, "observation.images.image": pixels, "observation.images.image2": pixels}
+    b = m.training_batch([raw, official], [0, 1])
+    assert b["observation.images.image"][0, 0, 0, 0].item() == 255
+    assert b["observation.images.image"][1, 0, 0, 0].item() == 0
+
+
+def test_replay_data_identity_binds_corrective_and_expert_sources(tmp_path, monkeypatch):
+    m = module()
+    correction = tmp_path / "correction"
+    expert = tmp_path / "expert"
+    correction.mkdir()
+    (expert / "data").mkdir(parents=True)
+    (correction / "provenance.json").write_text('{"revision":1}')
+    (expert / "data/selection.json").write_text('{"episodes":[1]}')
+    monkeypatch.setattr(m, "DATA", correction)
+    monkeypatch.setattr(m, "EVIDENCE", expert)
+    first = m.dataset_fingerprint("replay")
+    standard = m.dataset_fingerprint("standard")
+    (correction / "provenance.json").write_text('{"revision":2}')
+    assert m.dataset_fingerprint("replay") != first
+    assert m.dataset_fingerprint("standard") == standard
