@@ -2,5 +2,7 @@
 - [x] Integrate action-scale and windowed brightness interventions into the M04 runner and record provenance.
 - [x] Generalize source selection to frozen M02 suite/task/episode identities.
 - [x] Run real RTX 3090 MuJoCo policy/intervention attempts; retain failures.
+- [x] Independently reload and audit both LeRobot v3 episodes against physical replay NPZs, including actions, state, cameras, and terminal markers.
+- [x] Audit every registered attempt and demo-source hash; retain and disclose any provenance exception without rewriting evidence.
 - [x] Generate source-hashed 180–240 s demo and verify codec, duration, and full decode.
 - [ ] Reach at least 10 independently verified, nonduplicate corrected trajectories across diverse source episodes.

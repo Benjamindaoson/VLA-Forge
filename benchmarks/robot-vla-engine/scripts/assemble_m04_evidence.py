@@ -79,6 +79,8 @@ def main() -> None:
     independent_dataset = json.loads(independent_dataset_path.read_text())
     if independent_dataset.get("status") != "PASS":
         raise RuntimeError("independent LeRobot v3 audit did not pass")
+    artifact_integrity_path = ROOT / "artifact_integrity.json"
+    artifact_integrity = json.loads(artifact_integrity_path.read_text())
     sim_samples = [s.get("cpu_percent", 0) for x in attempts for s in x.get("cpu_gpu_samples", [])]
     metrics = {
         "schema": "vla-forge.m04.metrics.v1",
@@ -90,6 +92,7 @@ def main() -> None:
         "policy_attempt_failed_rows": len(attempts) - len(success_rows),
         "non_episode_engineering_error_rows": len(engineering_errors),
         "non_episode_operator_event_rows": len(operator_events),
+        "artifact_integrity": artifact_integrity,
         "policy_attempt_unique_success_action_hashes": len(successful_hashes),
         "independently_verified_unique_corrections": len(unique_verified),
         "verified_correction_action_hashes": sorted(unique_verified),
@@ -221,6 +224,7 @@ def main() -> None:
         "## Real policy attempts",
         f"- Completed attempt rows: {len(attempts)} ({len(success_rows)} Success rows, {len(attempts) - len(success_rows)} failed rows; all retained).",
         f"- Non-episode engineering errors retained separately: {len(engineering_errors)}; operator-interrupted pre-policy runs: {len(operator_events)} (not counted as episodes).",
+        f"- Artifact hash audit: {artifact_integrity['episode_artifact_references_checked']} references, {len(artifact_integrity['missing_artifacts'])} missing, {len(artifact_integrity['registry_hash_mismatches'])} registry hash exception(s); affected action values independently match the paired NPZ exactly. See `artifact_integrity.json`.",
         f"- Unique successful action hashes in policy registry: {len(successful_hashes)}; the first40/first50 success rows deduplicate to one exact action sequence.",
         f"- Independently verified unique correction sequences: {len(unique_verified)} (one M03-derived physical replay plus one new M04 SmolVLA inference sequence).",
         f"- M04 RTX 3090 allocated runtime over all fresh policy attempts: {gpu_hours:.6f} GPU-hours; peak allocated memory: {peak_vram / 1024**3:.3f} GiB.",
@@ -275,6 +279,7 @@ def main() -> None:
             "unique_verified_corrections_at_least_10": "FAIL: 2 unique sequences total (1 fresh M04 sequence + 1 M03-derived replay)",
             "task_diversity": "FAIL: both verified sequences are Goal task 6 / init state 7",
             "lerobot_v3_roundtrip": f"PASS: independent audit {independent_dataset['episodes']} episodes / {independent_dataset['transitions']} transitions; action/state Linf {independent_dataset['action_max_linf']}/{independent_dataset['state_max_linf']}",
+            "episode_artifact_integrity": f"PARTIAL: {len(artifact_integrity['missing_artifacts'])} missing artifacts; {len(artifact_integrity['registry_hash_mismatches'])} registry hash mismatch (action values match NPZ exactly)",
             "BF16_or_TF32_speedup": "NOT DEMONSTRATED: candidates rejected by correctness/speed gates",
             "public_dataset_and_space": "NOT RELEASED: insufficient data quality/diversity and rights clearance pending",
             "180_240s_demo": (
@@ -315,6 +320,7 @@ def main() -> None:
         "gpu_hours_all_attempts_including_failures": gpu_hours,
         "dataset_provenance": str(ROOT / "dataset/lerobot_v3_verified_r2/provenance.json"),
         "dataset_independent_validation": str(independent_dataset_path),
+        "artifact_integrity_audit": str(artifact_integrity_path),
         "demo_video_validation": str(demo_validation_path) if demo_validation else None,
         "public_dataset_uploaded": False,
         "space_uploaded": False,
