@@ -27,7 +27,7 @@ def select_cases(protocol: dict, receipts: dict) -> list[dict]:
         key = (case['suite'], case['task_id'], case['init_state_id'])
         rows = [receipts[(condition, *key)] for condition in CONDITIONS]
         duration = min(row['steps'] for row in rows) / 20.0
-        if duration < 4:
+        if duration < 2:
             continue
         variety = len({row['success'] for row in rows})
         candidates.append({'case': case, 'rows': rows, 'duration': min(10.0, duration - .05),
