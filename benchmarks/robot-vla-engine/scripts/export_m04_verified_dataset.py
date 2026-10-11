@@ -68,6 +68,31 @@ SOURCE_SPECS = [
 ]
 
 
+def all_source_specs() -> list[dict]:
+    specs = list(SOURCE_SPECS)
+    sweep_path = EVID / "logs/seed-sweep-summary.json"
+    if not sweep_path.is_file():
+        return specs
+    sweep = json.loads(sweep_path.read_text())
+    for item in sweep.get("attempts", []):
+        if item.get("status") != "NEW_VERIFIED_UNIQUE_SEQUENCE":
+            continue
+        run_id = item["run_id"]
+        replay_dir = EVID / "artifacts/verified_corrections" / run_id
+        specs.append(
+            {
+                "episode_id": f"{run_id}-verified-replay-01",
+                "npz": replay_dir / f"{run_id}-independent-replay-01.npz",
+                "json": replay_dir / f"{run_id}-independent-replay-01.json",
+                "start": 100,
+                "unique_action_source": (
+                    "fresh M04 SmolVLA policy seed sweep success, independently physically replayed twice"
+                ),
+            }
+        )
+    return specs
+
+
 def sha(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
@@ -99,7 +124,7 @@ def main() -> None:
     source_rows = []
     prepared = []
     seen_action_hashes = set()
-    for spec in SOURCE_SPECS:
+    for spec in all_source_specs():
         meta = json.loads(spec["json"].read_text())
         source_m02 = json.loads(
             (

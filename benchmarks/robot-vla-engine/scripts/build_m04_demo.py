@@ -16,8 +16,36 @@ OUT = EVIDENCE / "demo"
 SOURCES = OUT / "source_videos"
 VIS = OUT / "visualization"
 W, H, FPS = 1920, 1080, 20
-CLIP_MAX_S = 8.5
+CLIP_MAX_S = 5.5
 M03_DUPLICATE_SHAM_VIDEOS: list[dict] = []
+
+
+def text(
+    image: np.ndarray,
+    label: str,
+    origin: tuple[int, int],
+    scale: float,
+    color: tuple[int, int, int] = (240, 240, 240),
+    thickness: int = 2,
+) -> None:
+    cv2.putText(
+        image, label, origin, cv2.FONT_HERSHEY_SIMPLEX, scale, color, thickness, cv2.LINE_AA
+    )
+
+
+def card_frames(title: str, lines: list[str], seconds: int):
+    frame = np.zeros((H, W, 3), dtype=np.uint8)
+    frame[:] = (28, 34, 41)
+    cv2.rectangle(frame, (0, 0), (W, 126), (15, 20, 26), -1)
+    text(frame, "VLA-FORGE M04 | VERIFIED CLOUD EXPERIMENT", (55, 78), 0.88)
+    text(frame, title, (70, 330), 1.35, (120, 215, 240), 3)
+    y = 470
+    for line in lines:
+        text(frame, line, (75, y), 0.78, (238, 238, 238), 2)
+        y += 92
+    text(frame, "Evidence boundary: same Goal task / init state; no public release claim", (55, H - 60), 0.58, (175, 185, 195), 1)
+    for _ in range(max(1, int(seconds * FPS))):
+        yield frame
 
 
 def sha(path: Path) -> str:
@@ -140,57 +168,33 @@ def m03_clips() -> list[dict]:
 def m04_clips() -> list[dict]:
     registry = EVIDENCE / "artifacts/policy_attempts/attempts.jsonl"
     attempts = [json.loads(line) for line in registry.read_text().splitlines() if line.strip()]
-    verified = json.loads(
-        (
-            EVIDENCE
-            / "artifacts/verified_corrections/m04-goal-t06-e07-brightness115-first50-seed84075/summary.json"
-        ).read_text()
-    )
-    source_episode_id = verified["source_policy_run"]
-    success = next(
-        (
-            row
-            for row in attempts
-            if row.get("episode_id") == source_episode_id and row.get("success")
-        ),
-        None,
-    )
-    if success is None:
-        raise RuntimeError("verified fresh M04 policy success is absent from registry")
-    wrist_verified = json.loads(
-        (
-            EVIDENCE
-            / "artifacts/verified_corrections/m04-goal-t06-e07-wrist115-first50-seed84067/summary.json"
-        ).read_text()
-    )
-    wrist_success = next(
-        (
-            row
-            for row in attempts
-            if row.get("episode_id") == wrist_verified["source_policy_run"] and row.get("success")
-        ),
-        None,
-    )
-    if wrist_success is None:
-        raise RuntimeError("verified wrist-camera M04 success is absent from registry")
-    chosen = [success, wrist_success]
-    for run_id in (
-        "m04-goal-t06-e07-wrist110-first50-seed84068",
-        "m04-goal-t06-e07-wrist110-first50-seed84071",
-        "m04-goal-t06-e07-wrist110-first50-seed84072",
-    ):
-        receipt = json.loads((EVIDENCE / "artifacts/verified_corrections" / run_id / "summary.json").read_text())
-        row = next((item for item in attempts if item.get("episode_id") == receipt["source_policy_run"] and item.get("success")), None)
+    chosen = []
+    seen_actions = set()
+    for summary_path in sorted((EVIDENCE / "artifacts/verified_corrections").glob("*/summary.json")):
+        summary = json.loads(summary_path.read_text())
+        reps = summary.get("replicates", [])
+        action_hash = summary.get("source_action_sha256")
+        if not (
+            summary.get("source_policy_run")
+            and summary.get("independent_replay_pass") is True
+            and len(reps) == 2
+            and all(x.get("success") is True for x in reps)
+            and action_hash not in seen_actions
+        ):
+            continue
+        row = next(
+            (x for x in attempts if x.get("episode_id") == summary["source_policy_run"] and x.get("success")),
+            None,
+        )
         if row is None:
-            raise RuntimeError(f"independently verified success absent from registry: {run_id}")
+            raise RuntimeError(f"verified success absent from registry: {summary['source_policy_run']}")
+        seen_actions.add(action_hash)
         chosen.append(row)
+    if len(chosen) < 10:
+        raise RuntimeError(f"demo requires 10 unique replay-verified M04 policy successes; found {len(chosen)}")
     for suite in ("spatial", "long"):
         failure = next(
-            (
-                row
-                for row in reversed(attempts)
-                if row.get("suite") == suite and not row.get("success")
-            ),
+            (row for row in reversed(attempts) if row.get("suite") == suite and not row.get("success")),
             None,
         )
         if failure is not None:
@@ -214,46 +218,6 @@ def m04_clips() -> list[dict]:
             }
         )
     return out
-
-
-def text(
-    frame: np.ndarray,
-    value: str,
-    xy: tuple[int, int],
-    scale: float = 1.0,
-    color=(255, 255, 255),
-    thick: int = 2,
-) -> None:
-    cv2.putText(
-        frame, value[:140], xy, cv2.FONT_HERSHEY_SIMPLEX, scale, (0, 0, 0), thick + 4, cv2.LINE_AA
-    )
-    cv2.putText(frame, value[:140], xy, cv2.FONT_HERSHEY_SIMPLEX, scale, color, thick, cv2.LINE_AA)
-
-
-def card_frames(title: str, lines: list[str], seconds: int) -> list[np.ndarray]:
-    frames = []
-    for i in range(seconds * FPS):
-        frame = np.zeros((H, W, 3), dtype=np.uint8)
-        frame[:] = (28, 35, 43)
-        cv2.rectangle(frame, (0, 0), (W, 14), (96, 164, 226), -1)
-        text(
-            frame, "VLA-FORGE 2.0  |  M04 REAL CLOUD EVIDENCE", (95, 170), 1.35, (236, 243, 250), 3
-        )
-        text(frame, title, (100, 340), 1.65, (115, 190, 255), 3)
-        y = 455
-        for line in lines:
-            text(frame, line, (110, y), 0.9, (230, 235, 240), 2)
-            y += 85
-        cv2.rectangle(frame, (100, 965), (W - 100, 977), (70, 77, 85), -1)
-        cv2.rectangle(
-            frame,
-            (100, 965),
-            (100 + int((W - 200) * (i + 1) / (seconds * FPS)), 977),
-            (96, 164, 226),
-            -1,
-        )
-        frames.append(frame)
-    return frames
 
 
 def clip_frames(entry: dict, target: Path) -> tuple[np.ndarray, dict]:
@@ -320,6 +284,14 @@ def main() -> None:
     SOURCES.mkdir(parents=True, exist_ok=True)
     VIS.mkdir(parents=True, exist_ok=True)
     entries = m02_clips() + m03_clips() + m04_clips()
+    dataset_provenance = json.loads((EVIDENCE / "dataset/lerobot_v3_verified_r5/provenance.json").read_text())
+    verified_episode_count = int(dataset_provenance["episodes"])
+    verified_transition_count = int(dataset_provenance["transitions"])
+    fresh_policy_count = sum(
+        1 for p in (EVIDENCE / "artifacts/verified_corrections").glob("*/summary.json")
+        if json.loads(p.read_text()).get("source_policy_run")
+        and json.loads(p.read_text()).get("independent_replay_pass") is True
+    )
     seen = set()
     for item in entries:
         h = sha(Path(item["source_path"]))
@@ -345,8 +317,8 @@ def main() -> None:
         (
             "Dataset reality",
             [
-                "6 unique verified sequences | 533 transitions | LeRobot v3",
-                "All six are Goal task 6 / init state 7; not task-diverse and not public-ready",
+                f"{verified_episode_count} verified sequences | {verified_transition_count} transitions | LeRobot v3",
+                "All derive from Goal task 6 / init state 7; not task-diverse or public-ready",
             ],
             6,
         ),
@@ -369,8 +341,8 @@ def main() -> None:
         (
             "Conclusion",
             [
-                "Five fresh SmolVLA corrections succeeded and replayed twice from matched prefixes",
-                "M04 remains INCOMPLETE: at least 10 corrections and broader task/state coverage are required",
+                f"{fresh_policy_count} fresh SmolVLA corrections succeeded and replayed twice from matched prefixes",
+                "M04 reaches the 10-correction count; diverse source tasks/states and release clearance remain open",
             ],
             8,
         ),
@@ -544,10 +516,10 @@ def main() -> None:
     cards_dir.mkdir(exist_ok=True)
     summary = {
         "status": "INCOMPLETE",
-        "verified_unique_corrections": 6,
-        "new_m04_policy_sequences": 5,
-        "dataset_episodes": 6,
-        "dataset_transitions": 533,
+        "verified_unique_corrections": verified_episode_count,
+        "new_m04_policy_sequences": fresh_policy_count,
+        "dataset_episodes": verified_episode_count,
+        "dataset_transitions": verified_transition_count,
         "public_release": False,
         "reason": "insufficient task diversity and upstream redistribution review pending",
     }
@@ -563,8 +535,11 @@ def main() -> None:
     html += [
         "</table></article><article><h2>Dataset and metrics</h2><pre>"
         + json.dumps(summary, indent=2)
-        + "</pre><p>See ../REPORT.md, ../metrics.json, ../dataset/lerobot_v3_verified_r4/provenance.json, and ../status.json.</p></article></body></html>"
+        + "</pre><p>See ../REPORT.md, ../metrics.json, ../dataset/lerobot_v3_verified_r5/provenance.json, and ../status.json.</p></article></body></html>"
     ]
+    html[0] = html[0].replace("Five fresh", f"{fresh_policy_count} fresh").replace(
+        "Six unique", f"{verified_episode_count} unique"
+    )
     (VIS / "index.html").write_text("\n".join(html), encoding="utf-8")
     print(
         json.dumps(
