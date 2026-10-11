@@ -2,9 +2,9 @@
 - [x] Integrate action-scale and camera-specific windowed brightness interventions into the M04 runner and record provenance.
 - [x] Select frozen M02 source suite/task/episode identities and recover physical prefixes by exact state checks.
 - [x] Run real RTX 3090 MuJoCo policy/intervention attempts; retain every success and failure.
-- [x] Independently reload and audit eleven LeRobot v3 episodes (ten fresh M04 SmolVLA corrections plus one M03-derived replay) against physical replay NPZs, including actions, state, cameras, and terminal markers.
+- [x] Independently reload and audit twelve LeRobot v3 episodes (eleven fresh M04 SmolVLA corrections plus one M03-derived replay) against physical replay NPZs, including actions, state, cameras, and terminal markers.
 - [x] Audit every registered attempt and demo-source hash; retain and disclose the one historical JSON hash mismatch without rewriting evidence.
 - [x] Generate a source-hashed 180–240 s demo and verify codec, duration, and full decode.
-- [x] Reach at least 10 unique fresh policy corrections with two independent successful physical replays each (10 fresh policy sequences plus 1 M03-derived replay).
-- [ ] Expand source-state/task coverage: all current successes still derive from one Goal task 6 / init-state 7 M02 source failure; attempts on other Goal init states failed.
+- [x] Reach at least 10 unique fresh policy corrections with two independent successful physical replays each (11 fresh policy sequences plus 1 M03-derived replay).
+- [ ] Expand source-state/task coverage: verified set now includes M02 init states 6 and 7 for Goal task 6; task-level diversity remains open, and alternate-init attempts retained failures.
 - [ ] Complete license and data-quality review before any Hugging Face Dataset or Space publication.

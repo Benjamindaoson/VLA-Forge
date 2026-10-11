@@ -52,7 +52,7 @@ ENV_SEED = int(M02_EPISODE["seed"])
 POLICY_SEED = int(os.environ.get("M04_POLICY_SEED", str(ENV_SEED)))
 M03 = ROOT / "Evidence/M03/source/M03_interventional_diagnosis"
 SOURCE = M03 / "episodes/m03-g09-goal-t06-init07_baseline.npz"
-OUT = ROOT / "Evidence/M04/artifacts/policy_attempts"
+OUT = Path(os.environ.get("M04_ATTEMPT_DIR", str(ROOT / "Evidence/M04/artifacts/policy_attempts")))
 OUT.mkdir(parents=True, exist_ok=True)
 
 
@@ -119,6 +119,14 @@ def main():
         CHECKPOINT, config=cfg, strict=True, local_files_only=True
     )
     policy.eval()
+    acceleration = os.environ.get("M04_INFERENCE_BACKEND", "eager")
+    graph_sampler = None
+    if acceleration == "cuda_graph":
+        from robot_vla.m04_acceleration import CudaGraphSampler
+        graph_sampler = CudaGraphSampler(policy.model)
+        policy.model.sample_actions = graph_sampler
+    elif acceleration != "eager":
+        raise ValueError(f"Unknown inference backend: {acceleration}")
     pre, post = make_pre_post_processors(
         cfg,
         pretrained_path=CHECKPOINT,
@@ -178,6 +186,8 @@ def main():
             condition_key
         ]
         attempt_id = os.environ.get("M04_RUN_ID", attempt_id)
+        if any(OUT.glob(f"{attempt_id}.*")):
+            raise FileExistsError(f"Refusing to overwrite prior experiment: {attempt_id}")
         # Every condition has an explicit default no-op observation window.
         # Brightness interventions override it; action-scale conditions do not.
         intervention_start = 0
@@ -444,6 +454,8 @@ def main():
         log_event({"event": "resource_sample", **resource_rows[-1]})
         result = {
             "episode_id": attempt_id,
+            "inference_backend": acceleration,
+            "cuda_graph_cold_seconds": graph_sampler.cold_seconds if graph_sampler else None,
             "source_m02_episode": M02_EPISODE_DIR.name,
             "source_trace_sha256": digest(M02_TRACE),
             "source_checkpoint": f"M02_{M02_EPISODE_DIR.name}_prefix100",

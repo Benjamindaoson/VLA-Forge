@@ -1,0 +1,10 @@
+- [x] Freeze bounded scope: no more unbounded correction-seed searches; preserve 11 fresh verified corrections and the distinct M03-derived record.
+- [x] Benchmark complete FP32 action chunks with changing observations and seeds; all 18 comparisons have exact values and RNG equality.
+- [x] Keep dynamic vision preprocessing eager; capture prefix attention and denoising, with an equivalent GPU-created constant suffix mask.
+- [x] Validate a real MuJoCo continuation against its registered eager baseline: both success, 21 correction steps, exact actions/states/camera pixels.
+- [x] Record 1.816 s capture cost separately; retain eager default for isolated short jobs; no end-to-end speedup claim.
+- [x] Correct source-aware replay/export, freeze r7, and validate lineage exclusions.
+- [x] Test full root and benchmark suites: 82 passed (one upstream Starlette deprecation warning).
+- [x] Rebuild 227.934 s / 1080p / H.264 / 30 FPS demo and verify decode/source hashes.
+- [ ] Verify private Dataset/Space delivery and freeze uploaded hashes.
+- [ ] Public redistribution: withheld pending exact asset rights; never infer a license from missing metadata.

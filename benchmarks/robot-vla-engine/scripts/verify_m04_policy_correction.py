@@ -17,6 +17,7 @@ SOURCE_EP = int(os.environ.get("M04_SOURCE_EPISODE", "7"))
 RUN_ID = os.environ["M04_POLICY_RUN_ID"]
 POLICY_NPZ = ROOT / "Evidence/M04/artifacts/policy_attempts" / f"{RUN_ID}.npz"
 POLICY_META = ROOT / "Evidence/M04/artifacts/policy_attempts/attempts.jsonl"
+POLICY_EVENTS = ROOT / "Evidence/M04/artifacts/policy_attempts" / f"{RUN_ID}_events.jsonl"
 M03_BASELINE = (
     ROOT
     / "Evidence/M03/source/M03_interventional_diagnosis/episodes/m03-g09-goal-t06-init07_baseline.json"
@@ -58,22 +59,37 @@ def main() -> None:
     )
     with np.load(POLICY_NPZ) as z:
         all_actions = z["actions"].astype(np.float32)
-        expected_qpos = z["qpos"][100].copy()
-        expected_qvel = z["qvel"][100].copy()
-        recorded_qpos = z["qpos"][100].copy()
-        recorded_qvel = z["qvel"][100].copy()
-    baseline_reference = json.loads(M03_BASELINE.read_text())["checkpoint_state"]
-    expected_qpos = np.asarray(baseline_reference["qpos"], dtype=np.float64)
-    expected_qvel = np.asarray(baseline_reference["qvel"], dtype=np.float64)
-    expected_time = float(baseline_reference["time"])
-    recorded_state_error = {
-        "qpos_linf": float(np.max(np.abs(recorded_qpos - expected_qpos))),
-        "qvel_linf": float(np.max(np.abs(recorded_qvel - expected_qvel))),
-    }
-    if recorded_state_error["qpos_linf"] > 1e-5 or recorded_state_error["qvel_linf"] > 1e-4:
-        raise RuntimeError(
-            f"policy attempt stored a checkpoint different from M03 independent baseline: {recorded_state_error}"
-        )
+        # The independent replay re-establishes the checkpoint by resetting to
+        # this exact M02 failed episode and replaying its recorded action prefix.
+        # The attempt NPZ stores that attempt's physical state at the prefix end.
+        expected_qpos = z["qpos"][100].astype(np.float64).copy()
+        expected_qvel = z["qvel"][100].astype(np.float64).copy()
+    checkpoint_events = [
+        json.loads(line)
+        for line in POLICY_EVENTS.read_text().splitlines()
+        if line.strip()
+        and json.loads(line).get("event") == "prefix_step_completed"
+        and json.loads(line).get("step") == 100
+    ]
+    if not checkpoint_events:
+        raise RuntimeError("policy attempt has no persisted step-100 prefix checkpoint event")
+    expected_time = float(checkpoint_events[-1]["sim_time"])
+    m03_baseline_comparison = None
+    if SOURCE_EP == 7:
+        baseline_reference = json.loads(M03_BASELINE.read_text())["checkpoint_state"]
+        baseline_qpos = np.asarray(baseline_reference["qpos"], dtype=np.float64)
+        baseline_qvel = np.asarray(baseline_reference["qvel"], dtype=np.float64)
+        m03_baseline_comparison = {
+            "qpos_linf": float(np.max(np.abs(expected_qpos - baseline_qpos))),
+            "qvel_linf": float(np.max(np.abs(expected_qvel - baseline_qvel))),
+            "time_abs": abs(expected_time - float(baseline_reference["time"])),
+        }
+        if (
+            m03_baseline_comparison["qpos_linf"] > 1e-5
+            or m03_baseline_comparison["qvel_linf"] > 1e-4
+            or m03_baseline_comparison["time_abs"] > 1e-8
+        ):
+            raise RuntimeError(f"init-state-7 checkpoint differs from independent M03 reference: {m03_baseline_comparison}")
     if len(source_prefix) != 100 or all_actions.shape[0] <= 100:
         raise RuntimeError("prefix/correction segment is incomplete")
     prefix_error = float(np.max(np.abs(all_actions[:100] - source_prefix)))
@@ -195,9 +211,14 @@ def main() -> None:
                 "episode_id": ep_id,
                 "policy_attempt_id": RUN_ID,
                 "source_m02_episode": ep_meta["episode_id"],
+                "source_m02_suite": "goal",
+                "source_m02_task_id": 6,
+                "source_m02_init_state_id": SOURCE_EP,
+                "source_m02_registry_episode_path": str(EP_JSON),
                 "source_m02_trace_sha256": source_trace_sha,
-                "m03_baseline_checkpoint_reference": str(M03_BASELINE),
-                "policy_attempt_stored_checkpoint_error": recorded_state_error,
+                "checkpoint_recovery_method": "hard reset to recorded M02 failed init state; replay exact 100-action M02 prefix; compare replay qpos/qvel/time against policy-attempt checkpoint NPZ",
+                "checkpoint_reference": str(POLICY_NPZ),
+                "m03_baseline_crosscheck": m03_baseline_comparison,
                 "policy_attempt_npz_sha256": policy_npz_sha,
                 "policy_action_segment_sha256": hashlib.sha256(correction.tobytes()).hexdigest(),
                 "policy_checkpoint_sha256": CHECKPOINT_SHA,

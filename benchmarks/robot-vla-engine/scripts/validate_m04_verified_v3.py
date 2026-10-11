@@ -1,4 +1,4 @@
-"""Independently validate the frozen two-episode M04 LeRobot v3 dataset."""
+"""Independently validate the frozen source-limited M04 LeRobot v3 dataset."""
 
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ from lerobot.processor.env_processor import LiberoProcessorStep
 
 DATASET = Path(
     os.environ.get(
-        "M04_DATASET_PATH", "/data/VLA-Forge/Evidence/M04/dataset/lerobot_v3_verified_r2"
+        "M04_DATASET_PATH", "/data/VLA-Forge/Evidence/M04/dataset/lerobot_v3_verified_r7"
     )
 )
 OUT = DATASET / "independent_validation.json"

@@ -26,70 +26,35 @@ SOURCE_SPECS = [
         "start": 100,
         "unique_action_source": "M03 frozen SmolVLA brightness-treatment actions, independently physically replayed by M04",
     },
-    {
-        "episode_id": "m04-policy-seed84075-replay-01",
-        "npz": EVID
-        / "artifacts/verified_corrections/m04-goal-t06-e07-brightness115-first50-seed84075/m04-goal-t06-e07-brightness115-first50-seed84075-independent-replay-01.npz",
-        "json": EVID
-        / "artifacts/verified_corrections/m04-goal-t06-e07-brightness115-first50-seed84075/m04-goal-t06-e07-brightness115-first50-seed84075-independent-replay-01.json",
-        "start": 100,
-        "unique_action_source": "fresh M04 SmolVLA inference at policy seed 84075 with 1.15 RGB gain for the first 50 post-checkpoint observations, independently replayed twice",
-    },
-    {
-        "episode_id": "m04-policy-wrist-camera115-replay-01",
-        "npz": EVID
-        / "artifacts/verified_corrections/m04-goal-t06-e07-wrist115-first50-seed84067/m04-goal-t06-e07-wrist115-first50-seed84067-independent-replay-01.npz",
-        "json": EVID
-        / "artifacts/verified_corrections/m04-goal-t06-e07-wrist115-first50-seed84067/m04-goal-t06-e07-wrist115-first50-seed84067-independent-replay-01.json",
-        "start": 100,
-        "unique_action_source": "fresh M04 SmolVLA inference at policy seed 84067 with 1.15 gain applied only to wrist-camera observations for the first 50 post-checkpoint policy calls, independently replayed twice",
-    },
-    {
-        "episode_id": "m04-policy-wrist110-seed84068-replay-01",
-        "npz": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84068/m04-goal-t06-e07-wrist110-first50-seed84068-independent-replay-01.npz",
-        "json": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84068/m04-goal-t06-e07-wrist110-first50-seed84068-independent-replay-01.json",
-        "start": 100,
-        "unique_action_source": "fresh M04 SmolVLA inference at seed 84068 with 1.10 wrist-camera gain for 50 policy calls; independently replayed twice",
-    },
-    {
-        "episode_id": "m04-policy-wrist110-seed84071-replay-01",
-        "npz": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84071/m04-goal-t06-e07-wrist110-first50-seed84071-independent-replay-01.npz",
-        "json": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84071/m04-goal-t06-e07-wrist110-first50-seed84071-independent-replay-01.json",
-        "start": 100,
-        "unique_action_source": "fresh M04 SmolVLA inference at seed 84071 with 1.10 wrist-camera gain for 50 policy calls; independently replayed twice",
-    },
-    {
-        "episode_id": "m04-policy-wrist110-seed84072-replay-01",
-        "npz": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84072/m04-goal-t06-e07-wrist110-first50-seed84072-independent-replay-01.npz",
-        "json": EVID / "artifacts/verified_corrections/m04-goal-t06-e07-wrist110-first50-seed84072/m04-goal-t06-e07-wrist110-first50-seed84072-independent-replay-01.json",
-        "start": 100,
-        "unique_action_source": "fresh M04 SmolVLA inference at seed 84072 with 1.10 wrist-camera gain for 50 policy calls; independently replayed twice",
-    },
 ]
 
 
 def all_source_specs() -> list[dict]:
     specs = list(SOURCE_SPECS)
-    sweep_path = EVID / "logs/seed-sweep-summary.json"
-    if not sweep_path.is_file():
-        return specs
-    sweep = json.loads(sweep_path.read_text())
-    for item in sweep.get("attempts", []):
-        if item.get("status") != "NEW_VERIFIED_UNIQUE_SEQUENCE":
+    seen = set()
+    for summary_path in sorted((EVID / "artifacts/verified_corrections").glob("*/summary.json")):
+        summary = json.loads(summary_path.read_text())
+        reps = summary.get("replicates", [])
+        if (
+            not summary.get("source_policy_run")
+            or summary.get("independent_replay_pass") is not True
+            or len(reps) != 2
+            or not all(r.get("success") is True for r in reps)
+        ):
             continue
-        run_id = item["run_id"]
-        replay_dir = EVID / "artifacts/verified_corrections" / run_id
-        specs.append(
-            {
-                "episode_id": f"{run_id}-verified-replay-01",
-                "npz": replay_dir / f"{run_id}-independent-replay-01.npz",
-                "json": replay_dir / f"{run_id}-independent-replay-01.json",
-                "start": 100,
-                "unique_action_source": (
-                    "fresh M04 SmolVLA policy seed sweep success, independently physically replayed twice"
-                ),
-            }
-        )
+        action_hash = summary.get("source_action_sha256")
+        if not action_hash or action_hash in seen:
+            continue
+        seen.add(action_hash)
+        rep_id = reps[0]["episode_id"]
+        replay_dir = summary_path.parent
+        specs.append({
+            "episode_id": f"{summary['source_policy_run']}-verified-replay-01",
+            "npz": replay_dir / f"{rep_id}.npz",
+            "json": replay_dir / f"{rep_id}.json",
+            "start": 100,
+            "unique_action_source": "fresh M04 SmolVLA output; two successful independent prefix-replay receipts",
+        })
     return specs
 
 
@@ -126,12 +91,23 @@ def main() -> None:
     seen_action_hashes = set()
     for spec in all_source_specs():
         meta = json.loads(spec["json"].read_text())
-        source_m02 = json.loads(
-            (
-                ROOT
-                / "Evidence/M02/source/M02_libero40/registry/runs/20261010T030315-982cacc8515f/episodes/goal_task06_episode07_attempt1/episode.json"
-            ).read_text()
+        source_suite = meta.get("source_m02_suite", "goal")
+        source_task_id = int(meta.get("source_m02_task_id", 6))
+        source_episode_ref = meta.get("source_m02_episode", 7)
+        if "source_m02_init_state_id" in meta:
+            source_init_state = int(meta["source_m02_init_state_id"])
+        elif isinstance(source_episode_ref, int):
+            source_init_state = source_episode_ref
+        elif "episode" in str(source_episode_ref):
+            source_init_state = int(str(source_episode_ref).split("episode", 1)[1].split("_", 1)[0])
+        else:
+            raise RuntimeError(f"cannot resolve M02 source episode identity: {source_episode_ref!r}")
+        source_m02_path = (
+            ROOT
+            / "Evidence/M02/source/M02_libero40/registry/runs/20261010T030315-982cacc8515f/episodes"
+            / f"{source_suite}_task{source_task_id:02d}_episode{source_init_state:02d}_attempt1/episode.json"
         )
+        source_m02 = json.loads(source_m02_path.read_text())
         instruction = meta.get("instruction", source_m02["instruction"])
         if meta.get("success") is not True:
             raise RuntimeError(f"source not Success=True: {spec['episode_id']}")
@@ -327,7 +303,7 @@ def main() -> None:
         "roundtrip_validation": checks,
         "write_and_encode_seconds": encode_seconds,
         "transitions_per_second": len(loaded) / encode_seconds,
-        "release_scope": f"engineering preview: {len(seen_action_hashes)} unique successful corrected trajectories originate from the same LIBERO Goal task 6, M02 init state 7, M02 failed source episode. Not evidence of task/init-state generalization; public release remains gated by data quality and asset-license audit.",
+        "release_scope": f"engineering preview: {len(seen_action_hashes)} unique successful corrected trajectories span suites={sorted({x['suite'] for x in source_rows})}, tasks={sorted({x['task_id'] for x in source_rows})}, and M02 init states={sorted({x['init_state_id'] for x in source_rows})}. Task diversity remains limited; this is not a generalization claim; public release remains gated by data quality and asset-license audit.",
     }
     (DEST / "provenance.json").write_text(json.dumps(receipt, indent=2) + "\n")
     print(json.dumps(receipt, indent=2))

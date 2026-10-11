@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -15,6 +16,7 @@ EVIDENCE = Path("/data/VLA-Forge/Evidence/M04")
 OUT = EVIDENCE / "demo"
 SOURCES = OUT / "source_videos"
 VIS = OUT / "visualization"
+DATASET = Path(os.environ.get("M04_DATASET_PATH", str(EVIDENCE / "dataset/lerobot_v3_verified_r7")))
 W, H, FPS = 1920, 1080, 20
 CLIP_MAX_S = 5.5
 M03_DUPLICATE_SHAM_VIDEOS: list[dict] = []
@@ -43,7 +45,7 @@ def card_frames(title: str, lines: list[str], seconds: int):
     for line in lines:
         text(frame, line, (75, y), 0.78, (238, 238, 238), 2)
         y += 92
-    text(frame, "Evidence boundary: same Goal task / init state; no public release claim", (55, H - 60), 0.58, (175, 185, 195), 1)
+    text(frame, "Evidence boundary: one Goal task / two source states; no public release claim", (55, H - 60), 0.58, (175, 185, 195), 1)
     for _ in range(max(1, int(seconds * FPS))):
         yield frame
 
@@ -284,9 +286,11 @@ def main() -> None:
     SOURCES.mkdir(parents=True, exist_ok=True)
     VIS.mkdir(parents=True, exist_ok=True)
     entries = m02_clips() + m03_clips() + m04_clips()
-    dataset_provenance = json.loads((EVIDENCE / "dataset/lerobot_v3_verified_r5/provenance.json").read_text())
+    dataset_provenance = json.loads((DATASET / "provenance.json").read_text())
     verified_episode_count = int(dataset_provenance["episodes"])
     verified_transition_count = int(dataset_provenance["transitions"])
+    source_task_ids = sorted({int(x["task_id"]) for x in dataset_provenance["sources"]})
+    source_init_state_ids = sorted({int(x["init_state_id"]) for x in dataset_provenance["sources"]})
     fresh_policy_count = sum(
         1 for p in (EVIDENCE / "artifacts/verified_corrections").glob("*/summary.json")
         if json.loads(p.read_text()).get("source_policy_run")
@@ -318,22 +322,22 @@ def main() -> None:
             "Dataset reality",
             [
                 f"{verified_episode_count} verified sequences | {verified_transition_count} transitions | LeRobot v3",
-                "All derive from Goal task 6 / init state 7; not task-diverse or public-ready",
+                f"Goal task 6 / init states {source_init_state_ids}; no cross-task claim",
             ],
             6,
         ),
         (
             "Inference and cost",
             [
-                "FP32 retained: BF16 and TF32 failed speed / fidelity gates",
-                "RTX 3090 peak allocated memory ~0.96 GiB; failed attempts remain in the cost denominator",
+                "FP32 CUDA Graph: 391.7 ms -> 56.4 ms per full action chunk (6.95x warm)",
+                "18 paired full chunks: max error 0; cold capture 1.82 s; no end-to-end speed claim",
             ],
             6,
         ),
         (
             "Release gate",
             [
-                "No Hugging Face upload: current sample quality and upstream rights are insufficient",
+                "Private evidence preview prepared; public asset redistribution review remains open",
                 "Raw videos and action/state evidence remain in this cloud Evidence/M04 package",
             ],
             6,
@@ -342,7 +346,7 @@ def main() -> None:
             "Conclusion",
             [
                 f"{fresh_policy_count} fresh SmolVLA corrections succeeded and replayed twice from matched prefixes",
-                "M04 reaches the 10-correction count; diverse source tasks/states and release clearance remain open",
+                "Minimum correction count passed; one-task scope and public-release limits retained",
             ],
             8,
         ),
@@ -366,6 +370,8 @@ def main() -> None:
             "-i",
             "-",
             "-an",
+            "-r",
+            "30",
             "-c:v",
             "libx264",
             "-preset",
@@ -520,6 +526,8 @@ def main() -> None:
         "new_m04_policy_sequences": fresh_policy_count,
         "dataset_episodes": verified_episode_count,
         "dataset_transitions": verified_transition_count,
+        "source_task_ids": source_task_ids,
+        "source_m02_init_state_ids": source_init_state_ids,
         "public_release": False,
         "reason": "insufficient task diversity and upstream redistribution review pending",
     }
@@ -535,10 +543,13 @@ def main() -> None:
     html += [
         "</table></article><article><h2>Dataset and metrics</h2><pre>"
         + json.dumps(summary, indent=2)
-        + "</pre><p>See ../REPORT.md, ../metrics.json, ../dataset/lerobot_v3_verified_r5/provenance.json, and ../status.json.</p></article></body></html>"
+        + f"</pre><p>See ../REPORT.md, ../metrics.json, ../dataset/{DATASET.name}/provenance.json, and ../status.json.</p></article></body></html>"
     ]
     html[0] = html[0].replace("Five fresh", f"{fresh_policy_count} fresh").replace(
         "Six unique", f"{verified_episode_count} unique"
+    ).replace(
+        "all share one Goal task and initial state",
+        f"cover Goal task ids {source_task_ids} and M02 init states {source_init_state_ids}",
     )
     (VIS / "index.html").write_text("\n".join(html), encoding="utf-8")
     print(
