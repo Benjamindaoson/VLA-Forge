@@ -279,13 +279,21 @@ def performance_cost(chunks: dict, resource: dict, validation: dict):
     invalid_worker = json.loads(invalid_path.read_text()) if invalid_path.is_file() else None
     invalid_wall = ((invalid_worker['finished_unix'] - invalid_worker['started_unix']) / 3600
                     if invalid_worker and 'finished_unix' in invalid_worker else None)
-    cost = {'by_condition': costs, 'total_measured_episode_gpu_hours': sum(v['episode_gpu_hours'] for v in costs.values()),
+    worker_path = EVIDENCE / 'worker_status.json'
+    worker_status = json.loads(worker_path.read_text()) if worker_path.is_file() else None
+    worker_wall = ((worker_status['finished_unix'] - worker_status['started_unix']) / 3600
+                   if worker_status and 'finished_unix' in worker_status else None)
+    episode_hours = sum(v['episode_gpu_hours'] for v in costs.values())
+    cost = {'by_condition': costs, 'total_measured_episode_gpu_hours': episode_hours,
+            'corrected_worker_wall_gpu_hours': worker_wall,
+            'non_episode_worker_wall_gpu_hours': max(0.0, worker_wall - episode_hours)
+                if worker_wall is not None else None,
             'invalid_bf16_technical_attempt_gpu_wall_hours': invalid_wall,
             'invalid_attempt_note': '30 quarantined receipts, zero formal denominator contribution; worker wall is rental-time proxy, not an invoice',
             'rental_rate_per_hour': None, 'rental_invoice_cost': None,
             'rental_note': 'Unknown invoice/rate; no fabricated monetary estimate',
             'retry_errors': validation['failed_attempts_preserved'],
-            'worker_status': json.loads((EVIDENCE / 'worker_status.json').read_text()) if (EVIDENCE / 'worker_status.json').exists() else None,
+            'worker_status': worker_status,
             'unattributed_wall_note': 'episode sums exclude model loading, startup, and idle; worker_status records the process interval'}
     return perf, cost
 
