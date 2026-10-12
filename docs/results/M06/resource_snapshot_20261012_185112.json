@@ -1,0 +1,200 @@
+{
+  "sampled_at": "2026-10-12T18:51:12.168921+08:00",
+  "sample_count": 15,
+  "period_s_approx": 15,
+  "worker_pid": 887181,
+  "logical_cpus": 12,
+  "physical_cpus": 12,
+  "progress": {
+    "by_condition": {
+      "corrective": {
+        "complete": 400,
+        "success": 130
+      },
+      "frozen": {
+        "complete": 400,
+        "success": 247
+      },
+      "replay": {
+        "complete": 108,
+        "success": 58
+      },
+      "standard": {
+        "complete": 400,
+        "success": 247
+      }
+    },
+    "complete": 1308,
+    "errors": 0,
+    "expected": 1600,
+    "scope": "M06-independent",
+    "updated_unix": 1791802231.002428
+  },
+  "summary": {
+    "gpu_util_pct": {
+      "mean": 0.0,
+      "p50": 0.0,
+      "p95": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "vram_mib": {
+      "mean": 3919.0,
+      "p50": 3919.0,
+      "p95": 3919.0,
+      "min": 3919.0,
+      "max": 3919.0
+    },
+    "gpu_power_w": {
+      "mean": 113.29733333333333,
+      "p50": 110.67,
+      "p95": 125.12,
+      "min": 110.35,
+      "max": 125.12
+    },
+    "host_cpu_pct": {
+      "mean": 14.3,
+      "p50": 14.4,
+      "p95": 15.2,
+      "min": 13.3,
+      "max": 15.2
+    },
+    "worker_cpu_pct_one_core_100": {
+      "mean": 167.96,
+      "p50": 168.1,
+      "p95": 179.6,
+      "min": 157.4,
+      "max": 179.6
+    },
+    "worker_rss_gib": {
+      "mean": 6.582557678222656,
+      "p50": 6.582557678222656,
+      "p95": 6.582557678222656,
+      "min": 6.582557678222656,
+      "max": 6.582557678222656
+    }
+  },
+  "raw_samples": [
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.42,
+      "host_cpu_pct": 14.5,
+      "worker_cpu_pct_one_core_100": 170.4,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.45,
+      "host_cpu_pct": 14.0,
+      "worker_cpu_pct_one_core_100": 164.9,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.35,
+      "host_cpu_pct": 14.2,
+      "worker_cpu_pct_one_core_100": 166.2,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 119.96,
+      "host_cpu_pct": 13.5,
+      "worker_cpu_pct_one_core_100": 157.4,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 125.12,
+      "host_cpu_pct": 15.1,
+      "worker_cpu_pct_one_core_100": 178.1,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.62,
+      "host_cpu_pct": 14.0,
+      "worker_cpu_pct_one_core_100": 164.4,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.42,
+      "host_cpu_pct": 14.1,
+      "worker_cpu_pct_one_core_100": 168.1,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.82,
+      "host_cpu_pct": 14.5,
+      "worker_cpu_pct_one_core_100": 169.1,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.58,
+      "host_cpu_pct": 14.1,
+      "worker_cpu_pct_one_core_100": 166.7,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.56,
+      "host_cpu_pct": 13.3,
+      "worker_cpu_pct_one_core_100": 158.7,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 123.56,
+      "host_cpu_pct": 14.5,
+      "worker_cpu_pct_one_core_100": 168.4,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 114.29,
+      "host_cpu_pct": 15.2,
+      "worker_cpu_pct_one_core_100": 179.6,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.81,
+      "host_cpu_pct": 14.4,
+      "worker_cpu_pct_one_core_100": 169.5,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.83,
+      "host_cpu_pct": 14.6,
+      "worker_cpu_pct_one_core_100": 167.6,
+      "worker_rss_gib": 6.582557678222656
+    },
+    {
+      "gpu_util_pct": 0.0,
+      "vram_mib": 3919.0,
+      "gpu_power_w": 110.67,
+      "host_cpu_pct": 14.5,
+      "worker_cpu_pct_one_core_100": 170.3,
+      "worker_rss_gib": 6.582557678222656
+    }
+  ],
+  "limitations": "1 s nvidia-smi sampling can miss short kernels; process CPU percentage uses one core = 100%; host CPU percentage uses whole machine = 100%."
+}

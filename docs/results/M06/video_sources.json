@@ -1,0 +1,1477 @@
+{
+  "segments": [
+    {
+      "duration_s": 4.55,
+      "init_state_id": 41,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_000.mp4",
+      "segment_sha256": "c8f97ccd037323cba1a5beea6d1cef4acb3b9c0925b3c9ca20c39da5a9c2af49",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 4.55,
+          "episode_id": "frozen_goal_t06_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t06_i41.mp4",
+          "sha256": "4b4d52886d77e4d3f0c93c3322f0be5236862dae8e7d9fa623505154b27ea88f",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 4.55,
+          "episode_id": "standard_goal_t06_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t06_i41.mp4",
+          "sha256": "1d60e3f2cb86c68d34222e51289bd4d572c3f02e9f4a65042d86f0a00c4a1def",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 4.55,
+          "episode_id": "corrective_goal_t06_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t06_i41.mp4",
+          "sha256": "2476823d7b5329439595995bc6e52723a670176a2a0204cb89ee139fcbc86482",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 4.55,
+          "episode_id": "replay_goal_t06_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t06_i41.mp4",
+          "sha256": "e05878f52ce1260ac20eda33eef198bcc1774f2f603f3288fbe1b5c9e0ff3647",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "goal",
+      "task_id": 6
+    },
+    {
+      "duration_s": 4.45,
+      "init_state_id": 42,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_001.mp4",
+      "segment_sha256": "38f98149d9316ce0fd1b790b02a92b3c3cecf3dec0dfff454e6c08437b4d212c",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 4.45,
+          "episode_id": "frozen_goal_t06_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t06_i42.mp4",
+          "sha256": "41216d029f73f5ef7d967d90329d780a7f8b177c2f987b0b5631d712d6204b50",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 4.45,
+          "episode_id": "standard_goal_t06_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t06_i42.mp4",
+          "sha256": "96aa610d8f9a0dd38321359ee0989eeeb672c6466b4e099c2e2f801a264c585c",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 4.45,
+          "episode_id": "corrective_goal_t06_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t06_i42.mp4",
+          "sha256": "2aec90570f054067002bf5ae2b97f8e770693757aaa1c3567af1ed2712c120bf",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 4.45,
+          "episode_id": "replay_goal_t06_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t06_i42.mp4",
+          "sha256": "72446d7ac0824334e3f25e37e890f7f97944ecbb813d42c4290f7bf5def7e005",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "goal",
+      "task_id": 6
+    },
+    {
+      "duration_s": 4.4,
+      "init_state_id": 46,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_002.mp4",
+      "segment_sha256": "cfd6531d58d13365affb26126f0b368114d7b4450229f0e1235bd6cca4639077",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 4.4,
+          "episode_id": "frozen_goal_t06_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t06_i46.mp4",
+          "sha256": "be6277f91d48876d7bf0aafa11dd6e9b6dde4edd360d178773f2b2f80fc91f91",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "standard",
+          "end_s": 4.4,
+          "episode_id": "standard_goal_t06_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t06_i46.mp4",
+          "sha256": "8b15be1d4b091722740b08788b6945edef54853a4950cd44e00dee3fc41e8bbf",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 4.4,
+          "episode_id": "corrective_goal_t06_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t06_i46.mp4",
+          "sha256": "3c4e7cd4cfbe5285724315e6f8467855a849d9ab74586ef60e3390c214b01063",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 4.4,
+          "episode_id": "replay_goal_t06_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t06_i46.mp4",
+          "sha256": "5115747da62e9fadd910a1a863695630ac0a121e16ee1dc76156a1e3dc008df6",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "goal",
+      "task_id": 6
+    },
+    {
+      "duration_s": 3.6,
+      "init_state_id": 41,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_003.mp4",
+      "segment_sha256": "77fc8f29a766a07f728c95b5d79f5d15da5922f74fdbaaab9998fdbb632646dd",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 3.6,
+          "episode_id": "frozen_spatial_t00_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t00_i41.mp4",
+          "sha256": "fd33a4a4b97b72844026031abf3eedb4dd3016126ca4e2d223d56c2de9183eec",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 3.6,
+          "episode_id": "standard_spatial_t00_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t00_i41.mp4",
+          "sha256": "aced98e88cbd624424acd8fbd99d5377c36f9279b169f9142acc9c430d3271fc",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 3.6,
+          "episode_id": "corrective_spatial_t00_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t00_i41.mp4",
+          "sha256": "3c8e28a0a6df9a6344fb6f6093c5e05ad708550f509680b8454b7901498bc38b",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 3.6,
+          "episode_id": "replay_spatial_t00_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t00_i41.mp4",
+          "sha256": "ffd82e0c91ce48982dac000d19875c95497bd87b9806acc4718586118ddfb652",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 0
+    },
+    {
+      "duration_s": 5.9,
+      "init_state_id": 43,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_004.mp4",
+      "segment_sha256": "7dfa48fb91943620444f43a9e372afb9affb6f942f8d00acee024cae21799021",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 5.9,
+          "episode_id": "frozen_spatial_t01_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t01_i43.mp4",
+          "sha256": "e1e7c8ff3af84c1d93e4e58e771b368538c64094db7ccfd0354393ea9631987d",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "standard",
+          "end_s": 5.9,
+          "episode_id": "standard_spatial_t01_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t01_i43.mp4",
+          "sha256": "a88634f6f2a7871e78d41d32b7cab8c827f7a1bf047a12c595b6494231d5f736",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 5.9,
+          "episode_id": "corrective_spatial_t01_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t01_i43.mp4",
+          "sha256": "850b4792de9e26c86ab3ce4c9f40bef2f32e562e027aa5fa841c7d5f87114a20",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "replay",
+          "end_s": 5.9,
+          "episode_id": "replay_spatial_t01_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t01_i43.mp4",
+          "sha256": "70672dda73f408420cd5e49c441ee0fdc924a2388b465914337c1de6b70dd085",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 1
+    },
+    {
+      "duration_s": 4.95,
+      "init_state_id": 40,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_005.mp4",
+      "segment_sha256": "0de681ace4931586df9dd68076088e3de3d67b7450f2ff02f347f5002dae60a6",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 4.95,
+          "episode_id": "frozen_spatial_t02_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t02_i40.mp4",
+          "sha256": "096254072b2bfea0716c503163b9e00bca6b8a06be6ff85acb081ef30128baac",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "standard",
+          "end_s": 4.95,
+          "episode_id": "standard_spatial_t02_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t02_i40.mp4",
+          "sha256": "4856abf588429f9dd99917663245a6f769b6d040e588a9e60e42598cb05f7743",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 4.95,
+          "episode_id": "corrective_spatial_t02_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t02_i40.mp4",
+          "sha256": "76fac65f35c679ac047872f58a8b8140c343df21bdf3e67bef1a2b80ec8fee9f",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "replay",
+          "end_s": 4.95,
+          "episode_id": "replay_spatial_t02_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t02_i40.mp4",
+          "sha256": "2bef39671921625fb403345269feee98801bc44b110cb8782bda054df3d74d3a",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 2
+    },
+    {
+      "duration_s": 4.7,
+      "init_state_id": 42,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_006.mp4",
+      "segment_sha256": "62db1abbd27a0af80724414b9c41129e3ca00fd631ac586525b62edf68213048",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 4.7,
+          "episode_id": "frozen_spatial_t03_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t03_i42.mp4",
+          "sha256": "3eefe6303037a8731cce7b351803c3ecdc46f6ab224ea70edfd06d2e17d4b432",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 4.7,
+          "episode_id": "standard_spatial_t03_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t03_i42.mp4",
+          "sha256": "17196110eea6a934ba4718000d491d575c19990fef2b839bf863eefd8da8cf89",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 4.7,
+          "episode_id": "corrective_spatial_t03_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t03_i42.mp4",
+          "sha256": "afd49f19077f8381ab90f4ee1e754023d4533ec4bcdfa12446e7b54f2f93e022",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 4.7,
+          "episode_id": "replay_spatial_t03_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t03_i42.mp4",
+          "sha256": "f7a7456dd026c7d1dbb30c740a52c87e42d5a52451d18a5104640167cfe3122e",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 3
+    },
+    {
+      "duration_s": 6.7,
+      "init_state_id": 49,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_007.mp4",
+      "segment_sha256": "b46a530bf3101655b9cc3a91cfb1ef75e8f5773ea0d08c9904d908c5b48f8903",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.7,
+          "episode_id": "frozen_spatial_t04_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t04_i49.mp4",
+          "sha256": "5f8380b5158977d0f8f39cba91137335982c71a5d5d02e20ef46e7ca6371130d",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.7,
+          "episode_id": "standard_spatial_t04_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t04_i49.mp4",
+          "sha256": "7957717b6c06059bac9f890495b670f4954d0bb9d4af579c435356ed02fe3416",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.7,
+          "episode_id": "corrective_spatial_t04_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t04_i49.mp4",
+          "sha256": "fdba77b5af27379c81cf0c8da9ecfaeae2c25cdd1ebcb9aaa575b1ed7479b03e",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.7,
+          "episode_id": "replay_spatial_t04_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t04_i49.mp4",
+          "sha256": "1206b49967ec3623c1e2dc5dc061adb4b2bc547caab026bb32a3cde9b7735d67",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 4
+    },
+    {
+      "duration_s": 10.0,
+      "init_state_id": 40,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_008.mp4",
+      "segment_sha256": "4819f7779774c8d1d3dc8ef1cf9a315c8ec5fecf8cb338b2ba066c07135ecb2a",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 10.0,
+          "episode_id": "frozen_spatial_t05_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t05_i40.mp4",
+          "sha256": "9dd31642e9fa75721070796509fb2f2414f3a9b6e465fbfcaaf8761dc0573a53",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "standard",
+          "end_s": 10.0,
+          "episode_id": "standard_spatial_t05_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t05_i40.mp4",
+          "sha256": "23caf14442ca53a8d4c88c311aaf6f70cece192955dea60fbe8d341b87c7bb38",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 10.0,
+          "episode_id": "corrective_spatial_t05_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t05_i40.mp4",
+          "sha256": "3669a0d768ea71a7ab9815b89bdef4b078b4ecb0889747ce2dbf1cb05bac1853",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 10.0,
+          "episode_id": "replay_spatial_t05_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t05_i40.mp4",
+          "sha256": "13b43d891ed99320748c90659a10e26125d5e77a31a450908695df15270938a2",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 5
+    },
+    {
+      "duration_s": 5.5,
+      "init_state_id": 40,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_009.mp4",
+      "segment_sha256": "9b476e492203fe8d9faeca2f5f66e0b4bcd646cc3743bf8d8257d8a8ca518b6f",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 5.5,
+          "episode_id": "frozen_spatial_t06_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t06_i40.mp4",
+          "sha256": "e4be82e70c0e210058b0c7753124d2ed6c317c0b93dd395f5262b1adc126ea0a",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 5.5,
+          "episode_id": "standard_spatial_t06_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t06_i40.mp4",
+          "sha256": "9a7589169e4859eb2a3cdf6d451fbb5ed71983c6532e7cd846f056dec44fea0c",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 5.5,
+          "episode_id": "corrective_spatial_t06_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t06_i40.mp4",
+          "sha256": "5d6f17e442b67a745cc2b2bb5d7384b7c563b206b7417abfa0735d0e544ac7aa",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 5.5,
+          "episode_id": "replay_spatial_t06_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t06_i40.mp4",
+          "sha256": "4db7ea2d114d3682d85d8a6077ccf0ef0aac3b98177e41a495f9015fa76c6ac1",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 6
+    },
+    {
+      "duration_s": 6.05,
+      "init_state_id": 44,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_010.mp4",
+      "segment_sha256": "db4c22ca0cd224023411ef1b57b275194b3ec2e3ba278e5fdcc8c73b77d43414",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.05,
+          "episode_id": "frozen_spatial_t07_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t07_i44.mp4",
+          "sha256": "cac3505d646acfb167e9044270703e40512a8dfed854cdc6ae4dd9182e450ccb",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.05,
+          "episode_id": "standard_spatial_t07_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t07_i44.mp4",
+          "sha256": "20a40422008b10831b42583d200874958c0970c8302c2913a39183f81c1dbcb6",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.05,
+          "episode_id": "corrective_spatial_t07_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t07_i44.mp4",
+          "sha256": "27ff3340fba513fccea241b29f6acf3210cb9ac0c6071eacad726400f2ae4384",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.05,
+          "episode_id": "replay_spatial_t07_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t07_i44.mp4",
+          "sha256": "c83aacdc7c3fbc535f133509b4f8acfa2708aaffee8cc735fb4fbc723bd22836",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 7
+    },
+    {
+      "duration_s": 4.8,
+      "init_state_id": 43,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_011.mp4",
+      "segment_sha256": "1d91ac8eab6544d2a7333232e5d726817d81a62f300186a0ddcf4a7bb18f98a2",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 4.8,
+          "episode_id": "frozen_spatial_t08_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t08_i43.mp4",
+          "sha256": "26c9dac900a2518e6e97f486989a2785b194925754df8818a2b61734d56e398f",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "standard",
+          "end_s": 4.8,
+          "episode_id": "standard_spatial_t08_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t08_i43.mp4",
+          "sha256": "017c75c3337f396bd34a42d5bc5660010832639731a2b8c92265dcc3f8963981",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 4.8,
+          "episode_id": "corrective_spatial_t08_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t08_i43.mp4",
+          "sha256": "5a2525374c962de2cab36c59e8094551b87db5b378a394beb7737186ee499737",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 4.8,
+          "episode_id": "replay_spatial_t08_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t08_i43.mp4",
+          "sha256": "a56994e7796a86aa67727624fcd84badf341bfaa2823e169515e20d55b3e8924",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 8
+    },
+    {
+      "duration_s": 6.1000000000000005,
+      "init_state_id": 46,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_012.mp4",
+      "segment_sha256": "768b4b96110ce3ca8a0b42bc226bb854bc2cecb1bf8477786550c4ef732e1953",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.1000000000000005,
+          "episode_id": "frozen_spatial_t09_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_spatial_t09_i46.mp4",
+          "sha256": "0ce2fb17c68038940a33ad94f9697b20779a3fc005bfc836c90626967e9d283a",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.1000000000000005,
+          "episode_id": "standard_spatial_t09_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_spatial_t09_i46.mp4",
+          "sha256": "e901123092d4fcf5ff4331d2202cce2ef61a60d13d77df73089cd7ea59354fb8",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.1000000000000005,
+          "episode_id": "corrective_spatial_t09_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_spatial_t09_i46.mp4",
+          "sha256": "51fb469a8057b7bb3c22b1d435051b8d6c31c7f34d16056cceb8598c456998ae",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.1000000000000005,
+          "episode_id": "replay_spatial_t09_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_spatial_t09_i46.mp4",
+          "sha256": "f44402ae8298ca86d92e9147cf19f62d5e66d7007a9e125750c8ba11ffff31f3",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "spatial",
+      "task_id": 9
+    },
+    {
+      "duration_s": 7.0,
+      "init_state_id": 41,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_013.mp4",
+      "segment_sha256": "33de82752f66a15dbe4634af3176bf282f918c9e1021a18755356bc6d27db40c",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 7.0,
+          "episode_id": "frozen_object_t00_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t00_i41.mp4",
+          "sha256": "8447dfff4e5f8f5ed7eec041ba6a9236dc5e8837bca3908a4a2e3b884d4491a7",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 7.0,
+          "episode_id": "standard_object_t00_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t00_i41.mp4",
+          "sha256": "4344f53152912331b1d155e7b98286f497aa98de461dcdeefb36c83343a2f4f0",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 7.0,
+          "episode_id": "corrective_object_t00_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t00_i41.mp4",
+          "sha256": "ba92248d2237270251c5c0405453ac4ecdb6f8addb9a7bd2adb8f51b3b18ff2b",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 7.0,
+          "episode_id": "replay_object_t00_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t00_i41.mp4",
+          "sha256": "c123deced1af7f44ba38331227e609f86e7e9decb871f68a720eaf04d5c923b7",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "object",
+      "task_id": 0
+    },
+    {
+      "duration_s": 6.3500000000000005,
+      "init_state_id": 47,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_014.mp4",
+      "segment_sha256": "ee9a6bfd7cfdee6550cb409c89b60075843a591f4a0b0cac6569cbbb0028cc79",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.3500000000000005,
+          "episode_id": "frozen_object_t01_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t01_i47.mp4",
+          "sha256": "b0ccbbb43004008971e3a918da1470658cae083119c25b2b28e0c8d51247d6dc",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.3500000000000005,
+          "episode_id": "standard_object_t01_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t01_i47.mp4",
+          "sha256": "974553d76dcb1aad21a65ffd21a9941dc0908c10a54fb370a84adc81a0669178",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.3500000000000005,
+          "episode_id": "corrective_object_t01_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t01_i47.mp4",
+          "sha256": "cb556a5900df6b7fab0535a05493c0942d01702d788983435431e15b57c6d60d",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.3500000000000005,
+          "episode_id": "replay_object_t01_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t01_i47.mp4",
+          "sha256": "be973dc883dd36e4e1834c76366f63588298a671243074c57c308daf87121e78",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "object",
+      "task_id": 1
+    },
+    {
+      "duration_s": 5.6000000000000005,
+      "init_state_id": 42,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_015.mp4",
+      "segment_sha256": "0857c2614b0ee4f7f0fd9f848c3b6b1bdf8d1f177759f1d59eae17841dde4b07",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 5.6000000000000005,
+          "episode_id": "frozen_object_t02_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t02_i42.mp4",
+          "sha256": "369694aedf43cebf22dbbde6b491079723cd75778b5a79c2d0b0108969651e88",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 5.6000000000000005,
+          "episode_id": "standard_object_t02_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t02_i42.mp4",
+          "sha256": "77d134c44c779c51b65b61424eb7e776db9b43fa6ef1895926ecf36c7b85cf11",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 5.6000000000000005,
+          "episode_id": "corrective_object_t02_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t02_i42.mp4",
+          "sha256": "e4b5a84c21900f291abe88c8dbffbfeebe4ae2e13e5345c68c395d108a754912",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 5.6000000000000005,
+          "episode_id": "replay_object_t02_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t02_i42.mp4",
+          "sha256": "5363f16ac8fe83614e86ccb0668f56f6dadfd9387e7d3300fb9bfa166336b86b",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "object",
+      "task_id": 2
+    },
+    {
+      "duration_s": 7.55,
+      "init_state_id": 41,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_016.mp4",
+      "segment_sha256": "de2107926ae36b142bb7e91a7120a42b6922d0c59e24be5bfa374c0027660ebd",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 7.55,
+          "episode_id": "frozen_object_t03_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t03_i41.mp4",
+          "sha256": "30f7dd0a05234c6c48776f69c929156a0c0ed0c11ee3645994eacd3d3a6c5a2b",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 7.55,
+          "episode_id": "standard_object_t03_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t03_i41.mp4",
+          "sha256": "d613726aeaa545b7bfc13ed47c9f5f8d14607c70be707785de167425f44a99e3",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 7.55,
+          "episode_id": "corrective_object_t03_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t03_i41.mp4",
+          "sha256": "1547c85c80ef7d5451f5b3310b4bbaa4aeea0931fc8bc94e5217dc5785bc3ab2",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 7.55,
+          "episode_id": "replay_object_t03_i41",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t03_i41.mp4",
+          "sha256": "9bfd5f2604b955c8902cc7f1eeca8e14609a807af1d0c9b655a34e3b59dd9e0c",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "object",
+      "task_id": 3
+    },
+    {
+      "duration_s": 6.95,
+      "init_state_id": 47,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_017.mp4",
+      "segment_sha256": "62de5cc30364702d912fec4f9d63b47702cad518b2d949a539868ae660b99abc",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.95,
+          "episode_id": "frozen_object_t04_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t04_i47.mp4",
+          "sha256": "b1ec4d00fb35bb7d3d261b261a31d442737281df7d4d15daf727857c3782d142",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.95,
+          "episode_id": "standard_object_t04_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t04_i47.mp4",
+          "sha256": "a38be7698df869b4463df0d7665a122d1f8e06b3fbcf634d51c23a79b16c0f54",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.95,
+          "episode_id": "corrective_object_t04_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t04_i47.mp4",
+          "sha256": "f1aacbef39eb0efaa24c1adc81238b84d68c59252c9f3f75a430d7d6a07653e3",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.95,
+          "episode_id": "replay_object_t04_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t04_i47.mp4",
+          "sha256": "b8cfd77316f84a38d852b4f34756a7717774567a3268336cb27ac1cafa6300ca",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "object",
+      "task_id": 4
+    },
+    {
+      "duration_s": 7.25,
+      "init_state_id": 49,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_018.mp4",
+      "segment_sha256": "f1d6b5066fe700569af54a58f429a4d810d5fe085a7922c832a7a869688f5267",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 7.25,
+          "episode_id": "frozen_object_t05_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t05_i49.mp4",
+          "sha256": "92bd45479dd6b6d061a18b08574b7dc631d381bd842892c1a941562e7b0617a4",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "standard",
+          "end_s": 7.25,
+          "episode_id": "standard_object_t05_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t05_i49.mp4",
+          "sha256": "de2943f1429caa47451384fcf566c1da00148e4244aeb516e69f45efec196331",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 7.25,
+          "episode_id": "corrective_object_t05_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t05_i49.mp4",
+          "sha256": "ba4d454cd91b6c98f6e12aa6afad93f8baf435cf00da64b9b65f421b47b1eaa5",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "replay",
+          "end_s": 7.25,
+          "episode_id": "replay_object_t05_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t05_i49.mp4",
+          "sha256": "ab49062dff8d176cec6235287ee0c9ea9a3e82f2d085c09adf9ee2c321b5a4bf",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "object",
+      "task_id": 5
+    },
+    {
+      "duration_s": 7.05,
+      "init_state_id": 44,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_019.mp4",
+      "segment_sha256": "3b7696a2ca1ef0144949fcf5e4f7525e7b006c5bad63ccce39177f87389a6aee",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 7.05,
+          "episode_id": "frozen_object_t06_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t06_i44.mp4",
+          "sha256": "7bb349490cd0c0fecd2c8f55c2f0cb33347cf9a9b5f8b92439155bf9dd861080",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 7.05,
+          "episode_id": "standard_object_t06_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t06_i44.mp4",
+          "sha256": "24fede7b45eec292faabff674e650cf31ac34a18818328b974e9f8e6f687eada",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 7.05,
+          "episode_id": "corrective_object_t06_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t06_i44.mp4",
+          "sha256": "27cbeef54a94e1340e05505777fb74795cc7f32ed3cc472c57ea0226102c06fd",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 7.05,
+          "episode_id": "replay_object_t06_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t06_i44.mp4",
+          "sha256": "85d614419d889e7c7e8278a316a6e9cfd67d3262712d83f8187d5096d37d3210",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "object",
+      "task_id": 6
+    },
+    {
+      "duration_s": 6.3,
+      "init_state_id": 45,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_020.mp4",
+      "segment_sha256": "0f44a1cf367999e814230bfe47fba55bb932ce28b84788a2cd287d25ae58cd28",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.3,
+          "episode_id": "frozen_object_t07_i45",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t07_i45.mp4",
+          "sha256": "4ef99eda15be828c1a6e3c1b320ee16e2cbaaf84b8b1c7cc421dbc517f68a1ff",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.3,
+          "episode_id": "standard_object_t07_i45",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t07_i45.mp4",
+          "sha256": "3d23820e5c81936714c1e7fe77f5e9b89e61c6933db459ce63f48ed0bba159c3",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.3,
+          "episode_id": "corrective_object_t07_i45",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t07_i45.mp4",
+          "sha256": "2cc700de105883f2fb05c7fca31cb6cc71792136754a77144b2e481d77b2abd8",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.3,
+          "episode_id": "replay_object_t07_i45",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t07_i45.mp4",
+          "sha256": "28d623d2b41e405933e3391ef2580dc82a4f276a3488bf804fe42dac2aa33fd6",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "object",
+      "task_id": 7
+    },
+    {
+      "duration_s": 7.45,
+      "init_state_id": 43,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_021.mp4",
+      "segment_sha256": "4f6e2088d4341ce7e766336cd63ba4b3440f06811d7df6c0eaadec66e2c4b78d",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 7.45,
+          "episode_id": "frozen_object_t08_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t08_i43.mp4",
+          "sha256": "d29abcd825ea35dd57e50b34e6836043235bd9684e6512a41213488cb15c489f",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 7.45,
+          "episode_id": "standard_object_t08_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t08_i43.mp4",
+          "sha256": "ce7a968b0256912b279cf8a8b836d6eb6fac6b56e9dd6f4fbcaa9b84a6889983",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 7.45,
+          "episode_id": "corrective_object_t08_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t08_i43.mp4",
+          "sha256": "588267675f87b488faeae14c4d96075b3cdcdb7204ef5e570c4c5ba6ec150ece",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 7.45,
+          "episode_id": "replay_object_t08_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t08_i43.mp4",
+          "sha256": "d93dee7efcc59f1a7b13682156825e4ed0aae6209e27a44b9ecbccf74d574df2",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "object",
+      "task_id": 8
+    },
+    {
+      "duration_s": 6.0,
+      "init_state_id": 40,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_022.mp4",
+      "segment_sha256": "695561b7440776bfce28f0114ec4064eefac5520da2427f22945d59d9a786cae",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.0,
+          "episode_id": "frozen_object_t09_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_object_t09_i40.mp4",
+          "sha256": "55cf3c536190aa32073b7fcac48457f4c7fbfe36dad00051d25a05df396aa617",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.0,
+          "episode_id": "standard_object_t09_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_object_t09_i40.mp4",
+          "sha256": "5a3df1d0b43b4cd09cc8db355882d78b1440bc4708c416a5b7018654d40be565",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.0,
+          "episode_id": "corrective_object_t09_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_object_t09_i40.mp4",
+          "sha256": "a4809123f9bc0d3a2013c0c395be7591165a39bcc2280cc8c6544b75bbe680ce",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.0,
+          "episode_id": "replay_object_t09_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_object_t09_i40.mp4",
+          "sha256": "d119716d5aff50d9364e2ab30aeb765e646637bf894380b6f9ba35b4a981fbed",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "object",
+      "task_id": 9
+    },
+    {
+      "duration_s": 6.3,
+      "init_state_id": 40,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_023.mp4",
+      "segment_sha256": "5f2cbd4b9966ae12f31504c2c72efd222d7733c25c0a51fb5934d9724717ee7a",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.3,
+          "episode_id": "frozen_goal_t00_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t00_i40.mp4",
+          "sha256": "37b7028ce8fdc935df1be4f458b804b2832f98c4c8d5bce009c1ccac29142739",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.3,
+          "episode_id": "standard_goal_t00_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t00_i40.mp4",
+          "sha256": "0801223f3f9cf3fe398c19c80c0064554ac88a3e26ac839bd87d1c665f430d7e",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.3,
+          "episode_id": "corrective_goal_t00_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t00_i40.mp4",
+          "sha256": "bd5ed0947fc924e415d3a2b48acab1bab432547d8f51111d4c45df0000333140",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.3,
+          "episode_id": "replay_goal_t00_i40",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t00_i40.mp4",
+          "sha256": "b6ee75dea881f8308a9a3b6a30f9dbdd215137e27891b03b69850a9917318432",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "goal",
+      "task_id": 0
+    },
+    {
+      "duration_s": 4.8,
+      "init_state_id": 45,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_024.mp4",
+      "segment_sha256": "31cb74aca391421a48a1b6e53990cf21b4d2d142b02385808d2ea3c5eb36010d",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 4.8,
+          "episode_id": "frozen_goal_t01_i45",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t01_i45.mp4",
+          "sha256": "927ccd3c3ac45e673748c6ada23cb0b7bd1e522ab947acc90187becfad3c5543",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 4.8,
+          "episode_id": "standard_goal_t01_i45",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t01_i45.mp4",
+          "sha256": "5793303d665210116ea1b8664fa5e0db75ad3ca9158c18ae31887bfb09e627e5",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 4.8,
+          "episode_id": "corrective_goal_t01_i45",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t01_i45.mp4",
+          "sha256": "a083cd4be8db96eea65e8fe04072ce5d38362ae611461349e4a67a0dca9c4db0",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 4.8,
+          "episode_id": "replay_goal_t01_i45",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t01_i45.mp4",
+          "sha256": "183954b2165e9e7d59a020e7b343253460843bfc678c6a6444e65bfa60e16b15",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "goal",
+      "task_id": 1
+    },
+    {
+      "duration_s": 4.65,
+      "init_state_id": 49,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_025.mp4",
+      "segment_sha256": "9bc9f75e512b4b1ce4607225bbda4207bee875beeab43de4a46e0eaf5df5f16a",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 4.65,
+          "episode_id": "frozen_goal_t02_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t02_i49.mp4",
+          "sha256": "49afb3c2f00b657b6c761360401e355cffffc96ebbd343cc14ae629c3b91c9ed",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 4.65,
+          "episode_id": "standard_goal_t02_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t02_i49.mp4",
+          "sha256": "a9e10e0f830ffcbdefbdac56e0d8f7664fae89349b2d611b8ed6c6a0ab65316b",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 4.65,
+          "episode_id": "corrective_goal_t02_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t02_i49.mp4",
+          "sha256": "05d82d6a4ddee65761cd4ef179633c3712f95f265f9ad3bfe66511bc7ae3275c",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 4.65,
+          "episode_id": "replay_goal_t02_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t02_i49.mp4",
+          "sha256": "a93908bd727c1eb59e41b195144657da4e85a9d185d7f27c90da6b95a58b3f82",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "goal",
+      "task_id": 2
+    },
+    {
+      "duration_s": 9.5,
+      "init_state_id": 46,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_026.mp4",
+      "segment_sha256": "f1d2972257388452e6bf1dfcb900bb6f4a2842b605486256d3066e3caecf2183",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 9.5,
+          "episode_id": "frozen_goal_t03_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t03_i46.mp4",
+          "sha256": "0e3c44e56a948e31a17bdb81139f1f731a2426a0951faa65e0e0345bfd499782",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 9.5,
+          "episode_id": "standard_goal_t03_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t03_i46.mp4",
+          "sha256": "473d08ded32d74764541e624579fc4def57b60d03130777a978e47defda0b13b",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 9.5,
+          "episode_id": "corrective_goal_t03_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t03_i46.mp4",
+          "sha256": "7e50068813af685635eb9e62b3b1e9d5387d2ab9491868cd9ee4582c04e0e074",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 9.5,
+          "episode_id": "replay_goal_t03_i46",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t03_i46.mp4",
+          "sha256": "1d02ffe9ad47dba841fa646571507c0ef406e3eca61ab3e01dd384a5caf7eed7",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "goal",
+      "task_id": 3
+    },
+    {
+      "duration_s": 5.55,
+      "init_state_id": 47,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_027.mp4",
+      "segment_sha256": "a6fb6d161782bbc89e04fc5fa5b832ca33bceadac2bf1a7b60ea4ca279fa73d1",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 5.55,
+          "episode_id": "frozen_goal_t04_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t04_i47.mp4",
+          "sha256": "20839fb2c6c66defa0df0c28d127ad020e1fedbc6d684bed835ec0517b29bd63",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 5.55,
+          "episode_id": "standard_goal_t04_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t04_i47.mp4",
+          "sha256": "b754c359c0495149bf75a85da701536ef08880054b36ae036212bbc6a61e9c6f",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 5.55,
+          "episode_id": "corrective_goal_t04_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t04_i47.mp4",
+          "sha256": "aa02c6a402b82dd3dad3d4d11f14cfc1bb79ed38ee2d291e4582ff1271589c55",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 5.55,
+          "episode_id": "replay_goal_t04_i47",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t04_i47.mp4",
+          "sha256": "83debbc7f78040ecd72a164f5ad89b9122c439a2d2b553ebcff1026f81078259",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "goal",
+      "task_id": 4
+    },
+    {
+      "duration_s": 6.5,
+      "init_state_id": 44,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_028.mp4",
+      "segment_sha256": "a4d9339b7f132af6ad43f55da89d32b21ad0ccaa9438c6cbfc8ff3bad04178fb",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.5,
+          "episode_id": "frozen_goal_t05_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t05_i44.mp4",
+          "sha256": "96e94f23044c6f59c42e34c604e888f7de811fbaf9b34bb19b4f7489c63de68e",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.5,
+          "episode_id": "standard_goal_t05_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t05_i44.mp4",
+          "sha256": "9c850c7dee502042edc631f00c444650ab3aeacd1c6ddc882854cebd14b31178",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.5,
+          "episode_id": "corrective_goal_t05_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t05_i44.mp4",
+          "sha256": "d91999ba16cba8cdc09b309d76f82a282df9b113baebde0cca70b2b48940fb2c",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.5,
+          "episode_id": "replay_goal_t05_i44",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t05_i44.mp4",
+          "sha256": "b705ab1a6f253ad367f9590107518ca6666a7b7a8ce350ba4b0ad029650819cc",
+          "start_s": 0,
+          "success": false
+        }
+      ],
+      "suite": "goal",
+      "task_id": 5
+    },
+    {
+      "duration_s": 5.7,
+      "init_state_id": 42,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_029.mp4",
+      "segment_sha256": "03be68c1fa100885a232b5127d7f60a1e1626b0ca435084b931069ab15ae2dda",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 5.7,
+          "episode_id": "frozen_goal_t07_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t07_i42.mp4",
+          "sha256": "d992b8ced87a9d652641490a30f7cb5fc5068adf2afcc9a3bc850d6bc4c43092",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 5.7,
+          "episode_id": "standard_goal_t07_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t07_i42.mp4",
+          "sha256": "a1c300b50924f38c0a191be41ad6500506f65f5d9763527793acc4c56e5cdf60",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 5.7,
+          "episode_id": "corrective_goal_t07_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t07_i42.mp4",
+          "sha256": "6499d9b406dae7c48007c8bc0eb1560410f9fa6d32df7a954a0cb8a1d02cb9f4",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 5.7,
+          "episode_id": "replay_goal_t07_i42",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t07_i42.mp4",
+          "sha256": "c210e84fc664935c3bfdf15f0a7a2d985f01c362614ad30e607469f607157af2",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "goal",
+      "task_id": 7
+    },
+    {
+      "duration_s": 4.0,
+      "init_state_id": 49,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_030.mp4",
+      "segment_sha256": "8cdb2bd65669614352115a55bf0396ac11f33c9a9eb6c15aa1644b7b31c95fd8",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 4.0,
+          "episode_id": "frozen_goal_t08_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t08_i49.mp4",
+          "sha256": "3d18142ecb079247386daa36bfe783b3579c177cc2b2ed86f3a3fcb48691d7af",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "standard",
+          "end_s": 4.0,
+          "episode_id": "standard_goal_t08_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t08_i49.mp4",
+          "sha256": "c001c87bfae22f33bf222fe1d52422023632236fdba599abe92c5df8363ef662",
+          "start_s": 0,
+          "success": true
+        },
+        {
+          "condition": "corrective",
+          "end_s": 4.0,
+          "episode_id": "corrective_goal_t08_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t08_i49.mp4",
+          "sha256": "b290d85982dd3fa44835ded070afb24711ccb736d2257ceb76187e02ff2bc266",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 4.0,
+          "episode_id": "replay_goal_t08_i49",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t08_i49.mp4",
+          "sha256": "3e860ceddfe6be4b457582194899a3b0a9186b40caedf9034b3771bc9d7721eb",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "goal",
+      "task_id": 8
+    },
+    {
+      "duration_s": 6.7,
+      "init_state_id": 43,
+      "segment": "/data/VLA-Forge/Evidence/M06/demo/segments/segment_031.mp4",
+      "segment_sha256": "b51e4ae1993e53ff62805d2e8f463823ab66218b63813a95bdd3ba90a5514199",
+      "sources": [
+        {
+          "condition": "frozen",
+          "end_s": 6.7,
+          "episode_id": "frozen_goal_t09_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T161848-bb23f69881d8/videos/frozen_goal_t09_i43.mp4",
+          "sha256": "714c31fd203761d8d2ef224a0e4d509b87194b807afc863f15518f91a231d1e6",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "standard",
+          "end_s": 6.7,
+          "episode_id": "standard_goal_t09_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261011T213832-a6aa735ac654/videos/standard_goal_t09_i43.mp4",
+          "sha256": "048ffe42ca90f7f0fc5096e94590a3df7031f8991a0b18fa662a08a8f03ee35a",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "corrective",
+          "end_s": 6.7,
+          "episode_id": "corrective_goal_t09_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T030037-f0898eb5b60c/videos/corrective_goal_t09_i43.mp4",
+          "sha256": "9db225c5eae5936027568c6265b3170fda2393a218860b71f264c636ffd9db80",
+          "start_s": 0,
+          "success": false
+        },
+        {
+          "condition": "replay",
+          "end_s": 6.7,
+          "episode_id": "replay_goal_t09_i43",
+          "path": "/data/VLA-Forge/Evidence/M06/formal/registry/runs/20261012T092721-05a92e5b6546/videos/replay_goal_t09_i43.mp4",
+          "sha256": "37c01e609f45af7b54d2a6bbf933ba315006b9d143a0e7b26de3645e602cd2ce",
+          "start_s": 0,
+          "success": true
+        }
+      ],
+      "suite": "goal",
+      "task_id": 9
+    }
+  ],
+  "unique_source_episodes": 128
+}

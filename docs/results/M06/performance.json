@@ -1,0 +1,146 @@
+{
+  "corrective": {
+    "chunk_calls": 2380,
+    "chunk_latency_ms": {
+      "p50": 341.708845,
+      "p95": 382.76994879999995,
+      "p99": 433.93949588
+    },
+    "episode_wall_s": {
+      "mean": 57.51514415057994,
+      "p95": 94.73773847416595,
+      "sum": 23006.057660231978
+    },
+    "episodes": 400,
+    "first_chunk_ms": 354.498728,
+    "gpu_memory_used_mb_peak": 3917.0,
+    "gpu_peak_allocated_bytes": 3650451968,
+    "gpu_peak_reserved_bytes": 3755999232,
+    "gpu_power_w_mean": 111.50940405560966,
+    "gpu_utilization_percent_mean": 1.195076596121491,
+    "model_load_note": "Not timed separately in the frozen formal runner",
+    "model_load_s": null,
+    "phase_boundary": "video duration is residual outside control_cycle; exact encoder CPU cost is not separately timed",
+    "phase_sums_s": {
+      "control_cycle": 19646.47430428068,
+      "environment": 17501.560879342,
+      "forward": 1192.55901696,
+      "policy": 1482.8441075540002,
+      "postprocess": 32.702930545,
+      "preprocess": 252.572878138
+    },
+    "process_cpu_percent_mean": 178.28306915788542,
+    "process_rss_peak_bytes": 7912394752,
+    "resource_samples": 11293,
+    "steps": 110376,
+    "video_encode_plus_loop_upper_bound_s": 0.23650931924931484
+  },
+  "frozen": {
+    "chunk_calls": 1942,
+    "chunk_latency_ms": {
+      "p50": 294.188626,
+      "p95": 329.46362004999986,
+      "p99": 371.88032876
+    },
+    "episode_wall_s": {
+      "mean": 47.60805827952703,
+      "p95": 94.18719853895017,
+      "sum": 19043.223311810812
+    },
+    "episodes": 400,
+    "first_chunk_ms": 874.407327,
+    "gpu_memory_used_mb_peak": 2199.0,
+    "gpu_peak_allocated_bytes": 1880016384,
+    "gpu_peak_reserved_bytes": 1954545664,
+    "gpu_power_w_mean": 110.92595148653,
+    "gpu_utilization_percent_mean": 1.1407105291402813,
+    "model_load_note": "Not timed separately in the frozen formal runner",
+    "model_load_s": null,
+    "phase_boundary": "video duration is residual outside control_cycle; exact encoder CPU cost is not separately timed",
+    "phase_sums_s": {
+      "control_cycle": 15646.333095993235,
+      "environment": 14148.08176745,
+      "forward": 748.3099665579999,
+      "policy": 977.945833828,
+      "postprocess": 25.114801159,
+      "preprocess": 200.58627610399998
+    },
+    "process_cpu_percent_mean": 177.0576473113663,
+    "process_rss_peak_bytes": 6658695168,
+    "resource_samples": 9317,
+    "steps": 88301,
+    "video_encode_plus_loop_upper_bound_s": 0.1887986931833403
+  },
+  "replay": {
+    "chunk_calls": 2003,
+    "chunk_latency_ms": {
+      "p50": 337.322473,
+      "p95": 367.4250532,
+      "p99": 427.14771712000004
+    },
+    "episode_wall_s": {
+      "mean": 48.726657976320055,
+      "p95": 95.1924600868675,
+      "sum": 19490.663190528023
+    },
+    "episodes": 400,
+    "first_chunk_ms": 335.708338,
+    "gpu_memory_used_mb_peak": 3919.0,
+    "gpu_peak_allocated_bytes": 3651735040,
+    "gpu_peak_reserved_bytes": 3758096384,
+    "gpu_power_w_mean": 112.1375083507307,
+    "gpu_utilization_percent_mean": 1.0402922755741126,
+    "model_load_note": "Not timed separately in the frozen formal runner",
+    "model_load_s": null,
+    "phase_boundary": "video duration is residual outside control_cycle; exact encoder CPU cost is not separately timed",
+    "phase_sums_s": {
+      "control_cycle": 16170.709666023322,
+      "environment": 14418.082893673,
+      "forward": 983.461550497,
+      "policy": 1216.139392977,
+      "postprocess": 25.887267329,
+      "preprocess": 202.71163329
+    },
+    "process_cpu_percent_mean": 176.61458246346558,
+    "process_rss_peak_bytes": 7885385728,
+    "resource_samples": 9580,
+    "steps": 91438,
+    "video_encode_plus_loop_upper_bound_s": 0.19301508762873354
+  },
+  "standard": {
+    "chunk_calls": 1946,
+    "chunk_latency_ms": {
+      "p50": 341.37345500000004,
+      "p95": 381.061522,
+      "p99": 430.0605471999999
+    },
+    "episode_wall_s": {
+      "mean": 47.84881370674702,
+      "p95": 96.07263938763349,
+      "sum": 19139.52548269881
+    },
+    "episodes": 400,
+    "first_chunk_ms": 341.381665,
+    "gpu_memory_used_mb_peak": 3897.0,
+    "gpu_peak_allocated_bytes": 3657490432,
+    "gpu_peak_reserved_bytes": 3735027712,
+    "gpu_power_w_mean": 110.97383533922675,
+    "gpu_utilization_percent_mean": 1.254872723399723,
+    "model_load_note": "Not timed separately in the frozen formal runner",
+    "model_load_s": null,
+    "phase_boundary": "video duration is residual outside control_cycle; exact encoder CPU cost is not separately timed",
+    "phase_sums_s": {
+      "control_cycle": 15817.327740656969,
+      "environment": 14100.653935369,
+      "forward": 964.467433357,
+      "policy": 1195.6542670479998,
+      "postprocess": 26.048529718999998,
+      "preprocess": 201.10236672300002
+    },
+    "process_cpu_percent_mean": 176.8093300670998,
+    "process_rss_peak_bytes": 7500472320,
+    "resource_samples": 9389,
+    "steps": 88357,
+    "video_encode_plus_loop_upper_bound_s": 0.18821132369338756
+  }
+}

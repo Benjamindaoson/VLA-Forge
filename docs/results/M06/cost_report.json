@@ -1,0 +1,40 @@
+{
+  "by_condition": {
+    "corrective": {
+      "episode_gpu_hours": 6.39057157228666,
+      "episode_gpu_hours_per_100_rollouts": 1.597642893071665,
+      "scope": "sum of measured episode walls only; model load/setup/idle/error overhead separate"
+    },
+    "frozen": {
+      "episode_gpu_hours": 5.289784253280781,
+      "episode_gpu_hours_per_100_rollouts": 1.3224460633201953,
+      "scope": "sum of measured episode walls only; model load/setup/idle/error overhead separate"
+    },
+    "replay": {
+      "episode_gpu_hours": 5.4140731084800064,
+      "episode_gpu_hours_per_100_rollouts": 1.3535182771200016,
+      "scope": "sum of measured episode walls only; model load/setup/idle/error overhead separate"
+    },
+    "standard": {
+      "episode_gpu_hours": 5.316534856305225,
+      "episode_gpu_hours_per_100_rollouts": 1.3291337140763062,
+      "scope": "sum of measured episode walls only; model load/setup/idle/error overhead separate"
+    }
+  },
+  "corrected_worker_wall_gpu_hours": 22.6175,
+  "invalid_attempt_note": "30 quarantined receipts, zero formal denominator contribution; worker wall is rental-time proxy, not an invoice",
+  "invalid_bf16_technical_attempt_gpu_wall_hours": 0.35694444444444445,
+  "non_episode_worker_wall_gpu_hours": 0.2065362096473251,
+  "rental_invoice_cost": null,
+  "rental_note": "Unknown invoice/rate; no fabricated monetary estimate",
+  "rental_rate_per_hour": null,
+  "retry_errors": 0,
+  "total_measured_episode_gpu_hours": 22.410963790352675,
+  "unattributed_wall_note": "episode sums exclude model loading, startup, and idle; worker_status records the process interval",
+  "worker_status": {
+    "exit_code": 0,
+    "finished_unix": 1791816934,
+    "started_unix": 1791735511,
+    "status": "EXITED_ZERO"
+  }
+}

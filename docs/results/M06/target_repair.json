@@ -1,0 +1,47 @@
+{
+  "corrective": {
+    "candidate_success": 0,
+    "concordant": 6,
+    "frozen_success": 4,
+    "holm_adjusted_p": 1.0,
+    "improved": 0,
+    "independent_scenarios": 10,
+    "one_sided_exact_p": 1.0,
+    "paired_bootstrap_95": [
+      -0.7,
+      -0.1
+    ],
+    "paired_difference": -0.4,
+    "worsened": 4
+  },
+  "replay": {
+    "candidate_success": 5,
+    "concordant": 5,
+    "frozen_success": 4,
+    "holm_adjusted_p": 1.0,
+    "improved": 3,
+    "independent_scenarios": 10,
+    "one_sided_exact_p": 0.5,
+    "paired_bootstrap_95": [
+      -0.3,
+      0.5
+    ],
+    "paired_difference": 0.1,
+    "worsened": 2
+  },
+  "standard": {
+    "candidate_success": 5,
+    "concordant": 9,
+    "frozen_success": 4,
+    "holm_adjusted_p": 1.0,
+    "improved": 1,
+    "independent_scenarios": 10,
+    "one_sided_exact_p": 0.5,
+    "paired_bootstrap_95": [
+      0.0,
+      0.3
+    ],
+    "paired_difference": 0.1,
+    "worsened": 0
+  }
+}

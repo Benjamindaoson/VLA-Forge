@@ -1,0 +1,14 @@
+{
+  "bytes": 57294677,
+  "codec": "h264",
+  "decoded_without_error": true,
+  "duration_s": 193.104,
+  "pixel_format": "yuv420p",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "segments": 32,
+  "sha256": "483ad5daddb3e534fd277efdbdc5806d8069742b99b9f576043bb2de10b6d382",
+  "unique_source_episodes": 128
+}

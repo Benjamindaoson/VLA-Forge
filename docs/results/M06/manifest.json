@@ -1,0 +1,96 @@
+{
+  "code_commit": "e99d18cf98062b474f33956764a089135dbf456b",
+  "created_unix": 1791735427.0481203,
+  "environment": {
+    "gpu": "NVIDIA GeForce RTX 3090, 24576 MiB, 580.173.02",
+    "libero_source": "project-pinned local LIBERO checkout",
+    "mujoco_gl": "egl",
+    "packages": {
+      "av": "15.1.0",
+      "lerobot": "0.6.2",
+      "mujoco": "3.8.1",
+      "numpy": "2.2.6",
+      "peft": "0.21.2",
+      "robosuite": "1.4.0",
+      "torch": "2.7.1+cu128",
+      "transformers": "5.5.4"
+    },
+    "python": "3.12.15"
+  },
+  "invalid_technical_attempt": "technical_attempts/bf16_native_20261011/correction_receipt.json",
+  "license": "Private evidence; M04 source license restrictions apply",
+  "modelops_active_before_test": {
+    "evaluation": {
+      "boundary": "Eight frozen M05 development initial states only; no M06 test opened or production release claim",
+      "checkpoint_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+      "dataset_sha256": "df25e6fce4cf2161b7a22c495230e332bad5f73f1ca07605b35fa77500917b9c",
+      "episode_receipt_sha256": {
+        "frozen_goal_t00_i10": "14ecff898c8297e356aaace6271ef50943e0ba6b67b589635a5f1a64cbc28bc9",
+        "frozen_goal_t00_i11": "7d087b6ecf0fe902e0e4f8c0fe84979961df5669ad6f1cc9d3f545a476075325",
+        "frozen_goal_t06_i10": "05bc85323a18bd1d96e3a4838baa92818948201cdfa0f855f158ef48bece4b94",
+        "frozen_goal_t06_i11": "4a89f53a1ef90c7b2bf6b95a56fd4dd506d9c1db3c961e0be2366a4d9df7b341",
+        "frozen_goal_t06_i12": "13d82d6a30b72b004ca77520c2b7f7341aeb6a892e992a35c711d3a4fe1b2ed5",
+        "frozen_goal_t06_i13": "ac6dac783f66764f6fac8875a615e392c4af4007da49539c74e246febe1821a8",
+        "frozen_object_t00_i10": "70ccb863dc34dce93923c3eb5d9c712bda23f5856520b589f689468805bee3d8",
+        "frozen_object_t00_i11": "f9e4232fadf0f96981e828f215812816dda0fdff30e6e5b84f889235aa29b256"
+      },
+      "errors": [],
+      "illegal_actions": 0,
+      "mean_chunk_ms": 357.89999183333333,
+      "passed": true,
+      "peak_gpu_allocated_bytes": 964068864,
+      "processor_sha256": "122ec5106602b1bf129f49690d05ab2f49748a0ac6119de55ea0677d4e90d248",
+      "scope": "M05-development",
+      "success": 3,
+      "total": 8,
+      "training_run_id": "lerobot-smolvla-libero-upstream",
+      "version": "m05-base-frozen"
+    },
+    "previous": "m05-standard-s5501",
+    "revision": 7,
+    "scope": "simulation_only",
+    "time": 1791728224.3318548,
+    "version": "m05-base-frozen"
+  },
+  "modelops_registry": {
+    "corrective": {
+      "checkpoint_sha256": "70c360304fafc74fc2e2e8564046efc4d54e69690e0bcdb2e0e205a4a8ae1cac",
+      "path": "/data/VLA-Forge/Evidence/M05/modelops/registry/m05-corrective-cam180-s5501.json",
+      "sha256": "2cdc9067c723787805dcd6728185e153fea8b55666677a05e3ff29bfe19b629d",
+      "version": "m05-corrective-cam180-s5501"
+    },
+    "frozen": {
+      "checkpoint_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
+      "path": "/data/VLA-Forge/Evidence/M05/modelops/registry/m05-base-frozen.json",
+      "sha256": "6f41bf5d045e4942fe7eee1d4c95585d3989249d89fe0c3f44cf110c41ead078",
+      "version": "m05-base-frozen"
+    },
+    "replay": {
+      "checkpoint_sha256": "9ef568e52feef240042cdd0d4a16336e77a4134dff065f99bcb4bbf146275930",
+      "path": "/data/VLA-Forge/Evidence/M05/modelops/registry/m05-replay-cam180-s5501.json",
+      "sha256": "af75a7c5f6951e81beebc78ae0617432df5ab5d45ab059d20c69d43c01fe0ea2",
+      "version": "m05-replay-cam180-s5501"
+    },
+    "standard": {
+      "checkpoint_sha256": "6e266e2bc662b82edf38c7dd320070db97547615df22883bfd597cafd4803f0e",
+      "path": "/data/VLA-Forge/Evidence/M05/modelops/registry/m05-standard-s5501.json",
+      "sha256": "d6da16f3d5d34ea62b255ed9ca5f8c1333234d5651a972467e955e35148e64d7",
+      "version": "m05-standard-s5501"
+    }
+  },
+  "protocol_path": "/data/VLA-Forge/Evidence/M06/protocol_frozen.json",
+  "protocol_sha256": "d70bed88abf3cd4835140d3567f596cf38baf7053b9bcf9ee447a3a53a1b17b1",
+  "runner_path": "/data/VLA-Forge/project/robot-vla/benchmarks/robot-vla-engine/scripts/run_m06_independent.py",
+  "runner_sha256": "953546f420a094ee5495552ed5b019163f6f0b34d97baf0899210d3962b7c11f",
+  "runtime_precision": {
+    "autocast_enabled": false,
+    "development_smoke_receipts": 5,
+    "floating_parameters_and_buffers": [
+      "torch.float32"
+    ],
+    "tf32_allowed": false
+  },
+  "schema": "vla-forge.m06.manifest.v1",
+  "scope": "M06 locked test, 400 cases x 4 policies; FP32 Eager; video private",
+  "status": "READY_FOR_FORMAL_FP32"
+}

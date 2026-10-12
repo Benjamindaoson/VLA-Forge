@@ -1,0 +1,52 @@
+{
+  "kind": "M06 throughput diagnosis",
+  "scope": "read-only live sampling, no evaluation protocol change",
+  "captured_unix": 1791777109.1388898,
+  "protocol_sha256": "d70bed88abf3cd4835140d3567f596cf38baf7053b9bcf9ee447a3a53a1b17b1",
+  "registry_run_id": "20261012T030037-f0898eb5b60c",
+  "formal_progress_at_capture": {
+    "by_condition": {
+      "corrective": {
+        "complete": 59,
+        "success": 23
+      },
+      "frozen": {
+        "complete": 400,
+        "success": 247
+      },
+      "replay": {
+        "complete": 0,
+        "success": 0
+      },
+      "standard": {
+        "complete": 400,
+        "success": 247
+      }
+    },
+    "complete": 859,
+    "errors": 0,
+    "expected": 1600,
+    "scope": "M06-independent",
+    "updated_unix": 1791777089.0179138
+  },
+  "resource_sampling": {
+    "gpu_samples": 1490,
+    "gpu_util_mean_pct": 1.1771812080536912,
+    "gpu_util_p50_pct": 0.0,
+    "gpu_util_max_pct": 83.0,
+    "cpu_process_mean_pct": 183.4120134228188,
+    "note": "2 s nvidia-smi sampling can miss short GPU bursts; not a kernel profiler"
+  },
+  "corrective_receipt_sample": {
+    "episodes": 59,
+    "wall_s": 3024.2670763319766,
+    "environment_s": 2258.044054847,
+    "policy_s_including_pre_and_forward": 145.92080480200002,
+    "preprocess_s_subset_of_policy": 24.760838844000006,
+    "environment_fraction_of_wall": 0.7466417475224111,
+    "policy_fraction_of_wall": 0.04824997300799969,
+    "inference_only_ideal_speedup_upper_bound": 1.05069605635893,
+    "note": "Episode wall includes reset, video encoding, artifact persistence; condition-specific sample, not a formal overall benchmark"
+  },
+  "decision": "Keep the detached, locked FP32 Eager formal worker unchanged. Changing backend or starting parallel evaluators during the frozen run would mix execution contracts or bypass the shared GPU lock. Use verified rollout throughput and validity, not a 90 percent GPU utilization target, as the M06 objective."
+}

@@ -1,0 +1,30 @@
+{
+  "corrective": {
+    "decision": "REJECT",
+    "reason": "observed_target_or_supported_legacy_harm",
+    "success": 130,
+    "total": 400,
+    "version": "m05-corrective-cam180-s5501"
+  },
+  "frozen": {
+    "decision": "PROMOTE",
+    "reason": "unchanged_incumbent_reference",
+    "success": 247,
+    "total": 400,
+    "version": "m05-base-frozen"
+  },
+  "replay": {
+    "decision": "INSUFFICIENT_EVIDENCE",
+    "reason": "benefit_or_noninferiority_unproven",
+    "success": 226,
+    "total": 400,
+    "version": "m05-replay-cam180-s5501"
+  },
+  "standard": {
+    "decision": "INSUFFICIENT_EVIDENCE",
+    "reason": "benefit_or_noninferiority_unproven",
+    "success": 247,
+    "total": 400,
+    "version": "m05-standard-s5501"
+  }
+}

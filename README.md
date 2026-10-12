@@ -1,5 +1,13 @@
 # VLA-Forge
 
+## M06 independent regression and release evaluation
+
+[M06 final report](docs/results/M06/REPORT.md) · [Machine-readable validation](docs/results/M06/validation.json) · [Release decisions](docs/results/M06/release_decisions.json) · [Private full evidence backup](https://huggingface.co/datasets/jlai300/vla-forge-m06-private-evidence)
+
+M06 completed **1,600/1,600 real FP32 Eager SmolVLA→LIBERO/MuJoCo rollouts** across 40 tasks and four frozen policy identities, with no formal-run errors. Frozen scored **247/400 (61.75%)** and remains the only policy admitted for authorized simulation. Standard scored **247/400** and Replay **226/400**, both `INSUFFICIENT_EVIDENCE`; Corrective scored **130/400** and was `REJECT` due to measured target/legacy harm. The engineering evaluation pipeline passed, while the candidate policies did not establish a publishable improvement.
+
+The public GitHub package contains the report, protocol, episode-level numeric results, statistical analysis, performance/cost records, validation receipts, and reproduction entrypoint. The 1.5 GB videos, trajectory payloads, simulator states, and visual evidence are backed up in a **private** Hugging Face Dataset because the M04 file-level review did not grant public redistribution rights for those assets.
+
 ## M04 finalization and M05 admission
 
 [Final report](docs/results/M04/finalization_20261011/FINAL_REPORT.md) · [Public numeric Dataset](https://huggingface.co/datasets/jlai300/vla-forge-m04-numeric-evidence) · [Public report Space](https://huggingface.co/spaces/jlai300/vla-forge-m04-audited-evidence)

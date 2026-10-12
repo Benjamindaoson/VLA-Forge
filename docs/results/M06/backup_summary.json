@@ -1,0 +1,32 @@
+{
+  "archive_bytes": 1253005454,
+  "archive_content_revision": "58c5ec934b5cb4b3ff96c383acbddf744a59a6a2",
+  "archive_entries": 12361,
+  "archive_path": "archives/VLA-Forge_M06_Evidence_20261012.tar.zst",
+  "archive_sha256": "7892d4b52c131a856f2f53aa2baaa0cc140187626cfe6f99fad37e5ff90724474",
+  "created_unix": 1791820043.068533,
+  "demo_sha256": "483ad5daddb3e534fd277efdbdc5806d8069742b99b9f576043bb2de10b6d382",
+  "destination": {
+    "repo_id": "jlai300/vla-forge-m06-private-evidence",
+    "type": "huggingface_private_dataset"
+  },
+  "file_count": 10648,
+  "formal_complete": 1600,
+  "formal_expected": 1600,
+  "github_evidence_branch": "codex/m06-evidence-backup",
+  "inventory_sha256": "388044911c848aad67de5a99c523d3ca834beb2f1870be3c9b6925253f31bfce",
+  "license_boundary": "private visual evidence; no public redistribution clearance asserted",
+  "modelops_public_commit": "92d9ee614253053b347e065b36b18db8bc201a0f",
+  "remote_archive_size_verified": true,
+  "remote_file_count": 9,
+  "remote_verified": true,
+  "remote_verified_unix": 1791821714.2439332,
+  "report_sha256": "6ab07004dc74696136134a6b643681baae32dd3965e4f259efb2949a064e8166",
+  "schema_version": 1,
+  "source_root": "/data/VLA-Forge/Evidence/M06",
+  "total_bytes": 1514691560,
+  "validation_status": "PASS",
+  "vla_local_commit": "3f7ed1a8f5e20871a39b205e7822ec006cef6583",
+  "vla_public_commit": "0872811c1453d0f5a76121c05acc016c8ae870f3"
+}
+

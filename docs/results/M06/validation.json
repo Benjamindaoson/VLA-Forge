@@ -1,0 +1,24 @@
+{
+  "all_artifact_hashes_valid": true,
+  "all_checkpoint_hashes_valid": true,
+  "clipped_raw_commands": {
+    "corrective": 81136,
+    "frozen": 54176,
+    "replay": 67278,
+    "standard": 56817
+  },
+  "decoded_video_frames": 378472,
+  "executed_actions": 378472,
+  "expected": 1600,
+  "failed_attempts_preserved": 0,
+  "floating_parameter_dtypes": [
+    "torch.float32"
+  ],
+  "illegal_executed_actions": 0,
+  "license": "Private visual evidence; no public redistribution clearance asserted",
+  "physical_starts_matched": 1600,
+  "source_cases": 400,
+  "status": "PASS",
+  "tf32_allowed": false,
+  "valid": 1600
+}

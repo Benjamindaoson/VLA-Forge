@@ -1,0 +1,20 @@
+{
+  "method": "authorized GitHub connector on independent branches; local and remote commit IDs differ because connector authored publication commits",
+  "modelops": {
+    "branch": "codex/m06-policy-regression-gate",
+    "local_commit": "fafcd9e24e38c1fd2a911222ba85ecb00f0ee42f",
+    "remote_commit": "92d9ee614253053b347e065b36b18db8bc201a0f",
+    "url": "https://github.com/Benjamindaoson/ModelOps-Platform/commit/92d9ee614253053b347e065b36b18db8bc201a0f",
+    "verified_blob_sha": "232a66838098f20eee905140cf685139e2bcb7b4",
+    "verified_file": "pipelines/robotics/adapter.py"
+  },
+  "status": "SOURCE_PUBLISHED_RESULTS_PENDING",
+  "vla": {
+    "branch": "codex/m06-independent-release-eval",
+    "local_commit": "3f7ed1a8f5e20871a39b205e7822ec006cef6583",
+    "remote_commit": "0872811c1453d0f5a76121c05acc016c8ae870f3",
+    "url": "https://github.com/Benjamindaoson/VLA-Forge/commit/0872811c1453d0f5a76121c05acc016c8ae870f3",
+    "verified_blob_sha": "e999d89a8f3b9039e186f4fe1dfe70c59398eff5",
+    "verified_file": "benchmarks/robot-vla-engine/scripts/run_m06_independent.py"
+  }
+}

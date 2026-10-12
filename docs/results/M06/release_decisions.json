@@ -1,0 +1,22 @@
+{
+  "corrective": {
+    "decision": "REJECT",
+    "p95_ratio": 1.1617973138943543,
+    "reason": "observed_target_or_supported_legacy_harm"
+  },
+  "frozen": {
+    "decision": "PROMOTE",
+    "deployment_scope": "authorized simulation only",
+    "reason": "unchanged_incumbent_reference"
+  },
+  "replay": {
+    "decision": "INSUFFICIENT_EVIDENCE",
+    "p95_ratio": 1.1152219269133237,
+    "reason": "benefit_or_noninferiority_unproven"
+  },
+  "standard": {
+    "decision": "INSUFFICIENT_EVIDENCE",
+    "p95_ratio": 1.1566118345393328,
+    "reason": "benefit_or_noninferiority_unproven"
+  }
+}

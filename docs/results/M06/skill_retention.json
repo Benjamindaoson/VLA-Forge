@@ -1,0 +1,974 @@
+{
+  "corrective": {
+    "bootstrap_replicates": 10000,
+    "clusters": 39,
+    "new_failures": 132,
+    "one_sided_lower_95": -0.3564102564102563,
+    "paired_difference": -0.28974358974358966,
+    "seed": 606,
+    "task_differences": [
+      {
+        "candidate_success": 7,
+        "delta": -0.1,
+        "frozen_success": 8,
+        "suite": "spatial",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.2,
+        "frozen_success": 6,
+        "suite": "spatial",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.2,
+        "frozen_success": 8,
+        "suite": "spatial",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.7,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.2,
+        "frozen_success": 6,
+        "suite": "spatial",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 0,
+        "delta": 0.0,
+        "frozen_success": 0,
+        "suite": "spatial",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 3,
+        "delta": -0.6,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.0,
+        "frozen_success": 8,
+        "suite": "spatial",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.2,
+        "frozen_success": 3,
+        "suite": "spatial",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 4,
+        "delta": 0.0,
+        "frozen_success": 4,
+        "suite": "spatial",
+        "task_id": 9
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.3,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 7,
+        "delta": 0.0,
+        "frozen_success": 7,
+        "suite": "object",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.3,
+        "frozen_success": 4,
+        "suite": "object",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.3,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.4,
+        "frozen_success": 8,
+        "suite": "object",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.3,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 5,
+        "delta": -0.4,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 3,
+        "delta": -0.6,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.7,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.1,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 9
+      },
+      {
+        "candidate_success": 9,
+        "delta": -0.1,
+        "frozen_success": 10,
+        "suite": "goal",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.2,
+        "frozen_success": 8,
+        "suite": "goal",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.2,
+        "frozen_success": 8,
+        "suite": "goal",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 0,
+        "delta": -0.7,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.3,
+        "frozen_success": 9,
+        "suite": "goal",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 0,
+        "delta": -0.7,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.5,
+        "frozen_success": 9,
+        "suite": "goal",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.2,
+        "frozen_success": 8,
+        "suite": "goal",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.3,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 9
+      },
+      {
+        "candidate_success": 0,
+        "delta": -0.1,
+        "frozen_success": 1,
+        "suite": "long",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.1,
+        "frozen_success": 2,
+        "suite": "long",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.7,
+        "frozen_success": 9,
+        "suite": "long",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.1,
+        "frozen_success": 7,
+        "suite": "long",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 0,
+        "delta": -0.3,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.7,
+        "frozen_success": 8,
+        "suite": "long",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.2,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 0,
+        "delta": -0.5,
+        "frozen_success": 5,
+        "suite": "long",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 0,
+        "delta": -0.2,
+        "frozen_success": 2,
+        "suite": "long",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.2,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 9
+      }
+    ],
+    "two_sided_95": [
+      -0.36923076923076914,
+      -0.21538461538461534
+    ],
+    "worst_tasks": [
+      {
+        "candidate_success": 2,
+        "delta": -0.7,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.7,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 0,
+        "delta": -0.7,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 0,
+        "delta": -0.7,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.7,
+        "frozen_success": 9,
+        "suite": "long",
+        "task_id": 2
+      }
+    ]
+  },
+  "replay": {
+    "bootstrap_replicates": 10000,
+    "clusters": 39,
+    "new_failures": 53,
+    "one_sided_lower_95": -0.09743589743589744,
+    "paired_difference": -0.05641025641025642,
+    "seed": 606,
+    "task_differences": [
+      {
+        "candidate_success": 7,
+        "delta": -0.1,
+        "frozen_success": 8,
+        "suite": "spatial",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 5,
+        "delta": -0.1,
+        "frozen_success": 6,
+        "suite": "spatial",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 7,
+        "delta": -0.1,
+        "frozen_success": 8,
+        "suite": "spatial",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 7,
+        "delta": -0.2,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 6,
+        "delta": 0.0,
+        "frozen_success": 6,
+        "suite": "spatial",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 0,
+        "delta": 0.0,
+        "frozen_success": 0,
+        "suite": "spatial",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 8,
+        "delta": -0.1,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 7,
+        "delta": -0.1,
+        "frozen_success": 8,
+        "suite": "spatial",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 4,
+        "delta": 0.1,
+        "frozen_success": 3,
+        "suite": "spatial",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 3,
+        "delta": -0.1,
+        "frozen_success": 4,
+        "suite": "spatial",
+        "task_id": 9
+      },
+      {
+        "candidate_success": 5,
+        "delta": 0.0,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.1,
+        "frozen_success": 7,
+        "suite": "object",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 6,
+        "delta": 0.2,
+        "frozen_success": 4,
+        "suite": "object",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.3,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.0,
+        "frozen_success": 8,
+        "suite": "object",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 5,
+        "delta": 0.0,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.0,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 7,
+        "delta": -0.2,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.0,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 5,
+        "delta": 0.0,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 9
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.4,
+        "frozen_success": 10,
+        "suite": "goal",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 10,
+        "delta": 0.2,
+        "frozen_success": 8,
+        "suite": "goal",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.1,
+        "frozen_success": 8,
+        "suite": "goal",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.5,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.0,
+        "frozen_success": 9,
+        "suite": "goal",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.3,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 8,
+        "delta": -0.1,
+        "frozen_success": 9,
+        "suite": "goal",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.0,
+        "frozen_success": 8,
+        "suite": "goal",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 7,
+        "delta": 0.0,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 9
+      },
+      {
+        "candidate_success": 1,
+        "delta": 0.0,
+        "frozen_success": 1,
+        "suite": "long",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 2,
+        "delta": 0.0,
+        "frozen_success": 2,
+        "suite": "long",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 8,
+        "delta": -0.1,
+        "frozen_success": 9,
+        "suite": "long",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.2,
+        "frozen_success": 7,
+        "suite": "long",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 4,
+        "delta": 0.1,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.2,
+        "frozen_success": 8,
+        "suite": "long",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 5,
+        "delta": 0.2,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.1,
+        "frozen_success": 5,
+        "suite": "long",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 2,
+        "delta": 0.0,
+        "frozen_success": 2,
+        "suite": "long",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.2,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 9
+      }
+    ],
+    "two_sided_95": [
+      -0.10512820512820512,
+      -0.010256410256410256
+    ],
+    "worst_tasks": [
+      {
+        "candidate_success": 2,
+        "delta": -0.5,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.4,
+        "frozen_success": 10,
+        "suite": "goal",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.3,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.3,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 7,
+        "delta": -0.2,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 3
+      }
+    ]
+  },
+  "standard": {
+    "bootstrap_replicates": 10000,
+    "clusters": 39,
+    "new_failures": 16,
+    "one_sided_lower_95": -0.025641025641025647,
+    "paired_difference": -0.002564102564102565,
+    "seed": 606,
+    "task_differences": [
+      {
+        "candidate_success": 8,
+        "delta": 0.0,
+        "frozen_success": 8,
+        "suite": "spatial",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 6,
+        "delta": 0.0,
+        "frozen_success": 6,
+        "suite": "spatial",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.0,
+        "frozen_success": 8,
+        "suite": "spatial",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 8,
+        "delta": -0.1,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.2,
+        "frozen_success": 6,
+        "suite": "spatial",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 0,
+        "delta": 0.0,
+        "frozen_success": 0,
+        "suite": "spatial",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 8,
+        "delta": -0.1,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.0,
+        "frozen_success": 8,
+        "suite": "spatial",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 4,
+        "delta": 0.1,
+        "frozen_success": 3,
+        "suite": "spatial",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 5,
+        "delta": 0.1,
+        "frozen_success": 4,
+        "suite": "spatial",
+        "task_id": 9
+      },
+      {
+        "candidate_success": 7,
+        "delta": 0.2,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.1,
+        "frozen_success": 7,
+        "suite": "object",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 4,
+        "delta": 0.0,
+        "frozen_success": 4,
+        "suite": "object",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 5,
+        "delta": 0.0,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.0,
+        "frozen_success": 8,
+        "suite": "object",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.1,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.0,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.0,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.0,
+        "frozen_success": 9,
+        "suite": "object",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 5,
+        "delta": 0.0,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 9
+      },
+      {
+        "candidate_success": 10,
+        "delta": 0.0,
+        "frozen_success": 10,
+        "suite": "goal",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.1,
+        "frozen_success": 8,
+        "suite": "goal",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 7,
+        "delta": -0.1,
+        "frozen_success": 8,
+        "suite": "goal",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 6,
+        "delta": -0.1,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.0,
+        "frozen_success": 9,
+        "suite": "goal",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 7,
+        "delta": 0.0,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 10,
+        "delta": 0.1,
+        "frozen_success": 9,
+        "suite": "goal",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.0,
+        "frozen_success": 8,
+        "suite": "goal",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 7,
+        "delta": 0.0,
+        "frozen_success": 7,
+        "suite": "goal",
+        "task_id": 9
+      },
+      {
+        "candidate_success": 2,
+        "delta": 0.1,
+        "frozen_success": 1,
+        "suite": "long",
+        "task_id": 0
+      },
+      {
+        "candidate_success": 3,
+        "delta": 0.1,
+        "frozen_success": 2,
+        "suite": "long",
+        "task_id": 1
+      },
+      {
+        "candidate_success": 8,
+        "delta": -0.1,
+        "frozen_success": 9,
+        "suite": "long",
+        "task_id": 2
+      },
+      {
+        "candidate_success": 9,
+        "delta": 0.2,
+        "frozen_success": 7,
+        "suite": "long",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.2,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 8,
+        "delta": 0.0,
+        "frozen_success": 8,
+        "suite": "long",
+        "task_id": 5
+      },
+      {
+        "candidate_success": 2,
+        "delta": -0.1,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.1,
+        "frozen_success": 5,
+        "suite": "long",
+        "task_id": 7
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.1,
+        "frozen_success": 2,
+        "suite": "long",
+        "task_id": 8
+      },
+      {
+        "candidate_success": 4,
+        "delta": 0.1,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 9
+      }
+    ],
+    "two_sided_95": [
+      -0.030769230769230774,
+      0.028205128205128202
+    ],
+    "worst_tasks": [
+      {
+        "candidate_success": 4,
+        "delta": -0.2,
+        "frozen_success": 6,
+        "suite": "spatial",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 1,
+        "delta": -0.2,
+        "frozen_success": 3,
+        "suite": "long",
+        "task_id": 4
+      },
+      {
+        "candidate_success": 8,
+        "delta": -0.1,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 3
+      },
+      {
+        "candidate_success": 8,
+        "delta": -0.1,
+        "frozen_success": 9,
+        "suite": "spatial",
+        "task_id": 6
+      },
+      {
+        "candidate_success": 4,
+        "delta": -0.1,
+        "frozen_success": 5,
+        "suite": "object",
+        "task_id": 5
+      }
+    ]
+  }
+}
