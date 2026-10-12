@@ -26,7 +26,7 @@ Full videos, RGB observations, action/state trajectories, simulator-state payloa
 - Final report SHA-256: `6ab07004dc74696136134a6b643681baae32dd3965e4f259efb2949a064e8166`
 - Demo SHA-256: `483ad5daddb3e534fd277efdbdc5806d8069742b99b9f576043bb2de10b6d382`
 - Private archive: `archives/VLA-Forge_M06_Evidence_20261012.tar.zst` (1,253,005,454 bytes)
-- Archive SHA-256: `7892d4b52c131a856f2f53aa2baaa0cc140187626cfe6f99fad37e5ff90724474`
+- Archive SHA-256: `7892d4b52c131a856f2f53aa2baaa0c140187626cfe6f99fad37e5ff90724474`
 - Verified archive content revision: `58c5ec934b5cb4b3ff96c383acbddf744a59a6a2`
 - GitHub evidence branch: `codex/m06-evidence-backup`
 
