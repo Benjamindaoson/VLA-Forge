@@ -2,7 +2,7 @@
   "schema": "vla-forge.m04.metrics.v1",
   "generated_at_utc": "2026-10-11T08:04:29.430048+00:00",
   "status": "INCOMPLETE",
-  "hardware": "NVIDIA GeForce RTX 3090 24 GiB",
+  "hardware": "NVIDIA GeForce RTX 4090 24 GiB (rented GPU instance)",
   "policy_attempt_rows": 79,
   "policy_attempt_success_rows": 12,
   "policy_attempt_failed_rows": 67,
