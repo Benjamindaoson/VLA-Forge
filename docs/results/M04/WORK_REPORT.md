@@ -1,79 +1,83 @@
-# M04 �������棺��ʵ���������� VLA ��������
+# VLA-Forge M04 Work Report
 
-�������ڣ�2026-10-11��Ȩ��ִ�л�����RTX 4090 �Ʒ���������Ŀλ�� `/data/VLA-Forge/project/robot-vla`��
+**Execution date:** 2026-10-11  
+**GPU environment:** Rented NVIDIA RTX 4090 24GB instance  
+**Status:** INCOMPLETE — verified engineering outputs are available, but broader scale and publication gates have not passed.
 
-## ���������ձ߽�
+## 1. Scope
 
-**���ľ���ʵ�顢���ݼ�д��/������֤��FP32 ����������˽�н�������ʵ��֤�ݣ����� M04 ����������Ϊ INCOMPLETE��** δ��ʼ M05 ģ��ѵ����
+M04 evaluated a controlled SmolVLA failure-recovery workflow in LIBERO/MuJoCo. The objective was to generate corrective manipulation trajectories from failed attempts, verify them independently through simulator replay, and export an auditable LeRobotDataset v3 development artifact.
 
-������������������ 10 ���¾���������Ҫ�󡣹����ز��ٷַ����ɺ˲���δ��ɣ����������ɱ�Ҳû�и���ȫ�����ڣ�����˽���ϴ�������ͨ����ﵽ����Ҫ�󵥶�����ȫ������ͨ����
+The experiment does not claim physical-robot deployment, cross-task generalization, or a measured improvement from retraining the policy on corrective data.
 
-## ������ʲô
+## 2. Policy attempts and corrective trajectories
 
-�� M02 ����ʵʧ�ܹ켣�������ָ���Դ����״̬�����ö��� SmolVLA �����µľ����������� MuJoCo ��ȡ�óɹ��źš��Գɹ�����ȥ�ء����������ط����Σ���������۲⡢״̬����������Դд�� LeRobotDataset v3��
+| Item | Result |
+|---|---:|
+| Registered policy-attempt rows | 79 |
+| Successful attempt rows | 12 |
+| Failed attempt rows | 67 |
+| Non-episode engineering errors | 2 |
+| Operator-interrupted pre-policy runs | 2 |
+| Fresh M04 corrective trajectories | 11 |
+| Replay validations per new correction | 2 |
+| Total independently verified unique correction sequences | 12 |
 
-- **11 ���µ� M04 ��������**��ÿ�����������ط�����ͨ����
-- ���� **1 ��������ǵ� M03 ��������**��û�������µ� M04 ������
-- ���ݼ� **12 Episodes / 956 Transitions**��������״̬д��������������Ϊ 0��
-- ���ݸ��� **Goal task 6��M02 ��ʼ״̬ 6 �� 7**�����ǿ��������������ǿ����񷺻���֤��
-- �Ǽ��������� **79 ��**��12 �� Success ��¼��67 ��ʧ�ܼ�¼��Success �Ǽ��а����ظ��������У����ܴ���ȥ�غ�ľ���������Ҳ������Ϊ��׼ Benchmark �ɹ��ʡ�
-- 30�C50 ����δ�ﵽ����չĿ�ꡣ��ǰ�������������������������������
+The 12 independently verified sequences consist of 11 fresh M04 SmolVLA inference corrections and one historical M03-derived physical replay. The 12 successful attempt rows are not 12 newly generated M04 corrections.
 
-## �������ټ���ʵ������֤
+All failed attempts and engineering exceptions remain recorded rather than being removed from the denominator.
 
-���ÿ�ѡ CUDA Graph FP32 ·������̬�Ӿ�ǰ׺���� eager������ɸ��õ�ע������ȥ����㣻���ı�ģ�͡���һ����ȥ�벽��� Action Chunk ���á�
+## 3. Dataset export and provenance
 
-| ����������ָ�� | ԭʼ Eager | CUDA Graph |
-| --- | ---: | ---: |
+The exported LeRobotDataset v3 development artifact contains:
+
+- 12 episodes.
+- 956 transitions.
+- 11 fresh M04 corrective trajectories.
+- One M03-derived historical replay.
+- Action and state round-trip maximum absolute error: 0.
+- Mean absolute image error: 2.190.
+- Dataset writer throughput: 26.21 transitions/second.
+
+The current source scope is limited to LIBERO Goal task 6 and M02 initial-state IDs 6 and 7. The dataset is not task-diverse and does not support cross-task generalization claims.
+
+## 4. FP32 CUDA Graph inference optimization
+
+The eager and CUDA Graph paths were compared across 18 paired complete action chunks using the same checkpoint and source trajectories.
+
+| Metric | Eager FP32 | CUDA Graph FP32 |
+|---|---:|---:|
 | P50 | 391.74 ms | 56.39 ms |
 | P95 | 398.84 ms | 61.85 ms |
 | P99 | 399.07 ms | 61.87 ms |
 
-3 ����ʵ�۲� �� 6 ���������ӣ��� **18 �����**���������������Ϊ 0�������״̬ȫ��һ�¡�Ԥ�Ⱥ��������� P50 ���� **6.95 ��**����ʱ����ǰ�����ͷ��档
+The P50 speedup was **6.95×**. Action outputs were identical across paired observations, and the matched MuJoCo continuation checks passed.
 
-��ʵ MuJoCo ���ܶ����У�˫������ **21 ������������ Success=True**���������ؽ�λ��/�ٶȡ�ĩ��λ�˺�˫���֡���������Ϊ 0��
+Cold CUDA Graph capture took 1.816 seconds and is reported separately. The timing scope covers a synchronized full raw action chunk; preprocessing and simulator execution are excluded. This is not an end-to-end task latency claim.
 
-�䲶��Լ **1.82 ��**����ǰ�����ܵ�����������ѭ�� 6.965 �룬��ʷ eager �ο�Ϊ 5.558 �룻�ⲻ��ͬʱִ�еĶ˵���ʵ�飬**������������������� 6.95 ��**��Ĭ�ϱ��� eager��CUDA Graph �������ܹ����� sampler �ĳ���ִ�г�����
+## 5. Compute accounting
 
-## ���ݼ����ɱ���������
+- Registered policy-loop GPU time across fresh attempts, failures, and duplicates: 0.573466 GPU-hours.
+- GPU time per fresh M04 verified correction: approximately 0.052133 GPU-hours.
+- Peak allocated GPU memory: approximately 0.898 GiB.
 
-- LeRobot v3 r7 ��������ͨ����ͼ������ƽ��������� 2.190������ֵ��λ����
-- д�� 36.478 �룬���� 26.21 Transitions/s��
-- ��Դ����������ڸ��뿪�����ݣ�������������Ŀ�����ͻ������й©���ܾ���M06 ������δ��չ��
-- �Ǽǲ���ѭ���� **0.573466 GPU-hours**��ÿ���¿��ž���Լ **0.052133 GPU-hours**������ʧ�ܳ��ԣ���ȱ���������ء��ָ����طš�����Ϳ��гɱ����������������ɱ������˵���
-- ������ֵ PyTorch allocated memory 0.898 GiB��CUDA Graph ΢��׼��ֵ 981,761,024 bytes�������� GPU �������Դ档
-- 237 ���Ǽ���Ʒ����û��ȱʧ������һ����ʷʧ�ܳ��Ե� JSON ��ϣ�쳣�������������Ӧ NPZ ��ͬ�����������Ĩ����Դ�쳣��
-- �ƶ˽������ **82 passed��1 ������ Starlette ���þ���**��Ruff �ͱ�����ͨ�����˴������ѱ�����ƶ�ʵ����Ի�ִ������ README ����δ���� GPU ʵ�顣
+These figures cover registered policy-loop windows only. They exclude model loading, restoration, independent replay, encoding, and idle time, and are not equivalent to a rental invoice.
 
-## ��ʾ�뽻��
+## 6. Remaining acceptance gaps
 
-���� Demo��**227.934 �룬1920��1080��H.264 / yuv420p��30 FPS��43,383,032 bytes**������ 37 ����ͬ��ʵ Episode �زģ����гɹ�Ҳ��ʧ�ܣ�������������Դ��ϣ���ͨ����
+1. The current verified development set covers one LIBERO task and two initial states.
+2. Cross-task coverage and task-generalization evaluation remain incomplete.
+3. M05 controlled retraining on corrective data has not been completed.
+4. No policy-recovery improvement from M05 retraining is claimed.
+5. Public release of media and dataset artifacts remains withheld pending asset-rights review.
+6. The current evidence is simulator-based and does not establish physical-robot deployment.
 
-- [���� MP4](https://huggingface.co/spaces/jlai300/vla-forge-m04-evidence/resolve/main/demo/M04_demo_200s.mp4)
-- [ʵ��ͼ�� Space](https://huggingface.co/spaces/jlai300/vla-forge-m04-evidence)
-- [ȫ����Դ��Ƶ��ʵ������](VIDEO_INDEX.md)
-- [���ݼ�](https://huggingface.co/datasets/jlai300/vla-forge-m04-corrections-dev)
-- [�����ɶ�ָ��](results_summary.json)
+## 7. Evidence files
 
-Hugging Face ��Ƶ��ͼ�⡢��ͼ�����ݼ���Ϊ˽�У���Ҫ�˻�����Ȩ�ޡ������ı����治���Զ�������Щ�زġ�ȫ��ԭʼ��Ƶ���켣�ͱ��������ƶ� `/data/VLA-Forge/Evidence/M04`��
+- [M04 evidence report](REPORT.md)
+- [Machine-readable result summary](results_summary.json)
+- [CUDA Graph benchmark](cuda_graph_benchmark.json)
+- [Physical continuation comparison](cuda_graph_physical_comparison.json)
+- [Reproduction script](reproduce.sh)
 
-## �����븴��
-
-�㷨�ύ��`1836156f8f4ef65014237fed5c6a66f00d23d076`���ĵ�����ǰ���ƶ�Դ���ύ��`0dc9a02ab601235e2571dc9ab37800a8b1105f8f`��
-
-M04 Դ����ʷ��δͬ���� GitHub������ README �뱨�淢������������ʵ��Դ���ѹ�������ȷ������ԭʼ�ű����ռ�ͬĿ¼�ļ���
-
-```bash
-bash /data/VLA-Forge/Evidence/M04/reproduce.sh audit
-bash /data/VLA-Forge/Evidence/M04/reproduce.sh benchmark
-```
-
-## ��һ����Ͷ���ж�
-
-����Ͷ��Ӧ���Ȳ���������Դ�������ɱ������͸������ʧ����Դ�����н��֤���˿��طž����������������ֶ�������������Ż�����δ֤���������ݴ���ѵ�����桢�����񷺻�����ʵ�����˲����ֵ��
-
-���η�Χֹ�� M04��û��ѵ��ģ�ͣ�Ҳû�н��� M05��
-
-## �ɾ�ʵʹ�õ���Ŀ����
-
-���� SmolVLA �� LIBERO/MuJoCo ����������ʧ�ָܻ��;���������ˮ�ߣ����� 11 ��ͨ�����ζ��������طŵ��¾����켣���γ� 12 Episode / 956 Transition �� LeRobot v3 �������ݼ����� RTX 4090 ��ʵ�� FP32 CUDA Graph �����������Ż�����Ԥ�Ⱥ� P50 �� 391.74 ms ���� 56.39 ms������ 18 �����һ���Զ��պ���ʵ����������֤��ȷ�ԡ����ݷ�ΧΪһ������������Դ��ʼ״̬��
+Private media, raw trajectories, model checkpoints, and the development dataset remain access-restricted. Their existence is not represented as public redistribution permission.
