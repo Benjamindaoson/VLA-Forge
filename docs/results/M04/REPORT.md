@@ -8,7 +8,7 @@
 - Artifact hash audit: 237 references, 0 missing, 1 registry hash exception(s); affected action values independently match the paired NPZ exactly. See `artifact_integrity.json`.
 - Unique successful action hashes in policy registry: 11; success rows retain full-trajectory hashes; all corrected source action hashes are separately deduplicated and checked by independent replay.
 - Independently verified unique correction sequences: 12 (one M03-derived physical replay plus 11 fresh M04 SmolVLA inference sequences).
-- M04 RTX 3090 allocated runtime over all fresh policy attempts: 0.573466 GPU-hours; peak allocated memory: 0.898 GiB.
+- M04 RTX 4090 allocated runtime over all fresh policy attempts: 0.573466 GPU-hours; peak allocated memory: 0.898 GiB.
 - Episode-level median policy-call latency percentiles (ms): {'p50': 1.8661725043784827, 'p95': 3.0353291920619068, 'p99': 324.7058149299119}; chunk medians p50=322.7 ms, p95=964.8 ms, worst observed per-episode p99=1245.4 ms.
 - LeRobotDataset v3 writer: 36.478s; throughput receipt reports 26.21 transitions/s.
 - Independent LeRobot v3 audit: 12 episodes / 956 transitions; action/state Linf=0.0/0.0; mean camera error=2.190.
