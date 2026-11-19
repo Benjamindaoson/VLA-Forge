@@ -1,7 +1,7 @@
 {
   "checkpoint_sha256": "9a9f6413e42c0f332fccbce9a0dc796af2790f82cf002f791cdbf7e01e1afca8",
   "source_trajectory_sha256": "b88501b542bb33ed5d5a172364103e9cc129f36c4226e1b8a5a0a938c906cf75",
-  "gpu": "NVIDIA GeForce RTX 3090",
+  "gpu": "NVIDIA GeForce RTX 4090 24GB",
   "torch_version": "2.7.1+cu128",
   "samples": 18,
   "pairs": [
